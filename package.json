@@ -8,13 +8,21 @@
     "start": "next start",
     "lint": "next lint",
     "clean": "prettier --write \"(app|components|studio|lib)/**/*.+(js|jsx|json|css|md)\" --config ./.prettier.json"
-
   },
   "dependencies": {
-    "next": "14.1.0",
+    "@sanity/client": "^6.11.1",
+    "@sanity/icons": "^2.8",
+    "@sanity/image-url": "1",
+    "@sanity/types": "^3.25",
+    "@sanity/ui": "^2.0",
+    "@sanity/vision": "3",
+    "next": "^14.1",
+    "next-sanity": "7.0.12",
     "prettier": "^3.2.4",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^18.2",
+    "react-dom": "^18",
+    "sanity": "^3.25",
+    "styled-components": "^6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
