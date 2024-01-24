@@ -15,6 +15,46 @@ export default {
             name: 'description',
             type: 'text',
             title: 'Risk description'
-        }
+        },
+        {
+            name: 'riskType',
+            type: 'string',
+            title: 'Risk Type',
+            options: {
+                list: [
+                    {title: 'Climate', value: 'climate'},
+                    {title: 'AI and Innovation', value: 'aiAndInnovation'},
+                    {title: 'Labor', value: 'labor'},
+                    {title: 'Housing and commercial real estate / civic infrastructure', value: 'housingAndCommercial'},
+                    {title: 'Other', value: 'other'}
+                ]
+            }
+        },
+        {
+            name: 'riskSubType',
+            type: 'string',
+            title: 'Risk Subtype',
+            options: {
+                list: [
+                    {title: 'National Security Threat', value: 'nationalSecurityThreat'},
+                    {title: 'Climate Change and Environmental Impact', value: 'climateChange'},
+                    {title: 'Economic and Market Dynamics', value: 'economicDynamics'},
+                    {title: 'Societal and Community Welfare', value: 'societalWelfare'},
+                    {title: 'Governance and Regulatory Challenges', value: 'governanceChallenges'},
+                    {title: 'Political Stability', value: 'politicalStability'},
+                    // {title: '', value: ''},
+                ]
+            }
+        },
+        {
+            name: 'caseStudies',
+            type: 'reference',
+            title: 'Case Studies',
+            to: [{type: 'caseStudy'}],
+            options: {
+                disableNew: true,
+              },
+        },
+
     ]
 }
