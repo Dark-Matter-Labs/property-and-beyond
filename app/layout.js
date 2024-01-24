@@ -18,11 +18,7 @@ export default function RootLayout({ children }) {
         <title>Property and Beyond</title>
       </head>
       <body className={inter.className}>
-        <div>
-          <NavBar />
-          <div> {children}</div>
-          <Footer />
-        </div>
+        {children}
       </body>
     </html>
   );
