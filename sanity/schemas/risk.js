@@ -48,13 +48,66 @@ export default {
         },
         {
             name: 'caseStudies',
-            type: 'reference',
+            type: 'array',
             title: 'Case Studies',
-            to: [{type: 'caseStudy'}],
-            options: {
-                disableNew: true,
-              },
+            of: [
+                {
+                  type: 'reference',
+                  to: [
+                    {type: 'caseStudy'},
+                  ]
+                }
+              ]
         },
+        {
+            name: 'stakeholders',
+            type: 'array',
+            title: 'Stakeholders',
+            of: [{type: 'titleText'}]
+        },
+        {
+            name: 'propertyIssues',
+            type: 'array',
+            title: 'Property Issues',
+            of: [{type: 'reference', to: [{type: 'propertyIssue'}]}]
+        },
+        {
+            name: 'directImpacts',
+            type: 'array',
+            title: 'Direct impacts',
+            of: [{type: 'titleText'}]
+        },
+        {
+            name: 'indirectImpacts',
+            type: 'array',
+            title: 'Indirect impacts',
+            of: [{type: 'titleText'}]
+        },
+        {
+            name: 'easySolutions',
+            type: 'array',
+            title: 'Easy solutions',
+            of: [{type: 'titleText'}]
+        },
+        {
+            name: 'intermediateSolutions',
+            type: 'array',
+            title: 'Intermediate solutions',
+            of: [{type: 'titleText'}]
+        },
+        {
+            name: 'thirdHorizonSolutions',
+            type: 'array',
+            title: 'Third Horizon Solutions',
+            of: [{type: 'titleText'}]
+        },
+        {
+            name: 'adjacentPossibilities',
+            type: 'array',
+            title: 'Adjacent Possibilities',
+            of: [{type: 'titleText'}]
+        },
+
 
     ]
 }
