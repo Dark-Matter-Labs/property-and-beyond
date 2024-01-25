@@ -14,6 +14,11 @@ export default defineConfig({
   basePath: '/studio',
   projectId,
   dataset,
+  document: {
+    unstable_comments: {
+      enabled: true,
+    }
+  },
   // Add and edit the content schema in the './sanity/schema' folder
   schema,
   plugins: [

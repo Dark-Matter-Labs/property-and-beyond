@@ -69,7 +69,7 @@ export default {
             name: 'propertyIssues',
             type: 'array',
             title: 'Property Issues',
-            of: [{type: 'reference', to: [{type: 'propertyIssue'}]}]
+            of: [{type: 'titleText'}]
         },
         {
             name: 'directImpacts',
