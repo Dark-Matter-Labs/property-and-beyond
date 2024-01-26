@@ -21,7 +21,7 @@ export default {
                     {title: 'AI and Innovation', value: 'aiAndInnovation'},
                     {title: 'Labor', value: 'labor'},
                     {title: 'Housing and commercial real estate / civic infrastructure', value: 'housingAndCommercial'},
-                    {title: 'Other', value: 'other'}
+                    {title: 'Conflict and displacement', value: 'conflictAndDisplacement'}
                 ]
             }
         },
