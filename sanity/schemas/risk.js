@@ -87,7 +87,7 @@ export default {
             name: 'preparedness',
             type: 'array',
             title: 'Preparedness',
-            of: [{type: 'titleBlock'}]
+            of: [{type: 'block'}]
         },
         {
             name: 'intermediateSolutions',
