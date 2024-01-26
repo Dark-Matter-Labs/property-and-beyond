@@ -12,11 +12,6 @@ export default {
             title: 'Risk Title',
         },
         {
-            name: 'description',
-            type: 'text',
-            title: 'Risk description'
-        },
-        {
             name: 'riskType',
             type: 'string',
             title: 'Risk Type',
@@ -47,6 +42,11 @@ export default {
             }
         },
         {
+            name: 'description',
+            type: 'text',
+            title: 'Risk description'
+        },
+        {
             name: 'caseStudies',
             type: 'array',
             title: 'Case Studies',
@@ -63,49 +63,49 @@ export default {
             name: 'stakeholders',
             type: 'array',
             title: 'Stakeholders',
-            of: [{type: 'titleText'}]
+            of: [{type: 'titleBlock'}]
         },
         {
             name: 'propertyIssues',
             type: 'array',
             title: 'Property Issues',
-            of: [{type: 'titleText'}]
+            of: [{type: 'titleBlock'}]
         },
         {
             name: 'directImpacts',
             type: 'array',
             title: 'Direct impacts',
-            of: [{type: 'titleText'}]
+            of: [{type: 'titleBlock'}]
         },
         {
             name: 'indirectImpacts',
             type: 'array',
             title: 'Indirect impacts',
-            of: [{type: 'titleText'}]
+            of: [{type: 'titleBlock'}]
         },
         {
-            name: 'easySolutions',
+            name: 'preparedness',
             type: 'array',
-            title: 'Easy solutions',
-            of: [{type: 'titleText'}]
+            title: 'Preparedness',
+            of: [{type: 'titleBlock'}]
         },
         {
             name: 'intermediateSolutions',
             type: 'array',
             title: 'Intermediate solutions',
-            of: [{type: 'titleText'}]
+            of: [{type: 'titleBlock'}]
         },
         {
             name: 'thirdHorizonSolutions',
             type: 'array',
             title: 'Third Horizon Solutions',
-            of: [{type: 'titleText'}]
+            of: [{type: 'titleBlock'}]
         },
         {
             name: 'adjacentPossibilities',
             type: 'array',
             title: 'Adjacent Possibilities',
-            of: [{type: 'titleText'}]
+            of: [{type: 'titleBlock'}]
         },
 
 

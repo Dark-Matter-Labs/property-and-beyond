@@ -12,35 +12,64 @@ export default {
             title: 'Title',
         },
         {
+            name: 'typeOfRisk',
+            type: 'array',
+            title: 'Type of Risk',
+            of: [
+                {
+                  type: 'reference',
+                  to: [
+                    {type: 'risk'},
+                  ]
+                }
+              ]
+        },
+        {
             name: 'location',
             type: 'string',
             title: 'Location',
         },
         {
-            name: 'year',
-            type: 'number',
-            title: 'Year',
+            name: 'date',
+            type: 'string',
+            title: 'Date',
         },
         {
-            name: 'typeOfRisk',
-            type: 'string',
-            title: 'Type of Risk',
-            options: {
-                list: [
-                    {title: 'Technology', value: 'technology'},
-                    {title: 'Real Estate and Build Environment', value: 'reslEstate'},
-                ]
-            }
+            name: 'background',
+            type: 'text',
+            title: 'Background',
         },
-        {
-            name: 'scenario',
-            type: 'string',
-            title: 'Scenario (Risk)',
-        },
+     
         {
             name: 'desctiption',
             type: 'text',
-            title: 'Description',
+            title: 'Event Description',
         },
+
+        {
+            name: 'economicImpacts',
+            type: 'array',
+            title: 'Economic Impacts',
+            of: [{type: 'block'}]
+        },
+        {
+            name: 'sociopoliticalImpacts',
+            type: 'array',
+            title: 'Sociopolitical Impacts',
+            of: [{type: 'block'}]
+        },
+        {
+            name: 'outcomes',
+            type: 'array',
+            title: 'Outcome and Lessons Learned',
+            of: [{type: 'block'}]
+        },
+        {
+            name: 'references',
+            type: 'array',
+            title: 'References',
+            of: [{type: 'block'}]
+        },
+       
     ]
 }
