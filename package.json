@@ -10,6 +10,7 @@
     "clean": "prettier --write \"(app|components|studio|lib)/**/*.+(js|jsx|json|css|md)\" --config ./.prettier.json"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
     "@sanity/client": "^6.11.1",
     "@sanity/icons": "^2.8",
     "@sanity/image-url": "1",

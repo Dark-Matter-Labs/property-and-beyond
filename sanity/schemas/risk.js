@@ -31,7 +31,7 @@ export default {
             title: 'Risk Subtype',
             options: {
                 list: [
-                    {title: 'National Security Threat', value: 'nationalSecurityThreat'},
+                    {title: 'National Security Threat', value: 'National Security Threat'},
                     {title: 'Climate Change and Environmental Impact', value: 'climateChange'},
                     {title: 'Economic and Market Dynamics', value: 'economicDynamics'},
                     {title: 'Societal and Community Welfare', value: 'societalWelfare'},

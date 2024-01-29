@@ -3,7 +3,6 @@ import './globals.css';
 import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
 
-
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
@@ -17,9 +16,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>Property and Beyond</title>
       </head>
-      <body className={inter.className}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
