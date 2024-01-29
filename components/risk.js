@@ -1,9 +1,8 @@
 'use client';
-
+import Link from 'next/link';
 import { useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
-import caseStudy from '@/sanity/schemas/case-study';
 
 export default function RiskCard({ risk }) {
   const [open, setOpen] = useState(false);
@@ -41,7 +40,7 @@ export default function RiskCard({ risk }) {
                   leaveFrom='translate-x-0'
                   leaveTo='translate-x-full'
                 >
-                  <Dialog.Panel className='pointer-events-auto relative w-full'>
+                  <Dialog.Panel className='pointer-events-auto overflow-y-scroll relative ml-10 w-full'>
                     <Transition.Child
                       as={Fragment}
                       enter='ease-in-out duration-500'
@@ -61,7 +60,7 @@ export default function RiskCard({ risk }) {
                         </button>
                       </div>
                     </Transition.Child>
-                    <div className='flex h-full flex-col overflow-y-scroll bg-white p-6 shadow-xl'>
+                    <div className='flex h-auto flex-col bg-white p-6 shadow-xl'>
                       <div className=''>
                         <Dialog.Title className='text-gray-900'>
                           {' '}
@@ -73,13 +72,20 @@ export default function RiskCard({ risk }) {
                       <div>
                         {risk.description}
                       </div>
+                    
+                      <div className='w-full bg-red-300 h-[900px]'>
                       <div>
-                        {console.log(risk.caseStudies)}
                         {risk.caseStudies.map((caseStudy, id) => (
                             <div key={id}>
                             {caseStudy.title}
                             </div>
                         ))}
+                      </div>
+                      </div>
+                      <div className='w-full bg-blue-400 h-[900px]'>
+                          <Link href='/'>
+                            hello
+                          </Link>
                       </div>
 
                     </div>

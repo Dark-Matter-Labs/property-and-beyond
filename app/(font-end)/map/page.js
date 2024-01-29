@@ -1,8 +1,15 @@
 import { client } from '@/sanity/lib/client';
 import RiskCard from '@/components/risk';
 
+const riskQuery = `
+*[_type == 'risk']{
+  ...,
+  caseStudies[]->,
+}
+`
+
 async function getData() {
-  const res = await client.fetch(`*[_type == 'risk']{...,}`, { next: { revalidate: 1 } });
+  const res = await client.fetch(riskQuery, { next: { revalidate: 1 } });
 
   return res;
 }
