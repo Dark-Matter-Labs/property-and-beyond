@@ -4,9 +4,7 @@ import { useState } from 'react';
 import { Dialog, Disclosure, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { PortableText } from '@portabletext/react';
-import { FaMinus, FaPlus } from 'react-icons/fa';
-import { Poller_One } from 'next/font/google';
-import caseStudy from '@/sanity/schemas/case-study';
+import { FaMinus, FaPlus, FaArrowRight } from 'react-icons/fa';
 
 export default function RiskCard({ risk, func }) {
   const [open, setOpen] = useState(false);
@@ -67,7 +65,7 @@ export default function RiskCard({ risk, func }) {
                 >
                   <Dialog.Panel className='pointer-events-auto overflow-y-scroll relative ml-10 w-full'>
                     <Transition.Child
-                      as={Fragment}
+                      as='div'
                       enter='ease-in-out duration-500'
                       enterFrom='opacity-0'
                       enterTo='opacity-100'
@@ -75,18 +73,11 @@ export default function RiskCard({ risk, func }) {
                       leaveFrom='opacity-100'
                       leaveTo='opacity-0'
                     >
-                      <div className='absolute float-right top-0 right-0 flex pt-4 pr-8 sm:-ml-10'>
-                        <button
-                          type='button'
-                          className='rounded-md text-green-600'
-                          onClick={() => setOpen(false)}
-                        >
-                          <span className=''>Close panel</span>
-                        </button>
-                      </div>
+                   
                     </Transition.Child>
                     {/* main div for slider */}
                     <div className='flex h-auto flex-col bg-green-400 min-h-screen p-6'>
+                    
                       <div className='w-full h-full bg-red-300 flex flex-row relative'>
                         <div className='top-0 sticky w-1/3 bg-orange-700 h-full flex flex-col p-6'>
                           <div className='text-3xl my-4'>{risk.title}</div>
@@ -102,6 +93,15 @@ export default function RiskCard({ risk, func }) {
                             {risk.riskSubType}
                           </div>
                           <div className='text-lg my-4'>{risk.description}</div>
+                          <div className='relative z-30 bottom-0 left-0 flex'>
+                        <button
+                          type='button'
+                          className=' text-green-600 h-10 w-10 rounded-full bg-white flex items-center justify-center'
+                          onClick={() => setOpen(false)}
+                        >
+                          <FaArrowRight />
+                        </button>
+                      </div>
                         </div>
                         <div className='pl-4 flex flex-col w-2/3 p-6'>
                           {/* PROPERTY Issues */}
