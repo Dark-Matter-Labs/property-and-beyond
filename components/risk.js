@@ -103,7 +103,7 @@ export default function RiskCard({ risk, func }) {
                         </button>
                       </div>
                         </div>
-                        <div className='pl-4 flex flex-col w-2/3 p-6'>
+                        <div className='flex flex-col w-2/3 p-6'>
                           {/* PROPERTY Issues */}
                           <div className='flex flex-col bg-black bg-opacity-40 mb-6 p-4'>
                             <div className='italic font-bold'>Property Issues</div>
