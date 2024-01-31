@@ -17,11 +17,11 @@ export default {
             title: 'Risk Type',
             options: {
                 list: [
-                    {title: 'Climate', value: 'climate'},
-                    {title: 'AI and Innovation', value: 'aiAndInnovation'},
-                    {title: 'Labor', value: 'labor'},
-                    {title: 'Housing and commercial real estate / civic infrastructure', value: 'housingAndCommercial'},
-                    {title: 'Conflict and displacement', value: 'conflictAndDisplacement'}
+                    {title: 'Climate', value: 'Climate'},
+                    {title: 'AI and Innovation', value: 'AI and Innovation'},
+                    {title: 'Labor', value: 'Labor'},
+                    {title: 'Housing and commercial real estate / civic infrastructure', value: 'Housing and commercial real estate / civic infrastructure'},
+                    {title: 'Conflict and displacement', value: 'Conflict and displacement'}
                 ]
             }
         },
@@ -32,11 +32,11 @@ export default {
             options: {
                 list: [
                     {title: 'National Security Threat', value: 'National Security Threat'},
-                    {title: 'Climate Change and Environmental Impact', value: 'climateChange'},
-                    {title: 'Economic and Market Dynamics', value: 'economicDynamics'},
-                    {title: 'Societal and Community Welfare', value: 'societalWelfare'},
-                    {title: 'Governance and Regulatory Challenges', value: 'governanceChallenges'},
-                    {title: 'Political Stability', value: 'politicalStability'},
+                    {title: 'Climate Change and Environmental Impact', value: 'Climate Change and Environmental Impact'},
+                    {title: 'Economic and Market Dynamics', value: 'Economic and Market Dynamics'},
+                    {title: 'Societal and Community Welfare', value: 'Societal and Community Welfare'},
+                    {title: 'Governance and Regulatory Challenges', value: 'Governance and Regulatory Challenges'},
+                    {title: 'Political Stability', value: 'Political Stability'},
                     // {title: '', value: ''},
                 ]
             }
@@ -90,24 +90,18 @@ export default {
             of: [{type: 'block'}]
         },
         {
-            name: 'intermediateSolutions',
+            name: 'solutions',
             type: 'array',
-            title: 'Intermediate solutions',
-            of: [{type: 'titleBlock'}]
+            title: 'Solutions',
+            of: [
+                {
+                  type: 'reference',
+                  to: [
+                    {type: 'solution'},
+                  ]
+                }
+              ]
         },
-        {
-            name: 'thirdHorizonSolutions',
-            type: 'array',
-            title: 'Third Horizon Solutions',
-            of: [{type: 'titleBlock'}]
-        },
-        {
-            name: 'adjacentPossibilities',
-            type: 'array',
-            title: 'Adjacent Possibilities',
-            of: [{type: 'titleBlock'}]
-        },
-
 
     ]
 }

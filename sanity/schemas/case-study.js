@@ -12,6 +12,11 @@ export default {
             title: 'Title',
         },
         {
+            name: 'image',
+            type: 'image',
+            title: 'Image',
+        },
+        {
             name: 'typeOfRisk',
             type: 'array',
             title: 'Type of Risk',

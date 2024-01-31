@@ -2,7 +2,9 @@ import risk from "./schemas/risk"
 import caseStudy from "./schemas/case-study"
 import titleText from "./schemas/title-text"
 import titleBlock from "./schemas/title-block"
+import solution from "./schemas/solution"
+
 
 export const schema = {
-  types: [risk, caseStudy, titleText, titleBlock],
+  types: [risk, caseStudy, titleText, titleBlock, solution],
 }
