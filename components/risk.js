@@ -6,7 +6,7 @@ import { Fragment } from 'react';
 import { PortableText } from '@portabletext/react';
 import { FaMinus, FaPlus, FaArrowRight } from 'react-icons/fa';
 
-export default function RiskCard({ risk, func }) {
+export default function RiskCard({ risk }) {
   const [open, setOpen] = useState(false);
 
   const openRiskDetail = () => {
@@ -212,7 +212,7 @@ export default function RiskCard({ risk, func }) {
                                       <div className='flex flex-col'>
                                         <div className='my-2'>
                                           Location: {study.location}
-                                          {console.log(study)}
+                                     
                                         </div>
                                         <div className='my-2'>date: {study.date}</div>
                                         <div className='my-2'>Description: {study.desctiption}</div>

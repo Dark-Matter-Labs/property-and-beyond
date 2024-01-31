@@ -10,7 +10,8 @@ const riskQuery = `
 `;
 
 async function getData() {
-  const res = await client.fetch(riskQuery, { next: { revalidate: 10 } });
+  const res = await client.fetch(riskQuery, { next: { revalidate: 1 } });
+  
   return res;
 }
 
