@@ -1,8 +1,12 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import { Dialog, Disclosure, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
+import { PortableText } from '@portabletext/react';
+import { FaMinus, FaPlus } from 'react-icons/fa';
+import { Poller_One } from 'next/font/google';
+import caseStudy from '@/sanity/schemas/case-study';
 
 export default function RiskCard({ risk, func }) {
   const [open, setOpen] = useState(false);
@@ -15,7 +19,7 @@ export default function RiskCard({ risk, func }) {
   return (
     <>
       <button
-        className='group h-72 [perspective:1000px] flex flex-col items-center  border-0 relative'
+        className='group h-72 [perspective:1000px] flex flex-col items-center relative'
         onClick={() => openRiskDetail()}
       >
         <div className='relative bg-white h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
@@ -30,11 +34,8 @@ export default function RiskCard({ risk, func }) {
               <div>{risk.title}</div>
             </div>
           </div>
-
-          <div className='absolute inset-0 h-full w-full rounded-lg bg-black text-white px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
-            <div>
-              {risk.description}
-            </div>
+          <div className='absolute border inset-0 h-full w-full rounded-lg bg-black text-white px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
+            <div className='p-4'>{risk.description}</div>
           </div>
         </div>
       </button>
@@ -84,23 +85,193 @@ export default function RiskCard({ risk, func }) {
                         </button>
                       </div>
                     </Transition.Child>
-                    <div className='flex h-auto flex-col bg-black p-6 shadow-xl'>
-                      <div className=''>
-                        <Dialog.Title className='text-gray-900'>
-                          {' '}
-                          <h1 className='mobile sm:desktop text-white'>{risk.title}</h1>
-                        </Dialog.Title>
-                      </div>
-                      <div className='text-white'>{risk.description}</div>
-                      <div className='w-full bg-red-300 h-[900px] flex flex-row relative'>
-                        <div className='top-0 sticky h-12 w-1/3 hover:text-blue-600'>Hello</div>
-                        <div>
-                          {risk.caseStudies.map((caseStudy, id) => (
-                            <div key={id}>{caseStudy.title}</div>
+                    {/* main div for slider */}
+                    <div className='flex h-auto flex-col bg-green-400 min-h-screen p-6'>
+                      <div className='w-full h-full bg-red-300 flex flex-row relative'>
+                        <div className='top-0 sticky w-1/3 bg-orange-700 h-full flex flex-col p-6'>
+                          <div className='text-3xl my-4'>{risk.title}</div>
+                          <div className='relative h-64 w-full mb-4 bg-black rounded-lg'>
+                            <Image
+                              fill
+                              src='/icon.png'
+                              alt='icon'
+                              className='absolute object-fit'
+                            />
+                          </div>
+                          <div className='w-full bg-blue-400 rounded-lg text-lg p-4'>
+                            {risk.riskSubType}
+                          </div>
+                          <div className='text-lg my-4'>{risk.description}</div>
+                        </div>
+                        <div className='pl-4 flex flex-col w-2/3 p-6'>
+                          {/* PROPERTY Issues */}
+                          <div className='flex flex-col bg-black bg-opacity-40 mb-6 p-4'>
+                            <div className='italic font-bold'>Property Issues</div>
+                            <div>
+                              {risk?.propertyIssues?.map((issue, id) => (
+                                <div key={id} className='my-6'>
+                                  <div className='font-semibold'>{issue.title}</div>
+                                  <div>
+                                    <PortableText value={issue.content} />
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                          {/* Section two */}
+                          <div className='flex flex-col bg-blue-900 bg-opacity-50 mb-6'>
+                            <Disclosure>
+                              {({ open }) => (
+                                <>
+                                  {' '}
+                                  <Disclosure.Button className='italic font-bold flex flex-row justify-between items-center p-4'>
+                                    <div>Impacts</div>
+                                    {open ? (
+                                      <FaMinus className='w-4 h-4 mr-4' />
+                                    ) : (
+                                      <FaPlus className='w-4 h-4 mr-4' />
+                                    )}
+                                  </Disclosure.Button>
+                                  <Disclosure.Panel className='flex flex-col px-4 pb-4'>
+                                    <div className='flex flex-col'>
+                                      <div className='text-xl font-semibold mb-2'>
+                                        Direct Impacts
+                                      </div>
+                                      {risk?.directImpacts.map((impact, id) => (
+                                        <div key={id}>
+                                          <div className='font-bold'>{impact.title}</div>
+                                          <div>
+                                            <PortableText value={impact.content} />
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                    <div className='flex flex-col mt-4'>
+                                      <div className='text-xl font-semibold mb-2'>
+                                        Indirect Impacts
+                                      </div>
+                                      {risk?.indirectImpacts.map((impact, id) => (
+                                        <div key={id}>
+                                          <div className='font-bold'>{impact.title}</div>
+                                          <div>
+                                            <PortableText value={impact.content} />
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </Disclosure.Panel>
+                                </>
+                              )}
+                            </Disclosure>
+                          </div>
+                          {/* Section 3 */}
+                          <div className='flex flex-col bg-blue-900 bg-opacity-50 mb-6'>
+                            <Disclosure>
+                              {({ open }) => (
+                                <>
+                                  {' '}
+                                  <Disclosure.Button className='italic font-bold flex flex-row justify-between items-center p-4'>
+                                    <div>PREPAREDNESS</div>
+                                    {open ? (
+                                      <FaMinus className='w-4 h-4 mr-4' />
+                                    ) : (
+                                      <FaPlus className='w-4 h-4 mr-4' />
+                                    )}
+                                  </Disclosure.Button>
+                                  <Disclosure.Panel className='flex flex-col px-4 pb-4'>
+                                    <div className='flex flex-col'>
+                                      <div className=''>
+                                        <PortableText value={risk?.preparedness} />
+                                      </div>
+                                    </div>
+                                  </Disclosure.Panel>
+                                </>
+                              )}
+                            </Disclosure>
+                          </div>
+                          {/* Section 4 */}
+                          <div className='text-2xl'>Case Studies</div>
+                          {risk?.caseStudies.map((study, id) => (
+                            <div
+                              key={id}
+                              className='flex flex-col border-b border-black bg-opacity-50 mb-6'
+                            >
+                              <Disclosure>
+                                {({ open }) => (
+                                  <>
+                                    {' '}
+                                    <Disclosure.Button className='italic font-bold flex flex-row justify-between items-center p-4'>
+                                      <div>{study.title}</div>
+                                      {open ? (
+                                        <FaMinus className='w-4 h-4 mr-4' />
+                                      ) : (
+                                        <FaPlus className='w-4 h-4 mr-4' />
+                                      )}
+                                    </Disclosure.Button>
+                                    <Disclosure.Panel className='flex flex-col px-4 pb-4'>
+                                      <div className='flex flex-col'>
+                                        <div className='my-2'>
+                                          Location: {study.location}
+                                          {console.log(study)}
+                                        </div>
+                                        <div className='my-2'>date: {study.date}</div>
+                                        <div className='my-2'>Description: {study.desctiption}</div>
+                                      </div>
+                                    </Disclosure.Panel>
+                                  </>
+                                )}
+                              </Disclosure>
+                            </div>
                           ))}
+
+                          {/* Section 4 */}
+                          <div className='flex flex-col bg-blue-900 bg-opacity-50 mb-6'>
+                            <Disclosure>
+                              {({ open }) => (
+                                <>
+                                  {' '}
+                                  <Disclosure.Button className='italic font-bold flex flex-row justify-between items-center p-4'>
+                                    <div>Stakeholders</div>
+                                    {open ? (
+                                      <FaMinus className='w-4 h-4 mr-4' />
+                                    ) : (
+                                      <FaPlus className='w-4 h-4 mr-4' />
+                                    )}
+                                  </Disclosure.Button>
+                                  <Disclosure.Panel className='flex flex-col px-4 pb-4'>
+                                    <div className='flex flex-col'>
+                                      <div className=''>
+                                        {risk.stakeholders.map((holder, id) => (
+                                          <div key={id} className='my-2w'>
+                                            <div className='font-bold'>{holder.title}</div>
+                                            <div>
+                                              <PortableText value={holder.content} />
+                                            </div>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  </Disclosure.Panel>
+                                </>
+                              )}
+                            </Disclosure>
+                          </div>
+                          {/* PROPERTY Issues */}
+                          <div className='flex flex-col bg-black bg-opacity-40 p-4'>
+                            <div className='italic font-bold'>Solutions</div>
+                            <div>
+                              {risk?.propertyIssues?.map((issue, id) => (
+                                <div key={id} className='my-6'>
+                                  <div className='font-semibold'>{issue.title}</div>
+                                  <div>
+                                    <PortableText value={issue.content} />
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div className='w-full bg-blue-400 h-[900px]'>hello</div>
                     </div>
                   </Dialog.Panel>
                 </Transition.Child>

@@ -18,23 +18,22 @@ export default function Container({ data }) {
 
   return (
     <div className='flex flex-col relative z-20 h-screen w-full bg-black bg-opacity-50'>
-      <div className='flex flex-col global-margin relative z-30'>
+      <div className='flex flex-col global-margin relative z-30 2xl:min-w-[1280px]'>
         <div className='flex flex-row justify-between mt-10'>
           <div className='flex flex-row'>
+            <div className='flex items-center justify-center mr-3 text-white'>Types of Crisis:</div>
+            <div className='bg-white flex items-center justify-center rounded-md p-2 mr-4'>All</div>
             <div className='bg-white flex items-center justify-center rounded-md p-2 mr-4'>
-              categorie
+              Labour
             </div>
             <div className='bg-white flex items-center justify-center rounded-md p-2 mr-4'>
-              categorie
+              Housing and commercial real estate
             </div>
             <div className='bg-white flex items-center justify-center rounded-md p-2 mr-4'>
-              categorie
+              Climate
             </div>
             <div className='bg-white flex items-center justify-center rounded-md p-2 mr-4'>
-              categorie
-            </div>
-            <div className='bg-white flex items-center justify-center rounded-md p-2 mr-4'>
-              categorie
+              AI and innovation
             </div>
           </div>
           <div className='bg-orange-300 rounded-md p-2 flex items-center justify-center'>
