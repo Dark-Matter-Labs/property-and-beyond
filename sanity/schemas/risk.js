@@ -12,6 +12,16 @@ export default {
             title: 'Risk Title',
         },
         {
+            title: 'Slug',
+            name: 'slug',
+            type: 'slug',
+            options: {
+              source: 'title',
+              inUnique: 'true',
+              slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
+            },
+          },
+        {
             name: 'riskType',
             type: 'string',
             title: 'Risk Type',
