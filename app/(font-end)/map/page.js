@@ -5,19 +5,20 @@ import Container from '@/components/container';
 const riskQuery = `
 *[_type == 'risk']{
   ...,
-  caseStudies[]->,
+  "caseStudies": caseStudies[]->,
+  "solutions": solutions[]->,
 }
 `;
 
 async function getData() {
-  const res = await client.fetch(riskQuery, { next: { revalidate: 1 } });
+  const res = await client.fetch(riskQuery);
   
   return res;
 }
 
 export default async function Map() {
   const data = await getData();
-
+  
   return (
     <>
       <div className='relative flex items-center justify-center h-screen overflow-hidden'>

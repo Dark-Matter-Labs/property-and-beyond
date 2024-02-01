@@ -5,15 +5,16 @@ import { Dialog, Disclosure, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { PortableText } from '@portabletext/react';
 import { FaMinus, FaPlus, FaArrowRight } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 export default function RiskCard({ risk }) {
   const [open, setOpen] = useState(false);
+  const router = useRouter()
 
   const openRiskDetail = () => {
     setOpen(true);
-    // func(risk)
+    // router.push(`/map/${encodeURIComponent(risk.title)}`, undefined, {shallow:true})
   };
-
   return (
     <>
       <button
