@@ -4,25 +4,29 @@ import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { Fragment } from 'react';
 
-export default function Modal2({ children, risk }) {
+export default function Modal({ children, slug }) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-
+  const [risk, setRisk] = useState(slug)
+  
   useEffect(() => {
-    if (risk !== undefined) {
+    if (`/map/${risk}` === pathname) {
       setOpen(true);
     }
-  }, [risk]);
+  },[risk, pathname]);
+
 
   const closeRiskDetail = () => {
     router.push('/map');
     setOpen(false);
+    // setRisk(undefined)
   };
 
   useEffect(() => {
     if (pathname === '/map') {
       setOpen(false);
+      // setRisk(undefined)
     }
   }, [pathname]);
 
@@ -63,7 +67,6 @@ export default function Modal2({ children, risk }) {
                     leaveFrom='opacity-100'
                     leaveTo='opacity-0'
                   ></Transition.Child>
-
                   {children}
                 </Dialog.Panel>
               </Transition.Child>

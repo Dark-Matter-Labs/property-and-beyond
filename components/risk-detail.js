@@ -8,7 +8,6 @@ import { usePathname, useRouter } from 'next/navigation';
 
 export default function RiskDetail({ risk, ...props }) {
   const router = useRouter();
-
   return (
     <div className='flex h-auto flex-col bg-green-400 min-h-screen p-6'>
       <div className='w-full h-full bg-red-300 flex flex-row relative'>
@@ -115,7 +114,7 @@ export default function RiskDetail({ risk, ...props }) {
           </div>
           {/* Section 4 */}
           <div className='text-2xl'>Case Studies</div>
-          {risk?.caseStudies.map((study, id) => (
+          {risk?.caseStudy.map((study, id) => (
             <div key={id} className='flex flex-col border-b border-black bg-opacity-50 mb-6'>
               <Disclosure>
                 {({ open }) => (
@@ -178,11 +177,11 @@ export default function RiskDetail({ risk, ...props }) {
           <div className='flex flex-col bg-black bg-opacity-40 p-4'>
             <div className='italic font-bold'>Solutions</div>
             <div>
-              {risk?.propertyIssues?.map((issue, id) => (
+              {risk?.solution?.map((sol, id) => (
                 <div key={id} className='my-6'>
-                  <div className='font-semibold'>{issue.title}</div>
+                  <div className='font-semibold'>{sol.title}</div>
                   <div>
-                    <PortableText value={issue.content} />
+                    <PortableText value={sol.description} />
                   </div>
                 </div>
               ))}

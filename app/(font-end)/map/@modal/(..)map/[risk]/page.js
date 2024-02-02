@@ -8,7 +8,9 @@ export const riskSlugs = `
 
 const riskQuery = `
 *[_type == "risk" && slug.current == $slug][0] {
- ...,
+  "caseStudy": caseStudies[]->,
+  "solution": solutions[]->,
+  ...,
 }
 `;
 
@@ -27,9 +29,8 @@ async function getData(params) {
 
 export default async function RiskDetailModal({ params }) {
   const risk = await getData(params.risk);
-
   return (
-    <Modal risk={params.risk}>
+    <Modal slug={params.risk}>
       <RiskDetail risk={risk} />
     </Modal>
   );
