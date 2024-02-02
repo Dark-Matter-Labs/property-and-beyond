@@ -18,16 +18,16 @@ async function getData() {
 
 export default async function Map() {
   const data = await getData();
-  
+
   return (
     <>
-      <div className='relative flex items-center justify-center overflow-hidden'>
+      <div className='flex items-center justify-center overflow-hidden h-[calc(100vh-120px)] relative'>
         <Container data={data} />
         <video
           autoPlay
           loop
           muted
-          className='absolute z-10 bg-red-400 w-auto min-w-full min-h-full max-w-none'
+          className='absolute  w-auto min-w-full min-h-full max-w-none overflow-hidden'
         >
           <source src='/video.mp4' type='video/mp4' />
         </video>

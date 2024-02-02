@@ -1,20 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
 import RiskCard from './risk';
+import Link from 'next/link';
+
+
 
 export default function Container({ data }) {
-  const [selected, setSelected] = useState();
-
-  //  const getSelectedRisk = (item) => {
-  //     setSelected(item)
-  //    }
-
-  //    useEffect(() => {
-  //          if (data.indexOf(selected) > 0) {
-  //              data.splice(data.indexOf(selected), 1);
-  //              data.unshift(selected);
-  //          }
-  //    })
 
   const [ category, setCategory ] = useState('all')
   const [filteredRisks, setFilteredRisks] = useState(data)
@@ -70,7 +61,9 @@ export default function Container({ data }) {
         </div>
         <div className='grid grid-cols-4 gap-6 my-10'>
           {filteredRisks.map((risk, id) => (
-            <RiskCard key={id} risk={risk} />
+            <Link key={id} href={`/map/${risk.slug.current}`} className='h-72 flex flex-col items-center relative'>
+              <RiskCard risk={risk} />
+            </Link>
           ))}
         </div>
       </div>

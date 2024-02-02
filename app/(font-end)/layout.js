@@ -3,7 +3,7 @@ import Footer from '@/components/footer';
 
 export default function Layout({ children }) {
   return (
-    <div className='flex flex-col justify-between max-h-screen'>
+    <div className='flex flex-col justify-between min-h-screen'>
       <NavBar />
       <div className=''>{children}</div>
       <Footer />
