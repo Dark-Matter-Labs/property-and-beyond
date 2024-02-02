@@ -3,32 +3,34 @@ import { useEffect, useState } from 'react';
 import RiskCard from './risk';
 import Link from 'next/link';
 
-
-
 export default function Container({ data }) {
-
-  const [ category, setCategory ] = useState('all')
-  const [filteredRisks, setFilteredRisks] = useState(data)
-
+  const [category, setCategory] = useState('all');
+  const [filteredRisks, setFilteredRisks] = useState(data);
 
   useEffect(() => {
     if (data) {
-      let filteredRisks = data
+      let filteredRisks = data;
       if (category === 'Labour') {
-        setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'Labor'))
+        setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'Labor'));
       } else if (category === 'Climate') {
-        setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'Climate'))
+        setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'Climate'));
       } else if (category === 'AI and Innovation') {
-        setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'AI and Innovation'))
+        setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'AI and Innovation'));
       } else if (category === 'Housing and commercial real estate / civic infrastructure') {
-        setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'Housing and commercial real estate / civic infrastructure'))
+        setFilteredRisks(
+          filteredRisks?.filter(
+            (risk) => risk.riskType === 'Housing and commercial real estate / civic infrastructure',
+          ),
+        );
       } else if (category === 'Conflict and displacement') {
-        setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'Conflict and displacement'))
+        setFilteredRisks(
+          filteredRisks?.filter((risk) => risk.riskType === 'Conflict and displacement'),
+        );
       } else {
-        setFilteredRisks(filteredRisks)
+        setFilteredRisks(filteredRisks);
       }
     }
-  }, [category, data])
+  }, [category, data]);
 
   return (
     <div className='flex flex-col relative z-20 h-[calc(100vh-120px)] w-full bg-black bg-opacity-50 overflow-auto'>
@@ -36,23 +38,43 @@ export default function Container({ data }) {
         <div className='flex flex-row justify-between mt-10'>
           <div className='flex flex-row'>
             <div className='flex items-center justify-center mr-3 text-white'>Types of Crisis:</div>
-            <button onClick={() => setCategory('all')} className={`${category === 'all' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}>
+            <button
+              onClick={() => setCategory('all')}
+              className={`${category === 'all' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+            >
               All
             </button>
-            <button onClick={() => setCategory('Labour')} className={`${category === 'Labour' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}>
+            <button
+              onClick={() => setCategory('Labour')}
+              className={`${category === 'Labour' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+            >
               Labour
             </button>
-            <button onClick={() => setCategory('Housing and commercial real estate / civic infrastructure')} className={`${category === 'Housing and commercial real estate / civic infrastructure' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}>
+            <button
+              onClick={() =>
+                setCategory('Housing and commercial real estate / civic infrastructure')
+              }
+              className={`${category === 'Housing and commercial real estate / civic infrastructure' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+            >
               Housing and commercial real estate
             </button>
-            <button  onClick={() => setCategory('Climate')} className={`${category === 'Climate' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}>
+            <button
+              onClick={() => setCategory('Climate')}
+              className={`${category === 'Climate' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+            >
               Climate
             </button>
-            <button onClick={() => setCategory('AI and Innovation')} className={`${category === 'AI and Innovation' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}>
+            <button
+              onClick={() => setCategory('AI and Innovation')}
+              className={`${category === 'AI and Innovation' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+            >
               AI and innovation
             </button>
-            <button onClick={() => setCategory('Conflict and displacement')} className={`${category === 'Conflict and displacement' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}>
-            Conflict and displacement
+            <button
+              onClick={() => setCategory('Conflict and displacement')}
+              className={`${category === 'Conflict and displacement' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+            >
+              Conflict and displacement
             </button>
           </div>
           <div className='bg-orange-300 rounded-md p-2 flex items-center justify-center'>
@@ -61,7 +83,11 @@ export default function Container({ data }) {
         </div>
         <div className='grid grid-cols-4 gap-6 my-10'>
           {filteredRisks.map((risk, id) => (
-            <Link key={id} href={`/map/${risk.slug.current}`} className='h-72 flex flex-col items-center relative'>
+            <Link
+              key={id}
+              href={`/map/${risk.slug.current}`}
+              className='h-72 flex flex-col items-center relative'
+            >
               <RiskCard risk={risk} />
             </Link>
           ))}

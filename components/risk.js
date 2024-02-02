@@ -1,13 +1,10 @@
 'use client';
 import Image from 'next/image';
 
-
 export default function RiskCard({ risk }) {
   return (
-    <>  
-      <div
-        className='group [perspective:1000px] w-full h-full flex flex-col items-center relative'
-      >
+    <>
+      <div className='group [perspective:1000px] w-full h-full flex flex-col items-center relative'>
         <div className='relative bg-white h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
           <div className='absolute inset-0 p-4'>
             <div className='relative w-full bg-black h-28 rounded-lg'>

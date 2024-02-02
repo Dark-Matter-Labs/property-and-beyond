@@ -1,7 +1,6 @@
-import RiskDetail from "@/components/risk-detail";
-import { client } from "@/sanity/lib/client";
-import Modal from "@/components/modal";
-
+import RiskDetail from '@/components/risk-detail';
+import { client } from '@/sanity/lib/client';
+import Modal from '@/components/modal';
 
 export const riskSlugs = `
 *[_type == "risk" && defined(slug.current)][].slug.current
@@ -26,13 +25,12 @@ async function getData(params) {
   return res;
 }
 
-export default async function RiskDetailModal({params}) {
+export default async function RiskDetailModal({ params }) {
+  const risk = await getData(params.risk);
 
-    const risk = await getData(params.risk)
-
-    return (
-        <Modal risk={params.risk}>
-            <RiskDetail risk={risk}/>
-        </Modal>
-    )
+  return (
+    <Modal risk={params.risk}>
+      <RiskDetail risk={risk} />
+    </Modal>
+  );
 }

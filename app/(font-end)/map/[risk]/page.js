@@ -1,6 +1,5 @@
-import RiskDetail from "@/components/risk-detail";
-import { client } from "@/sanity/lib/client";
-
+import RiskDetail from '@/components/risk-detail';
+import { client } from '@/sanity/lib/client';
 
 export const riskSlugs = `
 *[_type == "risk" && defined(slug.current)][].slug.current
@@ -25,11 +24,11 @@ async function getData(params) {
   return res;
 }
 
-export default async function RiskDetailPage({params}) {
-    const risk = await getData(params.risk)
-    return (
-        <div>
-            <RiskDetail risk={risk}/>
-        </div>
-    )
+export default async function RiskDetailPage({ params }) {
+  const risk = await getData(params.risk);
+  return (
+    <div>
+      <RiskDetail risk={risk} />
+    </div>
+  );
 }

@@ -12,7 +12,7 @@ const riskQuery = `
 
 async function getData() {
   const res = await client.fetch(riskQuery);
-  
+
   return res;
 }
 
