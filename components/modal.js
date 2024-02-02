@@ -8,14 +8,13 @@ export default function Modal({ children, slug }) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-  const [risk, setRisk] = useState(slug)
-  
+  const [risk, setRisk] = useState(slug);
+
   useEffect(() => {
     if (`/map/${risk}` === pathname) {
       setOpen(true);
     }
-  },[risk, pathname]);
-
+  }, [risk, pathname]);
 
   const closeRiskDetail = () => {
     router.push('/map');

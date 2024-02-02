@@ -17,7 +17,7 @@ async function getData() {
 
 export default async function Map() {
   const data = await getData();
-  return (  
+  return (
     <>
       <div className='flex items-center justify-center overflow-hidden h-[calc(100vh-120px)] relative'>
         <Container data={data} />
