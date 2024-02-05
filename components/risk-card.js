@@ -10,7 +10,7 @@ export default function RiskCard({ risk }) {
     return (
       <>
       <div className='group [perspective:1000px] w-full h-full flex flex-col items-center relative'>
-        <div className='relative overflow:hidden bg-white/70 border-2 border-[#40A3FF] h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
+        <div className='relative bg-white/70 border-2 border-[#40A3FF] h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
           <div className='absolute inset-0 p-4'>
             <div className='relative w-full bg-black h-28 rounded-lg'>
               <Image fill src='/icon.png' alt='icon' className='absolute object-fit p-4' />
@@ -22,7 +22,7 @@ export default function RiskCard({ risk }) {
               <div>{risk.title}</div>
             </div>
           </div>
-          <div className='absolute top-0 right-0 w-full h-full border-inherit bg-[#40A3FF] text-white px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
+          <div className='absolute top-0 right-0 w-full h-full border-inherit bg-[#40A3FF] text-black px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
             <div className='p-4'>{risk.description}</div>
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function RiskCard({ risk }) {
     return (
     <>
       <div className='group [perspective:1000px] w-full h-full flex flex-col items-center relative'>
-        <div className='relative overflow:hidden bg-white/70 border-2 border-[#40FF8C] h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
+        <div className='relative bg-white/70 border-2 border-[#40FF8C] h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
           <div className='absolute inset-0 p-4'>
             <div className='relative w-full bg-black h-28 rounded-lg'>
               <Image fill src='/icon.png' alt='icon' className='absolute object-fit p-4' />
@@ -45,7 +45,7 @@ export default function RiskCard({ risk }) {
               <div>{risk.title}</div>
             </div>
           </div>
-          <div className='absolute top-0 right-0 w-full h-full border-inherit bg-[#40FF8C] text-white px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
+          <div className='absolute top-0 right-0 w-full h-full border-inherit bg-[#40FF8C] text-black px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
             <div className='p-4'>{risk.description}</div>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function RiskCard({ risk }) {
     return (
       <>
       <div className='group [perspective:1000px] w-full h-full flex flex-col items-center relative'>
-        <div className='relative overflow:hidden bg-white/70 border-2 border-[#FFBE40] h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
+        <div className='relative bg-white/70 border-2 border-[#FFBE40] h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
           <div className='absolute inset-0 p-4'>
             <div className='relative w-full bg-black h-28 rounded-lg'>
               <Image fill src='/icon.png' alt='icon' className='absolute object-fit p-4' />
@@ -68,7 +68,7 @@ export default function RiskCard({ risk }) {
               <div>{risk.title}</div>
             </div>
           </div>
-          <div className='absolute top-0 right-0 w-full h-full border-inherit  bg-[#FFBE40] text-white px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
+          <div className='absolute top-0 right-0 w-full h-full border-inherit  bg-[#FFBE40] text-black px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
             <div className='p-4'>{risk.description}</div>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function RiskCard({ risk }) {
     return (
       <>
       <div className='group [perspective:1000px] w-full h-full flex flex-col items-center relative'>
-        <div className='relative overflow:hidden bg-white/70 border-2 border-[#C970FF] h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
+        <div className='relative bg-white/70 border-2 border-[#C970FF] h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
           <div className='absolute inset-0 p-4'>
             <div className='relative w-full bg-black h-28 rounded-lg'>
               <Image fill src='/icon.png' alt='icon' className='absolute object-fit p-4' />
@@ -91,7 +91,7 @@ export default function RiskCard({ risk }) {
               <div>{risk.title}</div>
             </div>
           </div>
-          <div className='absolute top-0 right-0 w-full h-full border-inherit  bg-[#C970FF] text-white px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
+          <div className='absolute top-0 right-0 w-full h-full border-inherit  bg-[#C970FF] text-black px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
             <div className='p-4'>{risk.description}</div>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function RiskCard({ risk }) {
     return (
       <>
       <div className='group [perspective:1000px] w-full h-full flex flex-col items-center relative'>
-        <div className='relative overflow:hidden bg-white/70 border-2 border-[#FFA5A5] h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
+        <div className='relative bg-white/70 border-2 border-[#FFA5A5] h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]'>
           <div className='absolute inset-0 p-4'>
             <div className='relative w-full bg-black h-28 rounded-lg'>
               <Image fill src='/icon.png' alt='icon' className='absolute object-fit p-4' />
@@ -114,7 +114,7 @@ export default function RiskCard({ risk }) {
               <div>{risk.title}</div>
             </div>
           </div>
-          <div className='absolute top-0 right-0 w-full h-full border-inherit bg-[#FFA5A5] text-white px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
+          <div className='absolute top-0 right-0 w-full h-full border-inherit bg-[#FFA5A5] text-black px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'>
             <div className='p-4'>{risk.description}</div>
           </div>
         </div>
