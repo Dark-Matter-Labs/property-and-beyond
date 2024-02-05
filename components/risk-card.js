@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 
 export default function RiskCard({ risk }) {
-  console.log(risk.riskType)
 
   if (risk.riskType === 'Conflict and displacement' ) {
     return (
