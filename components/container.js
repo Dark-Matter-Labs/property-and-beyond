@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import RiskCard from './risk';
+import RiskCard from './risk-card';
 import Link from 'next/link';
 
 export default function Container({ data }) {
@@ -46,7 +46,7 @@ export default function Container({ data }) {
             </button>
             <button
               onClick={() => setCategory('Labour')}
-              className={`${category === 'Labour' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'Labour' ? 'bg-[#40FF8C]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               Labour
             </button>
@@ -54,31 +54,31 @@ export default function Container({ data }) {
               onClick={() =>
                 setCategory('Housing and commercial real estate / civic infrastructure')
               }
-              className={`${category === 'Housing and commercial real estate / civic infrastructure' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'Housing and commercial real estate / civic infrastructure' ? 'bg-[#FFBE40]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               Housing and commercial real estate
             </button>
             <button
               onClick={() => setCategory('Climate')}
-              className={`${category === 'Climate' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'Climate' ? 'bg-[#C970FF]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               Climate
             </button>
             <button
               onClick={() => setCategory('AI and Innovation')}
-              className={`${category === 'AI and Innovation' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'AI and Innovation' ? 'bg-[#FFA5A5]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               AI and innovation
             </button>
             <button
               onClick={() => setCategory('Conflict and displacement')}
-              className={`${category === 'Conflict and displacement' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'Conflict and displacement' ? 'bg-[#40A3FF]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               Conflict and displacement
             </button>
           </div>
-          <div className='bg-orange-300 rounded-md p-2 flex items-center justify-center'>
-            downloard
+          <div className='bg-orange-400 rounded-md p-2 flex items-center justify-center'>
+            Download
           </div>
         </div>
         <div className='grid grid-cols-4 gap-6 my-10'>

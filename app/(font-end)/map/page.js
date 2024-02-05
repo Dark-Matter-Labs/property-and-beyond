@@ -1,5 +1,5 @@
 import { client } from '@/sanity/lib/client';
-import RiskCard from '@/components/risk';
+import RiskCard from '@/components/risk-card';
 import Container from '@/components/container';
 
 const riskQuery = `

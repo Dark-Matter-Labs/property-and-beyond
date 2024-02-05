@@ -30,7 +30,7 @@ export default async function RiskDetailPage({ params }) {
   const risk = await getData(params.risk);
 
   return (
-    <div>
+    <div className=''>
       <RiskDetail risk={risk} />
     </div>
   );
