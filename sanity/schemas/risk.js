@@ -21,6 +21,16 @@ export default {
               slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
             },
           },
+          {
+            name: 'icon',
+            type: 'image',
+            title: 'Risk Icon',
+          },
+          {
+            name: 'alt',
+            type: 'string',
+            title: 'Icon Alt Text'
+        },
         {
             name: 'riskType',
             type: 'string',
@@ -79,7 +89,7 @@ export default {
             name: 'propertyIssues',
             type: 'array',
             title: 'Property Issues',
-            of: [{type: 'titleBlock'}]
+            of: [{type: 'propertyIssue'}]
         },
         {
             name: 'directImpacts',

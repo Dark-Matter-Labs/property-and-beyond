@@ -41,8 +41,9 @@ export default {
         },  
         {
             name: 'desctiption',
-            type: 'text',
-            title: 'Event Description',
+            type: 'array',
+            title: 'Case Study Description',
+            of: [{type: 'block'}]
         },
         {
             name: 'references',
