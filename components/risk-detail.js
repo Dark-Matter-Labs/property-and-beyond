@@ -174,6 +174,7 @@ export default function RiskDetail({ risk, ...props }) {
             </Disclosure>
           </div>
           {/* PROPERTY Issues */}
+          {/*  
           <div className='flex flex-col bg-black bg-opacity-40 p-4'>
             <div className='italic font-bold'>Solutions</div>
             <div>
@@ -187,7 +188,9 @@ export default function RiskDetail({ risk, ...props }) {
               ))}
             </div>
           </div>
+          */}
         </div>
+              
       </div>
     </div>
   );
