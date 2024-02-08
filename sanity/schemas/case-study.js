@@ -38,36 +38,11 @@ export default {
             name: 'date',
             type: 'string',
             title: 'Date',
-        },
-        {
-            name: 'background',
-            type: 'text',
-            title: 'Background',
-        },
-     
+        },  
         {
             name: 'desctiption',
             type: 'text',
             title: 'Event Description',
-        },
-
-        {
-            name: 'economicImpacts',
-            type: 'array',
-            title: 'Economic Impacts',
-            of: [{type: 'block'}]
-        },
-        {
-            name: 'sociopoliticalImpacts',
-            type: 'array',
-            title: 'Sociopolitical Impacts',
-            of: [{type: 'block'}]
-        },
-        {
-            name: 'outcomes',
-            type: 'array',
-            title: 'Outcome and Lessons Learned',
-            of: [{type: 'block'}]
         },
         {
             name: 'references',
