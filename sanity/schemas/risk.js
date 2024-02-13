@@ -39,9 +39,9 @@ export default {
                 list: [
                     {title: 'Climate', value: 'Climate'},
                     {title: 'AI and Innovation', value: 'AI and Innovation'},
-                    {title: 'Labor', value: 'Labor'},
-                    {title: 'Housing and commercial real estate / civic infrastructure', value: 'Housing and commercial real estate / civic infrastructure'},
-                    {title: 'Conflict and displacement', value: 'Conflict and displacement'}
+                    {title: 'Labor and Economic Security', value: 'Labor and Economic Security'},
+                    {title: 'Housing and Commercial Real Estate / Civic Infrastructure', value: 'Housing and Commercial Real Estate / Civic Infrastructure'},
+                    {title: 'Conflict and Displacement', value: 'Conflict and Displacement'}
                 ]
             }
         },
