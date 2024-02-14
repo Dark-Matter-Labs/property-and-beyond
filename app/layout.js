@@ -1,9 +1,10 @@
-import { Inter } from 'next/font/google';
+// import { Inter } from 'next/font/google';
 import './globals.css';
-import NavBar from '@/components/navbar';
-import Footer from '@/components/footer';
 
-const inter = Inter({ subsets: ['latin'] });
+import { Source_Sans_3 } from 'next/font/google'
+
+// const inter = Inter({ subsets: ['latin'] });
+const source = Source_Sans_3({ subsets: ['latin'],  display: 'swap',})
 
 export const metadata = {
   title: 'Property and Beyond',
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>Property and Beyond</title>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={source.className}>{children}</body>
     </html>
   );
 }

@@ -1,13 +1,18 @@
 import Link from 'next/link';
+import Header from '@/components/header';
+import SideMenu from '@/components/side-menu';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between'>
-      <div className='h-96 bg-red-300 w-full'>header</div>
-      <div className='h-96 bg-green-200 w-full'>
-        <Link href='/map'>Politics for Change</Link>
+    <main className='flex min-h-screen flex-col items-center'>
+      <Header />
+      <div className='relative bg-red-200 w-full h-screen'>
+        <div className='global-margin'>
+          test content
+        </div>
+        <SideMenu />
       </div>
-      <div className='h-96 bg-blue-300 w-full'>Proof of possibility</div>
+  
     </main>
   );
 }

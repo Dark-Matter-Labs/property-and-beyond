@@ -11,3 +11,18 @@
     @apply 2xl:mx-auto;
   }
 }
+
+
+h1 {
+  @apply text-6xl;
+}
+
+h2 {
+  @apply text-[55px] uppercase
+}
+
+.menu {
+  @apply text-xl uppercase text-[#AD76F4]
+}
+
+
