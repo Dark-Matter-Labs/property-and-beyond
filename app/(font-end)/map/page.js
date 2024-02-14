@@ -11,7 +11,7 @@ const riskQuery = `
 `;
 
 async function getData() {
-  const res = await client.fetch(riskQuery);
+  const res = await client.fetch(riskQuery, { next: { tags: ['risks'] } });
   return res;
 }
 
