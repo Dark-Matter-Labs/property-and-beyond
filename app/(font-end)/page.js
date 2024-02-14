@@ -4,6 +4,8 @@ import { client } from '@/sanity/lib/client';
 import { PortableText } from '@portabletext/react';
 import { HPcomponents } from '@/lib/portableText';
 import Link from 'next/link';
+import Image from 'next/image';
+import Card from '@/components/card';
 
 const hpQuery = `
   *[_type == "homePage"][0] {
@@ -108,14 +110,13 @@ export default async function Home() {
               <h2 className='mb-8'>Proofs of Possibility</h2>
               <PortableText value={data.proofsOfPossibility} components={HPcomponents} />
             </div>
-            <div className='grid grid-cols-2 gap-6 max-w-4xl pb-24'>
-              <div className='border border-black h-[520px] w-96'>card 1</div>
-              <div className='border border-black h-[520px] w-96'>card 2</div>
-              <div className='border border-black h-[520px] w-96'>card 3</div>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl pb-24'>
+              <Card />
+              <Card />
+              <Card />
             </div>
           </div>
         </div>
-
         <SideMenu />
       </div>
     </main>
