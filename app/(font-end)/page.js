@@ -7,7 +7,7 @@ export default function Home() {
     <main className='flex min-h-screen flex-col items-center'>
       <Header />
       <div className='relative bg-red-200 w-full h-screen'>
-        <div className='global-margin'>
+        <div className='global-margin h-96' id='section-1'>
           test content
         </div>
         <SideMenu />
