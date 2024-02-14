@@ -39,9 +39,9 @@ export default {
                 list: [
                     {title: 'Climate', value: 'Climate'},
                     {title: 'AI and Innovation', value: 'AI and Innovation'},
-                    {title: 'Labor', value: 'Labor'},
-                    {title: 'Housing and commercial real estate / civic infrastructure', value: 'Housing and commercial real estate / civic infrastructure'},
-                    {title: 'Conflict and displacement', value: 'Conflict and displacement'}
+                    {title: 'Labor and Economic Security', value: 'Labor and Economic Security'},
+                    {title: 'Housing and Commercial Real Estate / Civic Infrastructure', value: 'Housing and Commercial Real Estate / Civic Infrastructure'},
+                    {title: 'Conflict and Displacement', value: 'Conflict and Displacement'}
                 ]
             }
         },
@@ -57,7 +57,10 @@ export default {
                     {title: 'Societal and Community Welfare', value: 'Societal and Community Welfare'},
                     {title: 'Governance and Regulatory Challenges', value: 'Governance and Regulatory Challenges'},
                     {title: 'Political Stability', value: 'Political Stability'},
-                    // {title: '', value: ''},
+                    {title: 'Water Resource Challenges', value: 'Water Resource Challenges'},
+                    {title: 'Energy and Resource Scarcity', value: 'Energy and Resource Scarcity'},
+                    {title: 'Socio-Economic Impacts and Humanitarian Crises', value: 'Socio-Economic Impacts and Humanitarian Crises'},
+                    {title: 'Industrial and Technological Risks', value: 'Industrial and Technological Risks'},
                 ]
             }
         },
