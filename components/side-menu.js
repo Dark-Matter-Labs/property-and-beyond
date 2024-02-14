@@ -1,28 +1,95 @@
-import { Link } from "react-scroll"
+'use client';
+import { Link as ScrollLink } from 'react-scroll';
 
 export default function SideMenu() {
-    return (
-        <div className='w-96 absolute h-full top-0 right-0 my-10'>
-        <ul className="sticky top-16">
-          <li className='menu mb-6'>
-          PROPERTY & BEYOND LAB
-          </li>
-          <li className='menu mb-6'>
-          POLITICS OF CHANGE
-          </li>
-          <li className='menu mb-6'> 
-          PROOFS OF POSSIBILIY
-          </li>
-          <li className='menu mb-6'>
-          JOIN US
-          </li>
-          <li className='menu mb-6'>
-          CONFERENCE
-          </li>
-          <li className='menu mb-6'>
-          PARTNERS
-          </li>
-        </ul>
-      </div>
-    )
+  return (
+    <div className='h-full absolute top-0 right-12 lg:right-24 xl:right-48 2xl:right-64 my-10'>
+      <ul className='sticky top-16 min-w-[230px]'>
+        <li className='menu mb-6 hover:cursor-pointer'>
+          <ScrollLink
+            to='section-1'
+            smooth={true}
+            duration={500}
+            offset={0}
+            spy={true}
+            activeClass='font-bold transition-all duration-300 ease-in-out'
+          >
+            PROPERTY & BEYOND LAB
+          </ScrollLink>
+        </li>
+        <li className='menu mb-6 hover:cursor-pointer'>
+          <ScrollLink
+            to='section-2'
+            smooth={true}
+            duration={500}
+            offset={0}
+            spy={true}
+            activeClass='font-bold transition-all duration-300 ease-in-out'
+          >
+            POLITICS OF CHANGE
+          </ScrollLink>
+        </li>
+        <li className='menu mb-6 hover:cursor-pointer'>
+          <ScrollLink
+            to='section-3'
+            smooth={true}
+            duration={500}
+            offset={0}
+            spy={true}
+            activeClass='font-bold transition-all duration-300 ease-in-out'
+          >
+            CAPABILITIES
+          </ScrollLink>
+        </li>
+        <li className='menu mb-6 hover:cursor-pointer'>
+          <ScrollLink
+            to='section-4'
+            smooth={true}
+            duration={500}
+            offset={0}
+            spy={true}
+            activeClass='font-bold transition-all duration-300 ease-in-out'
+          >
+            PROOFS OF POSSIBILIY
+          </ScrollLink>
+        </li>
+        <li className='menu mb-6 hover:cursor-pointer'>
+          <ScrollLink
+            to='section-5'
+            smooth={true}
+            duration={500}
+            offset={0}
+            spy={true}
+            activeClass='font-bold transition-all duration-300 ease-in-out'
+          >
+            JOIN US
+          </ScrollLink>
+        </li>
+        <li className='menu mb-6 hover:cursor-pointer'>
+          <ScrollLink
+            to='section-6'
+            smooth={true}
+            duration={500}
+            offset={0}
+            spy={true}
+            activeClass='font-bold transition-all duration-300 ease-in-out'
+          >
+            CONFERENCE
+          </ScrollLink>
+        </li>
+        <li className='menu mb-6 hover:cursor-pointer'>
+          <ScrollLink
+            to='section-7'
+            smooth={true}
+            duration={500}
+            offset={0}
+            spy={true}
+            activeClass='font-bold transition-all duration-300 ease-in-out'
+          >
+            PARTNERS
+          </ScrollLink>
+        </li>
+      </ul>
+    </div>
+  );
 }

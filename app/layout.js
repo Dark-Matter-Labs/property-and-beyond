@@ -1,10 +1,10 @@
 // import { Inter } from 'next/font/google';
 import './globals.css';
 
-import { Source_Sans_3 } from 'next/font/google'
+import { Source_Sans_3 } from 'next/font/google';
 
 // const inter = Inter({ subsets: ['latin'] });
-const source = Source_Sans_3({ subsets: ['latin'],  display: 'swap',})
+const source = Source_Sans_3({ subsets: ['latin'], display: 'swap' });
 
 export const metadata = {
   title: 'Property and Beyond',

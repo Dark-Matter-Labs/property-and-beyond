@@ -4,8 +4,9 @@ import titleText from "./schemas/title-text"
 import titleBlock from "./schemas/title-block"
 import solution from "./schemas/solution"
 import propertyIssue from "./schemas/property-issue"
-
+import homePage from "./schemas/homepage"
+import textBlock from "./schemas/text-block"
 
 export const schema = {
-  types: [risk, caseStudy, titleText, titleBlock, solution, propertyIssue],
+  types: [risk, caseStudy, titleText, titleBlock, solution, propertyIssue, homePage, textBlock],
 }
