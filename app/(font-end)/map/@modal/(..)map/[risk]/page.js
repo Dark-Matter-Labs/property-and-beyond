@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 
 async function getData(params) {
   const slug = params;
-  const res = await client.fetch(riskQuery, { slug },{ next: { tags: ['riskDetail'] } } );
+  const res = await client.fetch(riskQuery, { slug }, { next: { tags: ['riskDetail'] } });
   return res;
 }
 

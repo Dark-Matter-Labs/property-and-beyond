@@ -190,7 +190,6 @@ export default function RiskDetail({ risk, ...props }) {
           </div>
           */}
         </div>
-              
       </div>
     </div>
   );
