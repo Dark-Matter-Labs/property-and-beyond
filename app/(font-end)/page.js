@@ -119,27 +119,34 @@ export default async function Home() {
         </div>
 
         {/* SECTION 5 - Join us */}
-        <div className='w-[calc(w-screen - 17px)] bg-[url("/join-us.png")] bg-cover h-[535px]' name='section-5'>
-              <div className='global-margin max-w-2xl text-white bg-transparent'>
-              <div className='max-w-2xl py-24'>
-                <h2 className='mb-8'>Join Us</h2>
-                <p className='intro mb-20'>Join us in envisioning and co-designing futures of property, ownership and beyond. </p>
-                <button
-                  href='/map'
-                  className='hover:bg-[#AD76F4] text-[#AD76F4] border-2 border-[#AD76F4] w-80 rounded-[33px] items-center justify-center hover:text-white'
-                >
-                  <div className='py-1 text-[21px] font-semibold'>Contact us</div>
-                </button>
-              </div>
+        <div
+          className='w-[calc(w-screen - 17px)] bg-[url("/join-us.png")] bg-cover h-[535px]'
+          name='section-5'
+        >
+          <div className='global-margin max-w-2xl text-white bg-transparent'>
+            <div className='max-w-2xl py-24'>
+              <h2 className='mb-8'>Join Us</h2>
+              <p className='intro mb-20'>
+                Join us in envisioning and co-designing futures of property, ownership and beyond. 
+              </p>
+              <button
+                href='/map'
+                className='hover:bg-[#AD76F4] text-[#AD76F4] border-2 border-[#AD76F4] w-80 rounded-[33px] items-center justify-center hover:text-white'
+              >
+                <div className='py-1 text-[21px] font-semibold'>Contact us</div>
+              </button>
             </div>
           </div>
-          {/* SECTION 6 - Conference */}
-          <div className='bg-black w-[calc(w-screen - 17px)]'>
+        </div>
+        {/* SECTION 6 - Conference */}
+        <div className='bg-black w-[calc(w-screen - 17px)]'>
           <div className='global-margin max-w-2xl bg-black text-white' name='section-6'>
             <div className='max-w-2xl py-20'>
-            <div className='uppercase text-[36px]'>conference:</div>
-            <h2 className=''>What and how we own</h2>
-            <div className='mb-8 text-[30px] text-[#AD76F4]'><span className='font-bold'>March 1, 2024</span> in Oakland, CA</div>
+              <div className='uppercase text-[36px]'>conference:</div>
+              <h2 className=''>What and how we own</h2>
+              <div className='mb-8 text-[30px] text-[#AD76F4]'>
+                <span className='font-bold'>March 1, 2024</span> in Oakland, CA
+              </div>
               <PortableText value={data.conference} components={HPcomponents} />
             </div>
           </div>
@@ -147,33 +154,25 @@ export default async function Home() {
         </div>
         {/* SECTION 7 - Partners */}
         <div className='bg-white w-[calc(w-screen - 17px)]' name='section-7'>
-            <div className='global-margin max-w-2xl bg-white text-black'>
-              <div className='max-w-2xl py-24'>
-                <h2 className='mb-8'>Our team</h2>
-                <p className='intro mb-20'>Many people have worked on this project. Thanks to our partners and collaborators: </p>
-                <div className='grid grid-cols-2 md:grid-cols-4 mb-20'>
-                  <div>
-                    logo
-                  </div>
-                  <div>
-                    logo
-                  </div>
-                  <div>
-                    logo
-                  </div>
-                  <div>
-                    logo
-                  </div>
-                </div>
+          <div className='global-margin max-w-2xl bg-white text-black'>
+            <div className='max-w-2xl py-24'>
+              <h2 className='mb-8'>Our team</h2>
+              <p className='intro mb-20'>
+                Many people have worked on this project. Thanks to our partners and collaborators:{' '}
+              </p>
+              <div className='grid grid-cols-2 md:grid-cols-4 mb-20'>
+                <div>logo</div>
+                <div>logo</div>
+                <div>logo</div>
+                <div>logo</div>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* END DECO */}
-          
-          <div className="bg-[url('/footer-deco.png')] bg-contain lg:bg-auto lg:bg-left lg:bg-no-repeat	bg-black h-[200px] md:h-[325px] w-full ">
-       
-          </div>
+        {/* END DECO */}
+
+        <div className="bg-[url('/footer-deco.png')] bg-contain lg:bg-auto lg:bg-left lg:bg-no-repeat	bg-black h-[200px] md:h-[325px] w-full "></div>
 
         <SideMenu />
       </div>

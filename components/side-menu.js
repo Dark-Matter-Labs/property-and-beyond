@@ -3,7 +3,7 @@ import { Link as ScrollLink } from 'react-scroll';
 
 export default function SideMenu() {
   return (
-    <div className='h-full absolute top-0 right-12 lg:right-24 xl:right-48 2xl:right-64 my-10'>
+    <div className='h-full hidden md:block absolute top-0 right-12 lg:right-24 xl:right-48 2xl:right-64 my-10'>
       <ul className='sticky top-48 min-w-[230px]'>
         <li className='menu mb-6 hover:cursor-pointer'>
           <ScrollLink
