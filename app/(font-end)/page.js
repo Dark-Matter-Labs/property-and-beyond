@@ -165,7 +165,7 @@ export default async function Home() {
               <p className='intro mb-20'>
                 Many people have worked on this project. Thanks to our partners and collaborators:{' '}
               </p>
-              <div className='grid grid-cols-2 md:grid-cols-2 gap-6 mb-20'>
+              <div className='flex flex-wrap gap-6 mb-20'>
                 <div>
                   <Image
                     src='/DMLogo-black.png'
