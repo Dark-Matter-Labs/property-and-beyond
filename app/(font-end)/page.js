@@ -27,7 +27,7 @@ export default async function Home() {
         {/* SECTION ONE - intro */}
         <div className='bg-black w-[calc(w-screen - 17px)]'>
           <div className='global-margin max-w-2xl bg-black text-white' name='section-1'>
-            <div className='max-w-2xl py-20'>
+            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
               <PortableText value={data.intro} components={HPcomponents} />
             </div>
           </div>
@@ -36,7 +36,7 @@ export default async function Home() {
         <div name='section-2'>
           <div className='bg-white w-[calc(w-screen - 17px)]'>
             <div className='global-margin max-w-2xl bg-white text-black'>
-              <div className='max-w-2xl py-24'>
+              <div className='max-w-lg md:max-w-md lg:max-w-2xl py-24'>
                 <h2 className='mb-8'>Politics of Change</h2>
                 <PortableText value={data.politicsOfChange} components={HPcomponents} />
               </div>
@@ -58,10 +58,10 @@ export default async function Home() {
         </div>
         {/* SECTION Three - Capabilites */}
         <div className='bg-black w-[calc(w-screen - 17px)]' name='section-3'>
-          <div className='global-margin max-w-3xl bg-black text-white'>
+          <div className='global-margin max-w-4xl  bg-black text-white'>
             <h2 className='mb-8 pt-24'>Capabilities</h2>
-            <div className='max-w-4xl pb-24'>
-              <div className='grid grid-cols-3'>
+            <div className='max-w-lg md:max-w-md lg:max-w-[690px]  pb-24'>
+              <div className='grid grid-cols-1 lg:grid-cols-3'>
                 <div className='col-span-2'>
                   <p className='intro mb-8'>
                     We are developing the interconnected building blocks for the futures of property
@@ -81,8 +81,8 @@ export default async function Home() {
                     </li>
                   </ol>
                 </div>
-                <div className='col-span-1 ml-12'>
-                  <p className='small-text mb-4'>
+                <div className='col-span-1 lg:ml-6 xl:ml-12'>
+                  <p className='small-text mb-4 mt-4 lg:mt-0'>
                     Beyond objectification: from dominion and control towards stewardship of land,
                     resources, information, and labor
                   </p>
@@ -106,7 +106,7 @@ export default async function Home() {
 
         <div className='bg-white w-[calc(w-screen - 17px)]' name='section-4'>
           <div className='global-margin max-w-2xl bg-white text-black'>
-            <div className='max-w-2xl pt-24 pb-12'>
+            <div className='max-w-lg md:max-w-md lg:max-w-2xl pt-24 pb-12'>
               <h2 className='mb-8'>Proofs of Possibility</h2>
               <PortableText value={data.proofsOfPossibility} components={HPcomponents} />
             </div>
@@ -124,7 +124,7 @@ export default async function Home() {
           name='section-5'
         >
           <div className='global-margin max-w-2xl text-white bg-transparent'>
-            <div className='max-w-2xl py-24'>
+            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-24'>
               <h2 className='mb-8'>Join Us</h2>
               <p className='intro mb-20'>
                 Join us in envisioning and co-designing futures of property, ownership and beyond. 
@@ -141,7 +141,7 @@ export default async function Home() {
         {/* SECTION 6 - Conference */}
         <div className='bg-black w-[calc(w-screen - 17px)]'>
           <div className='global-margin max-w-2xl bg-black text-white' name='section-6'>
-            <div className='max-w-2xl py-20'>
+            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
               <div className='uppercase text-[36px]'>conference:</div>
               <h2 className=''>What and how we own</h2>
               <div className='mb-8 text-[30px] text-[#AD76F4]'>
@@ -155,16 +155,18 @@ export default async function Home() {
         {/* SECTION 7 - Partners */}
         <div className='bg-white w-[calc(w-screen - 17px)]' name='section-7'>
           <div className='global-margin max-w-2xl bg-white text-black'>
-            <div className='max-w-2xl py-24'>
+            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-24'>
               <h2 className='mb-8'>Our team</h2>
               <p className='intro mb-20'>
                 Many people have worked on this project. Thanks to our partners and collaborators:{' '}
               </p>
-              <div className='grid grid-cols-2 md:grid-cols-4 mb-20'>
-                <div>logo</div>
-                <div>logo</div>
-                <div>logo</div>
-                <div>logo</div>
+              <div className='grid grid-cols-2 md:grid-cols-2 gap-6 mb-20'>
+                <div>       
+                  <Image src='/DMLogo-black.png' alt='Dark Matter Labs Logo' height={157} width={157} />
+</div>
+                <div> <Image src='/DMLogo-black.png' alt='Dark Matter Labs Logo' height={157} width={157} /></div>
+                <div> <Image src='/DMLogo-black.png' alt='Dark Matter Labs Logo' height={157} width={157} /></div>
+                <div> <Image src='/DMLogo-black.png' alt='Dark Matter Labs Logo' height={157} width={157} /></div>
               </div>
             </div>
           </div>
