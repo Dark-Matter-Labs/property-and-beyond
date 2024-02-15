@@ -1,8 +1,10 @@
 'use client';
 import Image from 'next/image';
 
+
+
 export default function RiskCard({ risk }) {
-  if (risk.riskType === 'Conflict and displacement') {
+  if (risk.riskType === 'Conflict and Displacement') {
     return (
       <>
         <div className='group [perspective:1000px] w-full h-full flex flex-col items-center relative'>
@@ -25,7 +27,7 @@ export default function RiskCard({ risk }) {
         </div>
       </>
     );
-  } else if (risk.riskType === 'Labor') {
+  } else if (risk.riskType === 'Labor and Economic Security') {
     return (
       <>
         <div className='group [perspective:1000px] w-full h-full flex flex-col items-center relative'>
@@ -48,7 +50,7 @@ export default function RiskCard({ risk }) {
         </div>
       </>
     );
-  } else if (risk.riskType === 'Housing and commercial real estate / civic infrastructure') {
+  } else if (risk.riskType === 'Housing and Commercial Real Estate / Civic Infrastructure') {
     return (
       <>
         <div className='group [perspective:1000px] w-full h-full flex flex-col items-center relative'>

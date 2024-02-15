@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 export default function Footer() {
   const pathname = usePathname();
-  if (pathname !== '/studio/structure') {
+  if (pathname !== '/studio/structure' && pathname !== '/map') {
     return (
       <div className='bg-black text-white h-28'>
         <div className='global-margin h-full flex flex-row justify-end items-center'>

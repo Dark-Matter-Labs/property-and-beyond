@@ -10,21 +10,21 @@ export default function Container({ data }) {
   useEffect(() => {
     if (data) {
       let filteredRisks = data;
-      if (category === 'Labour') {
-        setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'Labor'));
+      if (category === 'Labor and Economic Security') {
+        setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'Labor and Economic Security'));
       } else if (category === 'Climate') {
         setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'Climate'));
       } else if (category === 'AI and Innovation') {
         setFilteredRisks(filteredRisks?.filter((risk) => risk.riskType === 'AI and Innovation'));
-      } else if (category === 'Housing and commercial real estate / civic infrastructure') {
+      } else if (category === 'Housing and Commercial Real Estate / Civic Infrastructure') {
         setFilteredRisks(
           filteredRisks?.filter(
-            (risk) => risk.riskType === 'Housing and commercial real estate / civic infrastructure',
+            (risk) => risk.riskType === 'Housing and Commercial Real Estate / Civic Infrastructure',
           ),
         );
-      } else if (category === 'Conflict and displacement') {
+      } else if (category === 'Conflict and Displacement') {
         setFilteredRisks(
-          filteredRisks?.filter((risk) => risk.riskType === 'Conflict and displacement'),
+          filteredRisks?.filter((risk) => risk.riskType === 'Conflict and Displacement'),
         );
       } else {
         setFilteredRisks(filteredRisks);
@@ -33,6 +33,7 @@ export default function Container({ data }) {
   }, [category, data]);
 
   return (
+    <>    
     <div className='flex flex-col relative z-20 h-[calc(100vh-120px)] w-full bg-black bg-opacity-50 overflow-auto'>
       <div className='flex flex-col global-margin relative z-30 2xl:min-w-[1280px]'>
         <div className='flex flex-row justify-between mt-10'>
@@ -45,16 +46,16 @@ export default function Container({ data }) {
               All
             </button>
             <button
-              onClick={() => setCategory('Labour')}
-              className={`${category === 'Labour' ? 'bg-[#40FF8C]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              onClick={() => setCategory('Labor and Economic Security')}
+              className={`${category === 'Labor and Economic Security' ? 'bg-[#40FF8C]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               Labour
             </button>
             <button
               onClick={() =>
-                setCategory('Housing and commercial real estate / civic infrastructure')
+                setCategory('Housing and Commercial Real Estate / Civic Infrastructure')
               }
-              className={`${category === 'Housing and commercial real estate / civic infrastructure' ? 'bg-[#FFBE40]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'Housing and Commercial Real Estate / Civic Infrastructure' ? 'bg-[#FFBE40]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               Housing and commercial real estate
             </button>
@@ -71,8 +72,8 @@ export default function Container({ data }) {
               AI and innovation
             </button>
             <button
-              onClick={() => setCategory('Conflict and displacement')}
-              className={`${category === 'Conflict and displacement' ? 'bg-[#40A3FF]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              onClick={() => setCategory('Conflict and Displacement')}
+              className={`${category === 'Conflict and Displacement' ? 'bg-[#40A3FF]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               Conflict and displacement
             </button>
@@ -94,5 +95,7 @@ export default function Container({ data }) {
         </div>
       </div>
     </div>
+    </>
+
   );
 }

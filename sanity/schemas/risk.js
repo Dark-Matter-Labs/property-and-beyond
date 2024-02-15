@@ -10,16 +10,25 @@ export default {
             name:'title',
             type:'string',
             title: 'Risk Title',
+            validation: Rule => Rule.required()
         },
         {
             title: 'Slug',
             name: 'slug',
             type: 'slug',
+            validation: Rule => Rule.required(),
             options: {
-              source: 'title',
-              inUnique: 'true',
-              slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
-            },
+                //Change to schema title to automatically populate
+                source: "title",
+                slugify: (input) =>
+                  input
+                    .toLowerCase()
+                    //Remove spaces
+                    .replace(/\s+/g, "-")
+                    //Remove special characters
+                    .replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ""),
+                validation: (Rule) => Rule.required(),
+              },
           },
           {
             name: 'icon',
@@ -35,6 +44,7 @@ export default {
             name: 'riskType',
             type: 'string',
             title: 'Risk Type',
+            validation: Rule => Rule.required(),
             options: {
                 list: [
                     {title: 'Climate', value: 'Climate'},
@@ -49,6 +59,7 @@ export default {
             name: 'riskSubType',
             type: 'string',
             title: 'Risk Subtype',
+            validation: Rule => Rule.required(),
             options: {
                 list: [
                     {title: 'National Security Threat', value: 'National Security Threat'},
@@ -67,12 +78,14 @@ export default {
         {
             name: 'description',
             type: 'text',
-            title: 'Risk description'
+            title: 'Risk description',
+            validation: Rule => Rule.required(),
         },
         {
             name: 'caseStudies',
             type: 'array',
             title: 'Case Studies',
+            validation: Rule => Rule.required(),
             of: [
                 {
                   type: 'reference',
@@ -86,30 +99,35 @@ export default {
             name: 'stakeholders',
             type: 'array',
             title: 'Stakeholders',
+            validation: Rule => Rule.required(),
             of: [{type: 'titleBlock'}]
         },
         {
             name: 'propertyIssues',
             type: 'array',
             title: 'Property Issues',
+            validation: Rule => Rule.required(),
             of: [{type: 'propertyIssue'}]
         },
         {
             name: 'directImpacts',
             type: 'array',
             title: 'Direct impacts',
+            validation: Rule => Rule.required(),
             of: [{type: 'titleBlock'}]
         },
         {
             name: 'indirectImpacts',
             type: 'array',
             title: 'Indirect impacts',
+            validation: Rule => Rule.required(),
             of: [{type: 'titleBlock'}]
         },
         {
             name: 'preparedness',
             type: 'array',
             title: 'Preparedness',
+            validation: Rule => Rule.required(),
             of: [{type: 'block'}]
         },
         {
