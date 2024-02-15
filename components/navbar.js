@@ -2,7 +2,6 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Disclosure } from '@headlessui/react';
 import { CiMenuBurger } from 'react-icons/ci';
 import { IoMdClose } from 'react-icons/io';
 import { Link as ScrollLink } from 'react-scroll';
@@ -111,7 +110,7 @@ export default function NavBar() {
                           style={{ ...mobileMenuTransitionStyles }}
                         >
                           <div className='flex flex-col items-start justify-end global-margin '>
-                          <ul className='sticky top-48 min-w-[230px]'>
+                          <ul className=''>
                     `  <li className='menu mb-6 hover:cursor-pointer'>
                         <ScrollLink
                           to='section-1'
