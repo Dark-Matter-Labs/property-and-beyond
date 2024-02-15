@@ -77,6 +77,12 @@ export default {
             } 
             }]
         },
+          {
+            name: 'proofOfPossibilityCards',
+            type: 'array',
+            title: 'Proofs of Possiblity',
+            of: [{type: 'possibility'}]
+        },
         {
             name: 'conference',
             type: 'array',

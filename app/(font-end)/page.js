@@ -10,6 +10,11 @@ import Card from '@/components/card';
 const hpQuery = `
   *[_type == "homePage"][0] {
     ...,
+    "cards": proofOfPossibilityCards[] {
+      ...,
+      "image": image.asset->.url,
+      "file": file.asset->url,
+    }
   }
 `;
 
@@ -110,10 +115,10 @@ export default async function Home() {
               <h2 className='mb-8'>Proofs of Possibility</h2>
               <PortableText value={data.proofsOfPossibility} components={HPcomponents} />
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl pb-24'>
-              <Card />
-              <Card />
-              <Card />
+            <div className='flex flex-wrap gap-6 max-w-lg md:max-w-md lg:max-w-2xl pb-24 justify-center md:justify-start items-center'>
+              {data?.cards?.map((card, id) => (
+                <Card key={id} data={card} />
+              ))}
             </div>
           </div>
         </div>
@@ -161,12 +166,41 @@ export default async function Home() {
                 Many people have worked on this project. Thanks to our partners and collaborators:{' '}
               </p>
               <div className='grid grid-cols-2 md:grid-cols-2 gap-6 mb-20'>
-                <div>       
-                  <Image src='/DMLogo-black.png' alt='Dark Matter Labs Logo' height={157} width={157} />
-</div>
-                <div> <Image src='/DMLogo-black.png' alt='Dark Matter Labs Logo' height={157} width={157} /></div>
-                <div> <Image src='/DMLogo-black.png' alt='Dark Matter Labs Logo' height={157} width={157} /></div>
-                <div> <Image src='/DMLogo-black.png' alt='Dark Matter Labs Logo' height={157} width={157} /></div>
+                <div>
+                  <Image
+                    src='/DMLogo-black.png'
+                    alt='Dark Matter Labs Logo'
+                    height={157}
+                    width={157}
+                  />
+                </div>
+                <div>
+                  {' '}
+                  <Image
+                    src='/DMLogo-black.png'
+                    alt='Dark Matter Labs Logo'
+                    height={157}
+                    width={157}
+                  />
+                </div>
+                <div>
+                  {' '}
+                  <Image
+                    src='/DMLogo-black.png'
+                    alt='Dark Matter Labs Logo'
+                    height={157}
+                    width={157}
+                  />
+                </div>
+                <div>
+                  {' '}
+                  <Image
+                    src='/DMLogo-black.png'
+                    alt='Dark Matter Labs Logo'
+                    height={157}
+                    width={157}
+                  />
+                </div>
               </div>
             </div>
           </div>

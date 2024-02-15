@@ -7,8 +7,6 @@ import { IoMdClose } from 'react-icons/io';
 import { Link as ScrollLink } from 'react-scroll';
 import { useState } from 'react';
 
-
-
 import {
   useFloating,
   offset,
@@ -79,142 +77,136 @@ export default function NavBar() {
             />
           </Link>
           <div className='block md:hidden'>
-          <div className='inset-y-0 float-right flex items-center pt-2 lgNav:hidden'>
-                <button
-                  ref={mobileRef.setReference}
-                  {...mobileRefProps()}
+            <div className='inset-y-0 float-right flex items-center pt-2 lgNav:hidden'>
+              <button ref={mobileRef.setReference} {...mobileRefProps()}>
+                <span className='sr-only'>Open main menu</span>
+                {mobileMenuIsOpen ? (
+                  <IoMdClose className='block h-10 w-10' aria-hidden='true' />
+                ) : (
+                  <CiMenuBurger className='block h-10 w-10' aria-hidden='true' />
+                )}
+              </button>
+              {mobileMenuIsMounted && (
+                <FloatingOverlay
+                  id='overlay'
+                  lockScroll
+                  style={{ background: 'rgba(0, 0, 0, 0)' }}
+                  className='-z-10'
                 >
-                  <span className='sr-only'>Open main menu</span>
-                  {mobileMenuIsOpen ? (
-                    <IoMdClose className='block h-10 w-10' aria-hidden='true' />
-                  ) : (
-                    <CiMenuBurger className='block h-10 w-10' aria-hidden='true' />
-                  )}
-                </button>
-                {mobileMenuIsMounted && (
-                  <FloatingOverlay
-                    id='overlay'
-                    lockScroll
-                    style={{ background: 'rgba(0, 0, 0, 0)' }}
-                    className='-z-10'
-                  >
-                    <FloatingFocusManager context={mobileContext} modal={false} disabled>
+                  <FloatingFocusManager context={mobileContext} modal={false} disabled>
+                    <div
+                      className='h-auto w-full'
+                      ref={mobileRef.setFloating}
+                      style={mobileFloatingStyles}
+                      {...mobileFloatingProps()}
+                    >
                       <div
-                        className='h-auto w-full'
-                        ref={mobileRef.setFloating}
-                        style={mobileFloatingStyles}
-                        {...mobileFloatingProps()}
+                        className='w-full h-full bg-black'
+                        style={{ ...mobileMenuTransitionStyles }}
                       >
-                        <div
-                          className='w-full h-full bg-black'
-                          style={{ ...mobileMenuTransitionStyles }}
-                        >
-                          <div className='flex flex-col items-start justify-end global-margin '>
+                        <div className='flex flex-col items-start justify-end global-margin '>
                           <ul className=''>
-                    `  <li className='menu mb-6 hover:cursor-pointer'>
-                        <ScrollLink
-                          to='section-1'
-                          smooth={true}
-                          duration={500}
-                          offset={-250}
-                          spy={true}
-                          activeClass=''
-                          onClick={() => setMobileMenuIsOpen(false)}
-                        >
-                          PROPERTY & BEYOND LAB
-                        </ScrollLink>
-                      </li>
-                      <li className='menu mb-6 hover:cursor-pointer'>
-                        <ScrollLink
-                          to='section-2'
-                          smooth={true}
-                          duration={500}
-                          offset={-200}
-                          spy={true}
-                          activeClass=''
-                          onClick={() => setMobileMenuIsOpen(false)}
-                        >
-                          POLITICS OF CHANGE
-                        </ScrollLink>
-                      </li>
-                      <li className='menu mb-6 hover:cursor-pointer'>
-                        <ScrollLink
-                          to='section-3'
-                          smooth={true}
-                          duration={500}
-                          offset={-200}
-                          spy={true}
-                          activeClass=''
-                          onClick={() => setMobileMenuIsOpen(false)}
-                        >
-                          CAPABILITIES
-                        </ScrollLink>
-                      </li>
-                      <li className='menu mb-6 hover:cursor-pointer'>
-                        <ScrollLink
-                          to='section-4'
-                          smooth={true}
-                          duration={500}
-                          offset={-200}
-                          spy={true}
-                          activeClass=''
-                          onClick={() => setMobileMenuIsOpen(false)}
-                        >
-                          PROOFS OF POSSIBILIY
-                        </ScrollLink>
-                      </li>
-                      <li className='menu mb-6 hover:cursor-pointer'>
-                        <ScrollLink
-                          to='section-5'
-                          smooth={true}
-                          duration={500}
-                          offset={-200}
-                          spy={true}
-                          activeClass=''
-                          onClick={() => setMobileMenuIsOpen(false)}
-                        >
-                          JOIN US
-                        </ScrollLink>
-                      </li>
-                      <li className='menu mb-6 hover:cursor-pointer'>
-                        <ScrollLink
-                          to='section-6'
-                          smooth={true}
-                          duration={500}
-                          offset={-200}
-                          spy={true}
-                          activeClass=''
-                          onClick={() => setMobileMenuIsOpen(false)}
-                        >
-                          CONFERENCE
-                        </ScrollLink>
-                      </li>
-                      <li className='menu mb-6 hover:cursor-pointer'>
-                        <ScrollLink
-                          to='section-7'
-                          smooth={true}
-                          duration={500}
-                          offset={-200}
-                          spy={true}
-                          activeClass=''
-                          onClick={() => setMobileMenuIsOpen(false)}
-                        >
-                          PARTNERS
-                        </ScrollLink>
-                      </li>`
-      </ul>
-
-                          
-                          
-
-                            
-                          </div>
+                            `{' '}
+                            <li className='menu mb-6 hover:cursor-pointer'>
+                              <ScrollLink
+                                to='section-1'
+                                smooth={true}
+                                duration={500}
+                                offset={-250}
+                                spy={true}
+                                activeClass=''
+                                onClick={() => setMobileMenuIsOpen(false)}
+                              >
+                                PROPERTY & BEYOND LAB
+                              </ScrollLink>
+                            </li>
+                            <li className='menu mb-6 hover:cursor-pointer'>
+                              <ScrollLink
+                                to='section-2'
+                                smooth={true}
+                                duration={500}
+                                offset={-200}
+                                spy={true}
+                                activeClass=''
+                                onClick={() => setMobileMenuIsOpen(false)}
+                              >
+                                POLITICS OF CHANGE
+                              </ScrollLink>
+                            </li>
+                            <li className='menu mb-6 hover:cursor-pointer'>
+                              <ScrollLink
+                                to='section-3'
+                                smooth={true}
+                                duration={500}
+                                offset={-200}
+                                spy={true}
+                                activeClass=''
+                                onClick={() => setMobileMenuIsOpen(false)}
+                              >
+                                CAPABILITIES
+                              </ScrollLink>
+                            </li>
+                            <li className='menu mb-6 hover:cursor-pointer'>
+                              <ScrollLink
+                                to='section-4'
+                                smooth={true}
+                                duration={500}
+                                offset={-200}
+                                spy={true}
+                                activeClass=''
+                                onClick={() => setMobileMenuIsOpen(false)}
+                              >
+                                PROOFS OF POSSIBILIY
+                              </ScrollLink>
+                            </li>
+                            <li className='menu mb-6 hover:cursor-pointer'>
+                              <ScrollLink
+                                to='section-5'
+                                smooth={true}
+                                duration={500}
+                                offset={-200}
+                                spy={true}
+                                activeClass=''
+                                onClick={() => setMobileMenuIsOpen(false)}
+                              >
+                                JOIN US
+                              </ScrollLink>
+                            </li>
+                            <li className='menu mb-6 hover:cursor-pointer'>
+                              <ScrollLink
+                                to='section-6'
+                                smooth={true}
+                                duration={500}
+                                offset={-200}
+                                spy={true}
+                                activeClass=''
+                                onClick={() => setMobileMenuIsOpen(false)}
+                              >
+                                CONFERENCE
+                              </ScrollLink>
+                            </li>
+                            <li className='menu mb-6 hover:cursor-pointer'>
+                              <ScrollLink
+                                to='section-7'
+                                smooth={true}
+                                duration={500}
+                                offset={-200}
+                                spy={true}
+                                activeClass=''
+                                onClick={() => setMobileMenuIsOpen(false)}
+                              >
+                                PARTNERS
+                              </ScrollLink>
+                            </li>
+                            `
+                          </ul>
                         </div>
                       </div>
-                    </FloatingFocusManager>
-                  </FloatingOverlay>
-                )}
-              </div>
+                    </div>
+                  </FloatingFocusManager>
+                </FloatingOverlay>
+              )}
+            </div>
           </div>
         </div>
       </div>
