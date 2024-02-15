@@ -4,13 +4,13 @@ import { Link as ScrollLink } from 'react-scroll';
 export default function SideMenu() {
   return (
     <div className='h-full absolute top-0 right-12 lg:right-24 xl:right-48 2xl:right-64 my-10'>
-      <ul className='sticky top-16 min-w-[230px]'>
+      <ul className='sticky top-48 min-w-[230px]'>
         <li className='menu mb-6 hover:cursor-pointer'>
           <ScrollLink
             to='section-1'
             smooth={true}
             duration={500}
-            offset={0}
+            offset={-250}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
@@ -22,7 +22,7 @@ export default function SideMenu() {
             to='section-2'
             smooth={true}
             duration={500}
-            offset={0}
+            offset={-200}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
@@ -34,7 +34,7 @@ export default function SideMenu() {
             to='section-3'
             smooth={true}
             duration={500}
-            offset={0}
+            offset={-200}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
@@ -46,7 +46,7 @@ export default function SideMenu() {
             to='section-4'
             smooth={true}
             duration={500}
-            offset={0}
+            offset={-200}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
@@ -58,7 +58,7 @@ export default function SideMenu() {
             to='section-5'
             smooth={true}
             duration={500}
-            offset={0}
+            offset={-200}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
@@ -70,7 +70,7 @@ export default function SideMenu() {
             to='section-6'
             smooth={true}
             duration={500}
-            offset={0}
+            offset={-200}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
@@ -82,7 +82,7 @@ export default function SideMenu() {
             to='section-7'
             smooth={true}
             duration={500}
-            offset={0}
+            offset={-200}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >

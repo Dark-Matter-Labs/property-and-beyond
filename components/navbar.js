@@ -7,7 +7,7 @@ export default function NavBar() {
   const pathname = usePathname();
   if (pathname !== '/studio/structure') {
     return (
-      <div className='text-white bg-black h-20 sm:h-32 flex items-center justify-center'>
+      <div className='text-white bg-black h-20 sm:h-32 flex items-center justify-center sticky top-0 z-50'>
         <div className='global-margin flex flex-row justify-between items-center h-full w-full'>
           <Link href='/' className=''>
             <Image
