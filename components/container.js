@@ -2,7 +2,8 @@
 import { useEffect, useState } from 'react';
 import RiskCard from './risk-card';
 import Link from 'next/link';
-import {Disclosure} from '@headlessui/react'
+import Tooltip from './tooltip';
+
 
 export default function Container({ data }) {
   const [category, setCategory] = useState('all');
@@ -79,11 +80,13 @@ export default function Container({ data }) {
               Conflict and displacement
             </button>
           </div>
-          <Disclosure>
-          </Disclosure>
-          <div className='rounded-[9px] bg-black text-[16px] text-white border border-black p-2 flex items-center justify-center justify-self-end'>
+      
+
+              <Tooltip> <div className='rounded-[9px] bg-black text-[16px] text-white border border-black p-2 flex items-center justify-center justify-self-end'>
             Methodology
-          </div>
+            </div> </Tooltip>
+           
+
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-10'>
           {filteredRisks.map((risk, id) => (

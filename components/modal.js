@@ -43,9 +43,10 @@ export default function Modal({ children, slug }) {
         >
           <div className='fixed inset-0 bg-black/20 transition-opacity flex items-center' />
         </Transition.Child>
-        <div className='fixed inset-0 overflow-hidden'>
-          <div className='absolute inset-0 overflow-hidden'>
-            <div className='pointer-events-none fixed inset-y-0 right-0 flex'>
+        {/* controll width here first then re-do responsive design */}
+        <div className='fixed inset-0 overflow-hidden w-[95vw]'>
+          <div className='absolute inset-0 overflow-hidden w-full'>
+            <div className='pointer-events-none fixed inset-y-0 right-0 flex w-full'>
               <Transition.Child
                 as={Fragment}
                 enter='transform transition ease-in-out duration-500 sm:duration-700'
