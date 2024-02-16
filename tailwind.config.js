@@ -7,7 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
+      colors: {
+        climate: '#F9F7D0',
+        labor: '#4CAA49',
+        housing: '#9DADD6',
+        ai: '#E6D5F9',
+        conflict: '#F37A4B',
+      }
     },
   },
   plugins: [],

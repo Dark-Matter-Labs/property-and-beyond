@@ -38,42 +38,42 @@ export default function Container({ data }) {
       <div className='flex flex-col global-margin relative z-30 2xl:min-w-[1280px]'>
         <div className='flex flex-row justify-between mt-10'>
           <div className='flex flex-row'>
-            <div className='flex items-center justify-center mr-3 text-white'>Types of Crisis:</div>
+            <div className='flex items-center justify-center mr-3 text-white text-[22px]'>Types of Crisis:</div>
             <button
               onClick={() => setCategory('all')}
-              className={`${category === 'all' ? 'bg-orange-400' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'all' ? 'bg-black text-white' : 'bg-white'} text-[16px] flex items-center justify-center rounded-md p-2 mr-4 min-w-20`}
             >
               All
             </button>
             <button
               onClick={() => setCategory('Labor and Economic Security')}
-              className={`${category === 'Labor and Economic Security' ? 'bg-[#40FF8C]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'Labor and Economic Security' ? 'bg-labor' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
-              Labour
+              Labor and Economic Security
             </button>
             <button
               onClick={() =>
                 setCategory('Housing and Commercial Real Estate / Civic Infrastructure')
               }
-              className={`${category === 'Housing and Commercial Real Estate / Civic Infrastructure' ? 'bg-[#FFBE40]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'Housing and Commercial Real Estate / Civic Infrastructure' ? 'bg-housing' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               Housing and commercial real estate
             </button>
             <button
               onClick={() => setCategory('Climate')}
-              className={`${category === 'Climate' ? 'bg-[#C970FF]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'Climate' ? 'bg-climate' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               Climate
             </button>
             <button
               onClick={() => setCategory('AI and Innovation')}
-              className={`${category === 'AI and Innovation' ? 'bg-[#FFA5A5]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'AI and Innovation' ? 'bg-ai' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               AI and innovation
             </button>
             <button
               onClick={() => setCategory('Conflict and Displacement')}
-              className={`${category === 'Conflict and Displacement' ? 'bg-[#40A3FF]' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
+              className={`${category === 'Conflict and Displacement' ? 'bg-conflict' : 'bg-white'}  flex items-center justify-center rounded-md p-2 mr-4`}
             >
               Conflict and displacement
             </button>
@@ -87,7 +87,7 @@ export default function Container({ data }) {
             <Link
               key={id}
               href={`/map/${risk.slug.current}`}
-              className='h-72 flex flex-col items-center relative'
+              className='min-h-80 flex flex-col items-center relative'
             >
               <RiskCard risk={risk} />
             </Link>
