@@ -35,7 +35,7 @@ export default function Container({ data }) {
 
   return (
     <>    
-    <div className='flex flex-col relative z-20 sm:h-[calc(100vh-120px)] w-full bg-black bg-opacity-50 overflow-auto'>
+    <div className='hidden md:flex flex-col relative z-20 sm:h-[calc(100vh-120px)] w-full bg-black bg-opacity-50 overflow-auto'>
       <div className='flex flex-col global-margin relative z-30'>
       <div className='flex items-center justify-start mr-3 text-black text-[22px] mt-10'>Types of Crisis:</div>
         <div className='flex flex-row flex-wrap gap-y-4 justify-between mt-4'>

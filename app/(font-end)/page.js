@@ -30,7 +30,7 @@ export default async function Home() {
       <Header />
       <div className='relative w-full h-auto'>
         {/* SECTION ONE - intro */}
-        <div className='bg-black w-[calc(w-screen - 17px)]'>
+        <div className='bg-black w-[calc(w-screen-17px)]'>
           <div className='global-margin max-w-2xl bg-black text-white' name='section-1'>
             <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
               <PortableText value={data.intro} components={HPcomponents} />
@@ -39,7 +39,7 @@ export default async function Home() {
         </div>
         {/* SECTION TWO - Politics of Change */}
         <div name='section-2'>
-          <div className='bg-white w-[calc(w-screen - 17px)]'>
+          <div className='bg-white w-[calc(w-screen-17px)]'>
             <div className='global-margin max-w-2xl bg-white text-black'>
               <div className='max-w-lg md:max-w-md lg:max-w-2xl py-24'>
                 <h2 className='mb-8'>Politics of Change</h2>
@@ -48,7 +48,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className='w-[calc(w-screen - 17px)] bg-[url("/crisis.png")] bg-cover h-[800px]'>
+          <div className='w-[calc(w-screen-17px)] bg-[url("/crisis.png")] bg-cover h-[800px]'>
             <Link href='/map'>
               <div className='w-full h-full bg-black/40 md:bg-transparent md:hover:bg-black/80 flex items-center justify-center group'>
                 <button
@@ -62,7 +62,7 @@ export default async function Home() {
           </div>
         </div>
         {/* SECTION Three - Capabilites */}
-        <div className='bg-black w-[calc(w-screen - 17px)]' name='section-3'>
+        <div className='bg-black w-[calc(w-screen-17px)]' name='section-3'>
           <div className='global-margin max-w-4xl  bg-black text-white'>
             <h2 className='mb-8 pt-24'>Capabilities</h2>
             <div className='max-w-lg md:max-w-md lg:max-w-[690px]  pb-24'>
@@ -109,7 +109,7 @@ export default async function Home() {
 
         {/* SECTION 4 - Proofs of Possibility */}
 
-        <div className='bg-white w-[calc(w-screen - 17px)]' name='section-4'>
+        <div className='bg-white w-[calc(w-screen-17px)]' name='section-4'>
           <div className='global-margin max-w-2xl bg-white text-black'>
             <div className='max-w-lg md:max-w-md lg:max-w-2xl pt-24 pb-12'>
               <h2 className='mb-8'>Proofs of Possibility</h2>
@@ -125,7 +125,7 @@ export default async function Home() {
 
         {/* SECTION 5 - Join us */}
         <div
-          className='w-[calc(w-screen - 17px)] bg-[url("/join-us.png")] bg-cover h-[535px]'
+          className='w-[calc(w-screen-17px)] bg-[url("/join-us.png")] bg-cover h-[535px]'
           name='section-5'
         >
           <div className='global-margin max-w-2xl text-white bg-transparent'>
@@ -144,7 +144,7 @@ export default async function Home() {
           </div>
         </div>
         {/* SECTION 6 - Conference */}
-        <div className='bg-black w-[calc(w-screen - 17px)]'>
+        <div className='bg-black w-[calc(w-screen-17px)]'>
           <div className='global-margin max-w-2xl bg-black text-white' name='section-6'>
             <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
               <div className='uppercase text-[36px]'>conference:</div>
@@ -158,7 +158,7 @@ export default async function Home() {
           <div className='w-full h-8 bg-[#CEB2F2]'></div>
         </div>
         {/* SECTION 7 - Partners */}
-        <div className='bg-white w-[calc(w-screen - 17px)]' name='section-7'>
+        <div className='bg-white w-[calc(w-screen-17px)]' name='section-7'>
           <div className='global-margin max-w-2xl bg-white text-black'>
             <div className='max-w-lg md:max-w-md lg:max-w-2xl py-24'>
               <h2 className='mb-8'>Our team</h2>

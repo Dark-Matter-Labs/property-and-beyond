@@ -3,7 +3,7 @@ import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
 import { FaArrowRight, FaMinus, FaPlus } from 'react-icons/fa';
 import { Disclosure } from '@headlessui/react';
-
+import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation';
 import { use, useEffect, useState } from 'react';
 
@@ -68,10 +68,16 @@ export default function RiskDetail({ risk, ...props }) {
   }, [color, risk.riskType])
 
   return (
-    <div className='flex h-auto flex-col bg-[#181616F0] min-h-screen'>
-      <div className='w-full h-full flex flex-row relative'>
-        <div className='max-w-14 flex grow relative justify-center min-h-screen' style={{backgroundColor: color}}>
-          {/* this displays on the page view as well as in the modal. we only want it on the modal */}
+    <>
+     <div className='flex md:hidden relative w-screen z-20 bg-black h-screen text-white flex-col items-center justify-center global-margin'>
+            CONTENT HERE TO EXPLAIN THAT THE VIS IS BETTER ON A DESKTOP
+            <Link href='/' className='mt-4 bg-white text-black p-4 rounded-[9px]'>
+            Go Back
+            </Link>
+      </div>
+    <div className='hidden md:flex h-auto flex-row lg:flex-col bg-[#181616F0] min-h-screen'>
+      {/* close button md -> lg */}
+      <div className='lg:hidden flex w-14 grow relative justify-center min-h-screen' style={{backgroundColor: color}}>
           <button
               type='button'
               className='text-black border border-black h-10 w-10 rounded-full bg-white flex items-center justify-center sticky top-[50vh]'
@@ -80,9 +86,25 @@ export default function RiskDetail({ risk, ...props }) {
               <FaArrowRight />
             </button>
         </div>
-        <div className='w-1/4 flex flex-col grow relative items-center'>
+
+      <div className='w-full h-full flex flex-col lg:flex-row relative'>
+        
+        {/* close button lg + */}
+        <div className='hidden lg:flex w-14 grow relative justify-center min-h-screen' style={{backgroundColor: color}}>
+          <button
+              type='button'
+              className='text-black border border-black h-10 w-10 rounded-full bg-white flex items-center justify-center sticky top-[50vh]'
+              onClick={() => router.push('/map')}
+            >
+              <FaArrowRight />
+            </button>
+        </div>
+       
+
+
+        <div className='w-full lg:w-1/4 flex flex-col grow relative items-center'>
           <div className='sticky top-0'>
-            <div className='bg-black mt-6 ml-12 mr-6 p-6 border rounded-lg text-white max-w-80' style={{borderColor: color}}>
+            <div className='bg-black mt-6 ml-6 p-6 border rounded-lg text-white max-w-80' style={{borderColor: color}}>
           <div className='relative h-32 w-full mb-4 bg-black rounded-lg'>
             <Image fill src={`${image}`} alt='icon' className='absolute object-fit' />
           </div>
@@ -92,7 +114,9 @@ export default function RiskDetail({ risk, ...props }) {
           </div>
           </div>
         </div>
-        <div className='flex flex-col w-3/4 p-6 max-w-screen-lg'>
+
+
+        <div className='flex flex-col p-6 max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg'>
           {/* PROPERTY Issues */}
           <div className='flex flex-col mb-6'>
             <div className='text-white text-[30px] font-bold'>Linked property issues</div>
@@ -276,7 +300,10 @@ export default function RiskDetail({ risk, ...props }) {
           </div>
           */}
         </div>
+
+
       </div>
     </div>
+    </>
   );
 }

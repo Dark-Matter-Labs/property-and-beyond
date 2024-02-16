@@ -6,7 +6,7 @@ export default function CrisisIntro() {
 
     return (
     <>        
-    <div className='bg-black w-[calc(w-screen - 17px)] mt-1' name=''>
+    <div className='bg-black w-[calc(w-screen-17px)] mt-1' name=''>
         <div className='global-margin max-w-3xl bg-black text-white'>
           <h2 className='mb-8 pt-24'>Crisis map</h2>
           <div className='pb-24'>
