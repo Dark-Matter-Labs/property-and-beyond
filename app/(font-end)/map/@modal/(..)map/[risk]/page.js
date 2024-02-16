@@ -15,7 +15,11 @@ const riskQuery = `
 `;
 
 export async function generateStaticParams() {
-  const slugs = await client.fetch(riskSlugs, { next: { tags: ['riskSlugs'] } }, { cache: 'no-store' });
+  const slugs = await client.fetch(
+    riskSlugs,
+    { next: { tags: ['riskSlugs'] } },
+    { cache: 'no-store' },
+  );
   return slugs.map((slug) => ({
     slug: slug,
   }));
@@ -23,7 +27,12 @@ export async function generateStaticParams() {
 
 async function getData(params) {
   const slug = params;
-  const res = await client.fetch(riskQuery, { slug }, { next: { tags: ['riskDetail'] } }, { cache: 'no-store' });
+  const res = await client.fetch(
+    riskQuery,
+    { slug },
+    { next: { tags: ['riskDetail'] } },
+    { cache: 'no-store' },
+  );
   return res;
 }
 

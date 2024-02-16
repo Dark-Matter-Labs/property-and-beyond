@@ -78,15 +78,16 @@ export default function NavBar() {
           </Link>
           <div className='block md:hidden'>
             <div className='inset-y-0 float-right flex items-center pt-2 lgNav:hidden'>
-              {pathname === '/' && 
-              <button ref={mobileRef.setReference} {...mobileRefProps()}>
-                <span className='sr-only'>Open main menu</span>
-                {mobileMenuIsOpen ? (
-                  <IoMdClose className='block h-10 w-10' aria-hidden='true' />
-                ) : (
-                  <CiMenuBurger className='block h-10 w-10' aria-hidden='true' />
-                )}
-              </button>}
+              {pathname === '/' && (
+                <button ref={mobileRef.setReference} {...mobileRefProps()}>
+                  <span className='sr-only'>Open main menu</span>
+                  {mobileMenuIsOpen ? (
+                    <IoMdClose className='block h-10 w-10' aria-hidden='true' />
+                  ) : (
+                    <CiMenuBurger className='block h-10 w-10' aria-hidden='true' />
+                  )}
+                </button>
+              )}
               {mobileMenuIsMounted && (
                 <FloatingOverlay
                   id='overlay'
