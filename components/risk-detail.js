@@ -67,7 +67,6 @@ export default function RiskDetail({ risk, ...props }) {
     }
   }, [color, risk.riskType])
 
-
   return (
     <div className='flex h-auto flex-col bg-[#181616F0] min-h-screen'>
       <div className='w-full h-full flex flex-row relative'>

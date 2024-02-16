@@ -79,7 +79,7 @@ export default {
             name: 'description',
             type: 'text',
             title: 'Risk description',
-            validation: Rule => Rule.required(),
+            validation: Rule => Rule.required().max(315),
         },
         {
             name: 'caseStudies',

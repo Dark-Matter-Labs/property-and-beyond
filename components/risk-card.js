@@ -27,15 +27,13 @@ export default function RiskCard({ risk }) {
     }
   }, [color, risk.riskType])
 
-  // style={{backgroundColor: color}}
-  // style={{borderColor: color}}
     return (
       <>
-        <div className='group [perspective:1000px] w-full h-full flex flex-col items-center relative'>
+        <div className='group [perspective:1000px] w-full h-full flex flex-col items-center relative max-w-80'>
           <div className='relative bg-black/80 border-2 h-full w-full shadow-lg rounded-lg inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]' style={{borderColor: color}}>
             <div className='absolute inset-0 px-6 py-4 flex flex-col'>
-              <div className='relative w-full h-32 bg-black rounded-lg'>
-                <Image fill src={`${image}`} alt='icon' className='absolute object-fit p-4' />
+              <div className='relative w-full h-28 rounded-lg'>
+                <Image fill src={`${image}`} alt='icon' className='absolute object-cover h-28 w-full' />
               </div>
               <div className='mt-4 text-[16px] text-center rounded-[10px] w-full py-1 px-2 flex items-center justify-center uppercase wrap-text' style={{backgroundColor: color}}>
                 {risk.riskSubType}
@@ -45,7 +43,7 @@ export default function RiskCard({ risk }) {
               </div>
             </div>
             <div className='absolute top-0 right-0 w-full h-full border-inherit text-black px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]' style={{backgroundColor: color}}>
-              <div className='p-4'>{risk.description}</div>
+              <div className='p-4 line-clamp-[12]'>{risk.description}</div>
             </div>
           </div>
         </div>
