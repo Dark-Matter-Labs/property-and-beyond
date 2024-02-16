@@ -48,12 +48,12 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className='w-[calc(w-screen-17px)] bg-[url("/crisis.png")] bg-cover h-[800px]'>
+          <div className='hidden md:block w-[calc(w-screen-17px)] bg-[url("/crisis.png")] bg-cover h-[800px]'>
             <Link href='/map'>
-              <div className='w-full h-full bg-black/40 md:bg-transparent md:hover:bg-black/80 flex items-center justify-center group'>
+              <div className='w-full h-full bg-black/40 md:bg-black/80 flex items-center justify-center group'>
                 <button
                   href='/map'
-                  className='md:mr-12 bg-[#AD76F4] border-2 border-[#AD76F4] w-80 md:w-56 lg:w-80 rounded-[33px] items-center justify-center text-white block md:hidden group-hover:block '
+                  className='md:mr-12 bg-[#AD76F4] border-2 border-[#AD76F4] w-80 md:w-56 lg:w-80 rounded-[33px] items-center justify-center text-white block '
                 >
                   <div className='py-4 text-[21px]'>View the map</div>
                 </button>
