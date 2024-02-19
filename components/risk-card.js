@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 export default function RiskCard({ risk }) {
   const [color, setColor] = useState();
   const [image, setImage] = useState('/');
-  console.log(risk, 'card');
+
   useEffect(() => {
     if (risk.riskType === 'Climate') {
       setColor('#F9F7D0');
@@ -52,10 +52,10 @@ export default function RiskCard({ risk }) {
             </div>
           </div>
           <div
-            className='absolute top-0 right-0 w-full h-full border-inherit text-black px-4 [transform:rotateY(180deg)] [backface-visibility:hidden]'
+            className='absolute top-0 right-0 w-full h-full border-inherit text-black px-4 [transform:rotateY(180deg)] [backface-visibility:hidden] flex items-center justify-center'
             style={{ backgroundColor: color }}
           >
-            <div className='p-4 line-clamp-[12]'>{risk.description}</div>
+            <div className='p-4 text-[16px] line-clamp-[12]'>{risk.description}</div>
           </div>
         </div>
       </div>

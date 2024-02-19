@@ -37,9 +37,44 @@ export default function Container({ data }) {
 
   return (
     <>
-      <div className='hidden md:flex flex-col relative z-20 sm:h-[calc(100vh-120px)] w-full bg-black bg-opacity-50 overflow-auto'>
+      <div className='hidden md:flex flex-col relative z-20 sm:h-[calc(100vh-120px)] w-full bg-black bg-opacity-50 overflow-auto no-scrollbar'>
+        <div className='bg-black w-[calc(w-screen-17px)]'>
+          <div className='global-margin max-w-2xl bg-black text-white'>
+            <div className='max-w-lg md:max-w-md lg:max-w-2xl pb-20'>
+              <p className='text-xl mb-2'>
+                Property is one of the core deep codes of our everyday life: often invisible,
+                overlooked or seen as a near-natural law.{' '}
+              </p>
+              <p className='text-xl mb-2'>
+                But now, crises are bringing property to the fore. Faced with an unprecedented
+                complexity and entanglement of systemic risks, externalities, and value creation in
+                today’s world, property as a means of governance is increasingly falling short.
+              </p>
+              <p className='text-xl mb-2'>
+                To help us prepare for looming crises, we need to delve deeper into the multifaceted
+                challenges of property and build shared understanding and urgency.
+              </p>
+
+              <p className='text-xl mb-2'>
+                We need to rethink property and its role in system responsiveness and resilience,
+                and its potential to drive wider transformational change.
+              </p>
+              <p className='text-xl font-bold mb-2'>
+                This visualization tool maps critical global risks and their interplay with property
+                and ownership.
+              </p>
+
+              <p className='text-xl font-bold mb-2'>
+                It serves as a sensemaking tool to anticipate and respond to crises at a system
+                level and identify potential solutions, lead environments, and coalitions to build
+                real-world demonstrations of property futures.
+              </p>
+            </div>
+          </div>
+        </div>
         <div className='flex flex-col global-margin relative z-30'>
-          <div className='flex items-center justify-start mr-3 text-black text-[22px] mt-10'>
+          <div className='mt-6'>
+          <div className='flex items-center justify-start mr-3 text-black text-[22px]'>
             Types of Crisis:
           </div>
           <div className='flex flex-row flex-wrap gap-y-4 justify-between mt-4'>
@@ -90,6 +125,7 @@ export default function Container({ data }) {
                 Methodology
               </div>{' '}
             </Tooltip>
+          </div>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-10'>
             {filteredRisks.map((risk, id) => (
