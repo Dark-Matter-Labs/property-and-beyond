@@ -56,7 +56,7 @@ export default function Modal({ children, slug }) {
                 leaveFrom='translate-x-0'
                 leaveTo='translate-x-full'
               >
-                <Dialog.Panel className='pointer-events-auto overflow-y-scroll relative ml-10 w-full'>
+                <Dialog.Panel className='pointer-events-auto overflow-y-scroll relative ml-5 lg:ml-10 w-full'>
                   <Transition.Child
                     as='div'
                     enter='ease-in-out duration-500'

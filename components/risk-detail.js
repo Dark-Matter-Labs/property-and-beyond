@@ -10,7 +10,7 @@ import { use, useEffect, useState } from 'react';
 const componentsPropertyIssue = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[20px]'>{children}</p>,
+    normal: ({ children }) => <p className='text-[16px]'>{children}</p>,
   },
 };
 
@@ -66,6 +66,9 @@ export default function RiskDetail({ risk, ...props }) {
       setColor('#F37A4B');
     }
   }, [color, risk.riskType]);
+  console.log(risk,'risk')
+  console.log(color, 'color')
+  console.log(image)
 
   return (
     <>
@@ -75,10 +78,10 @@ export default function RiskDetail({ risk, ...props }) {
           Go Back
         </Link>
       </div>
-      <div className='hidden md:flex h-auto flex-row lg:flex-col bg-[#181616F0] min-h-screen'>
+      <div className='hidden md:flex h-auto flex-row lg:flex-col bg-[#181616F0] min-h-screen overflow-auto'>
         {/* close button md -> lg */}
         <div
-          className='lg:hidden flex w-14 grow relative justify-center min-h-screen'
+          className='lg:hidden flex max-w-14 px-2 relative justify-center min-h-screen'
           style={{ backgroundColor: color }}
         >
           <button
@@ -90,10 +93,10 @@ export default function RiskDetail({ risk, ...props }) {
           </button>
         </div>
 
-        <div className='w-full h-full flex flex-col lg:flex-row relative'>
+        <div className='w-full h-full flex flex-col lg:flex-row relative overflow-auto'>
           {/* close button lg + */}
           <div
-            className='hidden lg:flex w-14 grow relative justify-center min-h-screen'
+            className='hidden lg:flex max-w-14 relative justify-center min-h-screen px-2 '
             style={{ backgroundColor: color }}
           >
             <button
@@ -105,7 +108,7 @@ export default function RiskDetail({ risk, ...props }) {
             </button>
           </div>
 
-          <div className='w-full lg:w-1/4 flex flex-col grow relative items-center'>
+          <div className='w-full flex flex-col grow relative items-center min-w-80'>
             <div className='sticky top-0'>
               <div
                 className='bg-black mt-6 ml-6 p-6 border rounded-lg text-white max-w-80'
@@ -126,7 +129,7 @@ export default function RiskDetail({ risk, ...props }) {
             </div>
           </div>
 
-          <div className='flex flex-col p-6 max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg'>
+          <div className='flex flex-col p-6 overflow-hidden '>
             {/* PROPERTY Issues */}
             <div className='flex flex-col mb-6'>
               <div className='text-white text-[30px] font-bold'>Linked property issues</div>
@@ -134,17 +137,17 @@ export default function RiskDetail({ risk, ...props }) {
                 {risk?.propertyIssues?.map((issue, id) => (
                   <div
                     key={id}
-                    className='border p-6 rounded-[9px] bg-[#E7E7E7] min-w-96 flex flex-col justify-between'
+                    className='border p-6 rounded-[9px] bg-[#E7E7E7] min-w-80 flex flex-col justify-between'
                     style={{ borderColor: color }}
                   >
-                    <div className='text-black text-[54px] break-words w-full'>{issue.title}</div>
+                    <div className='text-black text-[40px] break-words w-full'>{issue.title}</div>
                     <div className='flex items-center w-full justify-center my-3'>
                       <Image
                         src='/propertyIssue.png'
                         alt='alt text'
                         width={150}
                         height={150}
-                        className='object-fit'
+                        className='object-fit h-32 w-32'
                       />
                     </div>
                     <div>
