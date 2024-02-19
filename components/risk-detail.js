@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { FaArrowRight, FaMinus, FaPlus } from 'react-icons/fa';
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import { use, useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const componentsPropertyIssue = {
   block: {
@@ -66,9 +66,6 @@ export default function RiskDetail({ risk, ...props }) {
       setColor('#F37A4B');
     }
   }, [color, risk.riskType]);
-  console.log(risk,'risk')
-  console.log(color, 'color')
-  console.log(image)
 
   return (
     <>

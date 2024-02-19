@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 export default function RiskCard({ risk }) {
   const [color, setColor] = useState();
   const [image, setImage] = useState('/');
-  console.log(risk, 'card')
+  console.log(risk, 'card');
   useEffect(() => {
     if (risk.riskType === 'Climate') {
       setColor('#F9F7D0');

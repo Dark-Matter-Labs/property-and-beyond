@@ -65,7 +65,7 @@ export default async function Home() {
         <div className='bg-black w-[calc(w-screen-17px)]' name='section-3'>
           <div className='global-margin max-w-4xl  bg-black text-white'>
             <h2 className='mb-8 pt-24'>Capabilities</h2>
-            <div className='max-w-lg md:max-w-md lg:max-w-[690px]  pb-24'>
+            <div className='max-w-lg md:max-w-md lg:max-w-[690px] xl:max-w-[740px] pb-24'>
               <div className='grid grid-cols-1 lg:grid-cols-3'>
                 <div className='col-span-2'>
                   <p className='intro mb-8'>
