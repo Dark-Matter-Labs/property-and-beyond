@@ -74,58 +74,58 @@ export default function Container({ data }) {
         </div>
         <div className='flex flex-col global-margin relative z-30 min-h-screen'>
           <div className='mt-6'>
-          <div className='flex items-center justify-start mr-3 text-black text-[22px]'>
-            Types of Crisis:
-          </div>
-          <div className='flex flex-row flex-wrap gap-y-4 justify-between mt-4'>
-            <div className='flex flex-row flex-wrap gap-y-4'>
-              <button
-                onClick={() => setCategory('all')}
-                className={`${category === 'all' ? 'bg-black text-white' : 'bg-white'} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4 min-w-20`}
-              >
-                All
-              </button>
-              <button
-                onClick={() => setCategory('Labor and Economic Security')}
-                className={`${category === 'Labor and Economic Security' ? 'bg-labor' : 'bg-white'} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4`}
-              >
-                Labor and Economic Security
-              </button>
-              <button
-                onClick={() =>
-                  setCategory('Housing and Commercial Real Estate / Civic Infrastructure')
-                }
-                className={`${category === 'Housing and Commercial Real Estate / Civic Infrastructure' ? 'bg-housing' : 'bg-white'} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4`}
-              >
-                Housing and commercial real estate
-              </button>
-              <button
-                onClick={() => setCategory('Climate')}
-                className={`${category === 'Climate' ? 'bg-climate' : 'bg-white'} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4`}
-              >
-                Climate
-              </button>
-              <button
-                onClick={() => setCategory('AI and Innovation')}
-                className={`${category === 'AI and Innovation' ? 'bg-ai' : 'bg-white'} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4`}
-              >
-                AI and innovation
-              </button>
-              <button
-                onClick={() => setCategory('Conflict and Displacement')}
-                className={`${category === 'Conflict and Displacement' ? 'bg-conflict ' : 'bg-white '} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4`}
-              >
-                Conflict and displacement
-              </button>
+            <div className='flex items-center justify-start mr-3 text-black text-[22px]'>
+              Types of Crisis:
             </div>
+            <div className='flex flex-row flex-wrap gap-y-4 justify-between mt-4'>
+              <div className='flex flex-row flex-wrap gap-y-4'>
+                <button
+                  onClick={() => setCategory('all')}
+                  className={`${category === 'all' ? 'bg-black text-white' : 'bg-white'} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4 min-w-20`}
+                >
+                  All
+                </button>
+                <button
+                  onClick={() => setCategory('Labor and Economic Security')}
+                  className={`${category === 'Labor and Economic Security' ? 'bg-labor' : 'bg-white'} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4`}
+                >
+                  Labor and Economic Security
+                </button>
+                <button
+                  onClick={() =>
+                    setCategory('Housing and Commercial Real Estate / Civic Infrastructure')
+                  }
+                  className={`${category === 'Housing and Commercial Real Estate / Civic Infrastructure' ? 'bg-housing' : 'bg-white'} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4`}
+                >
+                  Housing and commercial real estate
+                </button>
+                <button
+                  onClick={() => setCategory('Climate')}
+                  className={`${category === 'Climate' ? 'bg-climate' : 'bg-white'} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4`}
+                >
+                  Climate
+                </button>
+                <button
+                  onClick={() => setCategory('AI and Innovation')}
+                  className={`${category === 'AI and Innovation' ? 'bg-ai' : 'bg-white'} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4`}
+                >
+                  AI and innovation
+                </button>
+                <button
+                  onClick={() => setCategory('Conflict and Displacement')}
+                  className={`${category === 'Conflict and Displacement' ? 'bg-conflict ' : 'bg-white '} text-[16px] border border-black flex items-center justify-center rounded-[9px] p-2 mr-4`}
+                >
+                  Conflict and displacement
+                </button>
+              </div>
 
-            <Tooltip>
-              {' '}
-              <div className='rounded-[9px] bg-black text-[16px] text-white border border-black p-2 flex items-center justify-center justify-self-end'>
-                Methodology
-              </div>{' '}
-            </Tooltip>
-          </div>
+              <Tooltip>
+                {' '}
+                <div className='rounded-[9px] bg-black text-[16px] text-white border border-black p-2 flex items-center justify-center justify-self-end'>
+                  Methodology
+                </div>{' '}
+              </Tooltip>
+            </div>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-10'>
             {filteredRisks.map((risk, id) => (
