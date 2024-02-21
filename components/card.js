@@ -22,7 +22,7 @@ export default function Card({ data }) {
             Read More
           </button>
         </div>
-        <div class='absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed md:bg-white/80 md:opacity-100 transition duration-300 ease-in-out md:hover:opacity-0'></div>
+        <div className='absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed md:bg-white/80 md:opacity-100 transition duration-300 ease-in-out md:hover:opacity-0'></div>
       </div>
     </Link>
   );
