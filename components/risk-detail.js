@@ -75,7 +75,7 @@ export default function RiskDetail({ risk, ...props }) {
           Go Back
         </Link>
       </div>
-      <div className='hidden md:flex h-auto flex-row lg:flex-col bg-[#181616F0] min-h-screen overflow-auto'>
+      <div className='hidden md:flex h-auto flex-row lg:flex-col bg-[#181616F0] min-h-screen'>
         {/* close button md -> lg */}
         <div
           className='lg:hidden flex max-w-14 px-2 relative justify-center min-h-screen'
@@ -90,7 +90,7 @@ export default function RiskDetail({ risk, ...props }) {
           </button>
         </div>
 
-        <div className='w-full h-full flex flex-col lg:flex-row relative overflow-auto'>
+        <div className='w-full h-full flex flex-col lg:flex-row relative md:overflow-auto lg:overflow-visible'>
           {/* close button lg + */}
           <div
             className='hidden lg:flex max-w-14 relative justify-center min-h-screen px-2 '
@@ -106,7 +106,7 @@ export default function RiskDetail({ risk, ...props }) {
           </div>
 
           <div className='w-full flex flex-col grow relative items-center min-w-80'>
-            <div className='sticky top-0'>
+            <div className='lg:sticky lg:top-0'>
               <div
                 className='bg-black mt-6 ml-6 p-6 border rounded-lg text-white max-w-80'
                 style={{ borderColor: color }}
