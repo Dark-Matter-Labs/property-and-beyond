@@ -69,14 +69,30 @@ export default function RiskDetailNonModal({ risk, ...props }) {
 
   return (
     <>
+    <div className='flex md:hidden relative  z-20 bg-black h-screen text-white flex-col items-center justify-center'>
+          CONTENT HERE TO EXPLAIN THAT THE VIS IS BETTER ON A DESKTOP
+          <Link href='/' className='mt-4 bg-white text-black p-4 rounded-[9px]'>
+            Go Back
+          </Link>
+        </div>
       <div className='hidden md:flex h-auto flex-row lg:flex-col bg-[#181616F0] min-h-screen'>
         {/* close button md -> lg */}
        
+              <div className='hidden lg:flex rounded-[9px] bg-white text-[16px] w-32 m-4 text-black border border-white p-2  items-center justify-center justify-self-end'>
+               <Link href='/map'>
+                Back to map
+               </Link>
+              </div>
+
 
         <div className='w-full h-full flex flex-col lg:flex-row relative md:overflow-auto lg:overflow-visible'>
-          {/* close button lg + */}
 
           <div className='w-full flex flex-col grow relative items-center min-w-80'>
+          <div className='md:flex lg:hidden rounded-[9px] bg-white text-[16px] w-32 m-4 text-black border border-white p-2  items-center justify-center justify-self-end'>
+               <Link href='/map'>
+                Back to map
+               </Link>
+              </div>
             <div className='lg:sticky lg:top-0'>
               <div
                 className='bg-black mt-6 ml-6 p-6 border rounded-lg text-white max-w-80'
