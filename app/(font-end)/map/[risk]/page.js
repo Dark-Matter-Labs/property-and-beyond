@@ -1,4 +1,4 @@
-import RiskDetail from '@/components/risk-detail';
+import RiskDetailNonModal from '@/components/risk-detail-non-modal';
 import { client } from '@/sanity/lib/client';
 
 export const riskSlugs = `
@@ -40,7 +40,7 @@ export default async function RiskDetailPage({ params }) {
 
   return (
     <div className=''>
-      <RiskDetail risk={risk} />
+      <RiskDetailNonModal risk={risk} />
     </div>
   );
 }

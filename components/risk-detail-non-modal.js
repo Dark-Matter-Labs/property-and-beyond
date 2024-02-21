@@ -42,7 +42,7 @@ const componentsStakehoilder = {
   },
 };
 
-export default function RiskDetail({ risk, ...props }) {
+export default function RiskDetailNonModal({ risk, ...props }) {
   const router = useRouter();
 
   const [color, setColor] = useState();
@@ -71,33 +71,10 @@ export default function RiskDetail({ risk, ...props }) {
     <>
       <div className='hidden md:flex h-auto flex-row lg:flex-col bg-[#181616F0] min-h-screen'>
         {/* close button md -> lg */}
-        <div
-          className='lg:hidden flex max-w-14 px-2 relative justify-center min-h-screen'
-          style={{ backgroundColor: color }}
-        >
-          <button
-            type='button'
-            className='text-black border border-black h-10 w-10 rounded-full bg-white flex items-center justify-center sticky top-[50vh]'
-            onClick={() => router.push('/map')}
-          >
-            <FaArrowRight />
-          </button>
-        </div>
+       
 
         <div className='w-full h-full flex flex-col lg:flex-row relative md:overflow-auto lg:overflow-visible'>
           {/* close button lg + */}
-          <div
-            className='hidden lg:flex max-w-14 relative justify-center min-h-screen px-2 '
-            style={{ backgroundColor: color }}
-          >
-            <button
-              type='button'
-              className='text-black border border-black h-10 w-10 rounded-full bg-white flex items-center justify-center sticky top-[50vh]'
-              onClick={() => router.push('/map')}
-            >
-              <FaArrowRight />
-            </button>
-          </div>
 
           <div className='w-full flex flex-col grow relative items-center min-w-80'>
             <div className='lg:sticky lg:top-0'>
