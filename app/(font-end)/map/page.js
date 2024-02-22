@@ -36,7 +36,7 @@ export default async function Map() {
           muted
           className='absolute w-auto min-w-full min-h-full max-w-none overflow-hidden'
         >
-          <source src='/video.mp4' type='video/mp4' />
+          <source src='/compressed11.mp4' type='video/mp4' />
         </video>
       </div>
     </>
