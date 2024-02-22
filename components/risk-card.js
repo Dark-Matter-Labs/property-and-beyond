@@ -42,7 +42,7 @@ export default function RiskCard({ risk }) {
               />
             </div>
             <div
-              className='mt-4 text-[16px] text-center rounded-[10px] w-full py-1 px-2 flex items-center justify-center uppercase wrap-text'
+              className='mt-4 text-[12px] leading-3	  text-center rounded-[10px] w-full py-1.5 px-2 flex items-center justify-center uppercase wrap-text'
               style={{ backgroundColor: color }}
             >
               {risk.riskSubType}

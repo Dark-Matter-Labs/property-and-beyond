@@ -24,7 +24,7 @@ const componentsImpacts = {
 const componentsPreparedness = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[20px]'>{children}</p>,
+    normal: ({ children }) => <p className='text-[20px] max-h-64'>{children}</p>,
   },
 };
 
