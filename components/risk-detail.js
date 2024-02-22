@@ -7,7 +7,6 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import PropertyIssueCard from './property-issue-card';
 
-
 const componentsImpacts = {
   block: {
     // Ex. 1: customizing common block types
@@ -37,8 +36,7 @@ const componentsStakehoilder = {
 };
 
 export default function RiskDetail({ risk, ...props }) {
-
-  console.log(risk)
+  console.log(risk);
   const router = useRouter();
 
   const [color, setColor] = useState();
@@ -62,8 +60,6 @@ export default function RiskDetail({ risk, ...props }) {
       setColor('#F37A4B');
     }
   }, [color, risk.riskType]);
-
-  
 
   return (
     <>
@@ -123,11 +119,11 @@ export default function RiskDetail({ risk, ...props }) {
             <div className='flex flex-col mb-6'>
               <div className='text-white text-[30px] font-bold'>Linked property issues</div>
               <div className='flex my-6'>
-              <div className='flex gap-6 overflow-x-scroll snap-x snap-mandatory no-scrollbar h-auto'>
-                {risk?.propertyIssues?.map((issue, id) => (
-                <PropertyIssueCard issue={issue} key={id} color={color}/>
-                ))}
-              </div>
+                <div className='flex gap-6 overflow-x-scroll snap-x snap-mandatory no-scrollbar h-auto'>
+                  {risk?.propertyIssues?.map((issue, id) => (
+                    <PropertyIssueCard issue={issue} key={id} color={color} />
+                  ))}
+                </div>
               </div>
             </div>
             {/* Section two */}
@@ -253,45 +249,54 @@ export default function RiskDetail({ risk, ...props }) {
                       <div className='flex flex-col'>
                         {risk?.caseStudy.map((study, id) => (
                           <div key={id} className='py-6 border-b' style={{ borderColor: color }}>
-                          <div
-                            
-                            className='flex flex-row '
-                            
-                          >
-                            <div className='basis-1/4 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
-                              <Image
-                                src='/27.jpg'
-                                alt=''
-                                width={200}
-                                height={200}
-                                className='object-fill rounded-md w-full h-full'
-                              />
-                            </div>
-                            <div className='flex flex-col basis-2/4'>
-                            {study.date ? ( <div className='text-[15px] font-bold'>{study.date}</div>) : ( <div className='text-[15px] font-bold'>January</div>)}
-                             
-                              <div className='text-[20px] font-bold'>{study.title}</div>
-                              {study.location ? (<div className='text-[20px] mb-2'>{study.location}</div>) : (<div className='text-[20px] mb-4'>Location</div>)}
-                              <div>
-                                {study.description ? (
-                                  <PortableText
-                                    value={study?.description}
-                                    components={componentsCaseStudy}
-                                  />
+                            <div className='flex flex-row '>
+                              <div className='basis-1/4 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
+                                <Image
+                                  src='/27.jpg'
+                                  alt=''
+                                  width={200}
+                                  height={200}
+                                  className='object-fill rounded-md w-full h-full'
+                                />
+                              </div>
+                              <div className='flex flex-col basis-2/4'>
+                                {study.date ? (
+                                  <div className='text-[15px] font-bold'>{study.date}</div>
                                 ) : (
-                                  <div className='text-[16px]'>
-                                    Tech industry leading here text here here text adding text only
-                                    2 lines here. the text will be actually longere so more than 3
-                                    lines actually even longer so we can consider approximalety this
-                                    amount.
-                                  </div>
+                                  <div className='text-[15px] font-bold'>January</div>
                                 )}
+
+                                <div className='text-[20px] font-bold'>{study.title}</div>
+                                {study.location ? (
+                                  <div className='text-[20px] mb-2'>{study.location}</div>
+                                ) : (
+                                  <div className='text-[20px] mb-4'>Location</div>
+                                )}
+                                <div>
+                                  {study.description ? (
+                                    <PortableText
+                                      value={study?.description}
+                                      components={componentsCaseStudy}
+                                    />
+                                  ) : (
+                                    <div className='text-[16px]'>
+                                      Tech industry leading here text here here text adding text
+                                      only 2 lines here. the text will be actually longere so more
+                                      than 3 lines actually even longer so we can consider
+                                      approximalety this amount.
+                                    </div>
+                                  )}
+                                </div>
                               </div>
                             </div>
-                            </div>
-                            {study.source ? (  <span className='text-[8px] translate-y-2'>{study.source}</span>): (  <span className='text-[8px] translate-y-2'>I am a source of an image</span>)}
+                            {study.source ? (
+                              <span className='text-[8px] translate-y-2'>{study.source}</span>
+                            ) : (
+                              <span className='text-[8px] translate-y-2'>
+                                I am a source of an image
+                              </span>
+                            )}
                           </div>
-                          
                         ))}
                       </div>
                     </Disclosure.Panel>
@@ -322,18 +327,16 @@ export default function RiskDetail({ risk, ...props }) {
                       style={{ borderColor: color }}
                     >
                       <div className='flex flex-col w-full'>
-                          {risk.stakeholders.map((holder, id) => (
-                            <div key={id} className='my-2 w-3/4'>
-                                <div className='text-[20px] font-bold inline'>
-                                  - {holder.title}:
-                                </div>{' '}
-                                <PortableText
-                                  value={holder.content}
-                                  components={componentsStakehoilder}
-                                />
-                              </div>
-                          ))}
-                        </div>
+                        {risk.stakeholders.map((holder, id) => (
+                          <div key={id} className='my-2 w-3/4'>
+                            <div className='text-[20px] font-bold inline'>- {holder.title}:</div>{' '}
+                            <PortableText
+                              value={holder.content}
+                              components={componentsStakehoilder}
+                            />
+                          </div>
+                        ))}
+                      </div>
                     </Disclosure.Panel>
                   </>
                 )}
