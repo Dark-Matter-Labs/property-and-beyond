@@ -3,28 +3,22 @@ import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
 import { FaArrowRight, FaMinus, FaPlus } from 'react-icons/fa';
 import { Disclosure } from '@headlessui/react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import PropertyIssueCard from './property-issue-card';
 
-const componentsPropertyIssue = {
-  block: {
-    // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[16px]'>{children}</p>,
-  },
-};
 
 const componentsImpacts = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <span className='text-[20px] inline'>{children}</span>,
+    normal: ({ children }) => <span className='text-[20px]'>{children}</span>,
   },
 };
 
 const componentsPreparedness = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[20px] max-h-64'>{children}</p>,
+    normal: ({ children }) => <p className='text-[20px]'>{children}</p>,
   },
 };
 
@@ -43,6 +37,8 @@ const componentsStakehoilder = {
 };
 
 export default function RiskDetail({ risk, ...props }) {
+
+  console.log(risk)
   const router = useRouter();
 
   const [color, setColor] = useState();
@@ -66,6 +62,8 @@ export default function RiskDetail({ risk, ...props }) {
       setColor('#F37A4B');
     }
   }, [color, risk.riskType]);
+
+  
 
   return (
     <>
@@ -99,8 +97,8 @@ export default function RiskDetail({ risk, ...props }) {
             </button>
           </div>
 
-          <div className='w-full flex flex-col grow relative items-center min-w-80'>
-            <div className='lg:sticky lg:top-0'>
+          <div className='w-full flex flex-col grow relative items-center lg:max-w-80'>
+            <div className='lg:sticky lg:top-0 min-w-80'>
               <div
                 className='bg-black mt-6 ml-6 p-6 border rounded-lg text-white max-w-80'
                 style={{ borderColor: color }}
@@ -124,28 +122,12 @@ export default function RiskDetail({ risk, ...props }) {
             {/* PROPERTY Issues */}
             <div className='flex flex-col mb-6'>
               <div className='text-white text-[30px] font-bold'>Linked property issues</div>
-              <div className='flex flex-row my-6 gap-6 overflow-x-scroll snap-x snap-mandatory no-scrollbar'>
+              <div className='flex my-6'>
+              <div className='flex gap-6 overflow-x-scroll snap-x snap-mandatory no-scrollbar h-auto'>
                 {risk?.propertyIssues?.map((issue, id) => (
-                  <div
-                    key={id}
-                    className='border p-6 rounded-[9px] bg-[#E7E7E7] min-w-80 flex flex-col justify-between'
-                    style={{ borderColor: color }}
-                  >
-                    <div className='text-black text-[40px] break-words w-full'>{issue.title}</div>
-                    <div className='flex items-center w-full justify-center my-3'>
-                      <Image
-                        src='/propertyIssue.png'
-                        alt='alt text'
-                        width={150}
-                        height={150}
-                        className='object-fit h-32 w-32'
-                      />
-                    </div>
-                    <div>
-                      <PortableText value={issue.content} components={componentsPropertyIssue} />
-                    </div>
-                  </div>
+                <PropertyIssueCard issue={issue} key={id} color={color}/>
                 ))}
+              </div>
               </div>
             </div>
             {/* Section two */}

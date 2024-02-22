@@ -9,6 +9,7 @@ const riskQuery = `
   ...,
   "caseStudy": caseStudies[]->,
   "solution": solutions[]->,
+  "plainText":propertyIssues[]{"content":pt::text(content)},
 }
 `;
 
@@ -29,7 +30,6 @@ export default async function Map() {
             Go Back
           </Link>
         </div>
-
         <video
           autoPlay
           loop

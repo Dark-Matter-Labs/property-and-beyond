@@ -38,7 +38,7 @@ export default function Container({ data }) {
   return (
     <>
       <div className='hidden md:flex flex-col relative z-20 sm:h-[calc(100vh-120px)] w-full bg-black bg-opacity-50 overflow-auto no-scrollbar'>
-        <div className='bg-black w-[calc(w-screen-17px)]'>
+        <div className='bg-black'>
           <div className='global-margin max-w-2xl bg-black text-white'>
             <div className='max-w-lg md:max-w-md lg:max-w-2xl pb-20'>
               <p className='text-xl mb-2'>
