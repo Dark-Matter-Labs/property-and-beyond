@@ -64,15 +64,15 @@ export default function Tooltip({ children, icon }) {
                         </button>
                       </div>
                     </Transition.Child>
-                    <div className='flex h-full md:w-[50vw] flex-col overflow-y-scroll bg-white py-6 shadow-xl'>
+                    <div className='flex h-screen pb-10 md:w-[60vw] flex-col overflow-y-scroll bg-white py-6 shadow-xl'>
                       <div className='px-4 sm:px-6'>
                         <Dialog.Title className='text-gray-900'>
                           {' '}
                           <h2 className='mobile sm:desktop'>Methodology</h2>
                         </Dialog.Title>
                       </div>
-                      <div className='relative mx-6 flex-1 px-4 sm:px-6'>
-                        <div className='absolute inset-0 px-4 sm:px-6'>
+                      <div className='relative px-4 sm:px-6 mb-6 h-full'>
+                        <div className='absolute inset-0 px-4 sm:px-6 h-full'>
                           <p className='text-[20px] mb-4'>
                             Unlike traditional risk assessments that focus on classifying severity
                             of risks and their immediate and tangible impacts, this tool highlights
@@ -93,7 +93,7 @@ export default function Tooltip({ children, icon }) {
                             <span className='font-bold'>Risk Identification:</span> We identified
                             strategic risks across five domains: AI and innovation, climate,
                             conflict and displacement, labor and economic security, and housing and
-                            civic infrastructure. \
+                            civic infrastructure.
                           </p>
                           <p className='text-[20px] mb-4'>
                             <span className='font-bold'>Property Linkages:</span> Each risk was
@@ -120,7 +120,7 @@ export default function Tooltip({ children, icon }) {
                             stakeholders to engage in solutions spaces and their potential role as
                             lead actor, supporter, or barrier.
                           </p>
-                          <p className=''>
+                          <p className='text-[20px] mb-4'>
                             <span className='font-bold'>Preparedness:</span> We assessed the nature
                             and scope of existing mitigation strategies and their potential and
                             limitations to respond to a specific risk. Wherever existing solutions

@@ -121,7 +121,7 @@ export default function Container({ data }) {
 
               <Tooltip>
                 {' '}
-                <div className='rounded-[9px] bg-black text-[16px] text-white border border-black p-2 flex items-center justify-center justify-self-end'>
+                <div className='rounded-[9px] bg-[#AD76F4] text-[16px] text-black border border-[#AD76F4] p-2 flex items-center justify-center justify-self-end'>
                   Methodology
                 </div>{' '}
               </Tooltip>

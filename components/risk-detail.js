@@ -216,7 +216,7 @@ export default function RiskDetail({ risk, ...props }) {
                       style={{ borderColor: color }}
                     >
                       <div className='flex'>
-                        <div className='basis-2/3'>
+                        <div className='basis-3/4'>
                           <PortableText
                             value={risk?.preparedness}
                             components={componentsPreparedness}
@@ -252,24 +252,26 @@ export default function RiskDetail({ risk, ...props }) {
                     >
                       <div className='flex flex-col'>
                         {risk?.caseStudy.map((study, id) => (
+                          <div key={id} className='py-6 border-b' style={{ borderColor: color }}>
                           <div
-                            key={id}
-                            className='flex flex-row basis-2/3 py-6 border-b'
-                            style={{ borderColor: color }}
+                            
+                            className='flex flex-row '
+                            
                           >
-                            <div className='basis-1/3'>
+                            <div className='basis-1/4 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
                               <Image
-                                src='/caseStudy.png'
+                                src='/27.jpg'
                                 alt=''
                                 width={200}
                                 height={200}
-                                className='object-cover'
+                                className='object-fill rounded-md w-full h-full'
                               />
                             </div>
-                            <div className='flex flex-col basis-2/3'>
-                              <div className='text-[15px] font-bold'>{study.date}</div>
+                            <div className='flex flex-col basis-2/4'>
+                            {study.date ? ( <div className='text-[15px] font-bold'>{study.date}</div>) : ( <div className='text-[15px] font-bold'>January</div>)}
+                             
                               <div className='text-[20px] font-bold'>{study.title}</div>
-                              <div className='text-[20px] font-bold mb-4'>{study.location}</div>
+                              {study.location ? (<div className='text-[20px] mb-2'>{study.location}</div>) : (<div className='text-[20px] mb-4'>Location</div>)}
                               <div>
                                 {study.description ? (
                                   <PortableText
@@ -277,7 +279,7 @@ export default function RiskDetail({ risk, ...props }) {
                                     components={componentsCaseStudy}
                                   />
                                 ) : (
-                                  <div>
+                                  <div className='text-[16px]'>
                                     Tech industry leading here text here here text adding text only
                                     2 lines here. the text will be actually longere so more than 3
                                     lines actually even longer so we can consider approximalety this
@@ -286,7 +288,10 @@ export default function RiskDetail({ risk, ...props }) {
                                 )}
                               </div>
                             </div>
+                            </div>
+                            {study.source ? (  <span className='text-[8px] translate-y-2'>{study.source}</span>): (  <span className='text-[8px] translate-y-2'>I am a source of an image</span>)}
                           </div>
+                          
                         ))}
                       </div>
                     </Disclosure.Panel>
@@ -316,11 +321,9 @@ export default function RiskDetail({ risk, ...props }) {
                       className='flex flex-col p-6 bg-[#E7E7E7] border rounded-b-[9px]'
                       style={{ borderColor: color }}
                     >
-                      <div className='flex flex-col'>
-                        <div className=''>
+                      <div className='flex flex-col w-full'>
                           {risk.stakeholders.map((holder, id) => (
-                            <div key={id} className='my-2w'>
-                              <div className='mb-4'>
+                            <div key={id} className='my-2 w-3/4'>
                                 <div className='text-[20px] font-bold inline'>
                                   - {holder.title}:
                                 </div>{' '}
@@ -329,10 +332,8 @@ export default function RiskDetail({ risk, ...props }) {
                                   components={componentsStakehoilder}
                                 />
                               </div>
-                            </div>
                           ))}
                         </div>
-                      </div>
                     </Disclosure.Panel>
                   </>
                 )}
