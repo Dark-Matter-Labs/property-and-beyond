@@ -17,6 +17,18 @@ const componentsPropertyIssueGeneric = {
     // Ex. 1: customizing common block types
     normal: ({ children }) => <p className='text-[16px] mb-2'>{children}</p>,
   },
+  list: {
+    bullet: ({children}) => (
+      <div className='newlineDisplay p-base my-1 ml-3'>
+      <ul className='list-disc list-inside'>{children}</ul>
+      </div>
+      )
+  },
+  listItem: {
+    bullet: ({children}) => (
+      <li className='text-[16px] mb-1 '>{children}</li>
+    ),
+  },
 };
 
 export default function PropertyIssueCard({ issue, color }) {
