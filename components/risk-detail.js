@@ -25,7 +25,7 @@ const componentsPreparedness = {
 const componentsCaseStudy = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[20px]'>{children}</p>,
+    normal: ({ children }) => <p className='text-[16px]'>{children}</p>,
   },
 };
 
@@ -37,7 +37,6 @@ const componentsStakehoilder = {
 };
 
 export default function RiskDetail({ risk, ...props }) {
-  console.log(risk);
   const router = useRouter();
 
   const [color, setColor] = useState();
@@ -248,8 +247,9 @@ export default function RiskDetail({ risk, ...props }) {
                       style={{ borderColor: color }}
                     >
                       <div className='flex flex-col'>
-                        {risk?.caseStudy.map((study, id) => (
+                        {risk?.caseStudies.map((study, id) => (
                           <div key={id} className='py-6 border-b' style={{ borderColor: color }}>
+
                             <div className='flex flex-row '>
                               <div className='basis-1/4 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
                                 {study.image ? (   <Image
@@ -281,9 +281,9 @@ export default function RiskDetail({ risk, ...props }) {
                                   <div className='text-[20px] mb-4'>Location</div>
                                 )}
                                 <div>
-                                  {study.description ? (
+                                  {study.desctiption ? (
                                     <PortableText
-                                      value={study?.description}
+                                      value={study?.desctiption}
                                       components={componentsCaseStudy}
                                     />
                                   ) : (

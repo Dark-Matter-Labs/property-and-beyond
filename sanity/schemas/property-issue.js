@@ -21,14 +21,12 @@ export default  {
             of: [{type: 'block'}]
         },
         {
-            name: 'image',
-            type: 'image',
-            title: 'Image',
-        }, 
-        {
-            name: 'alt',
-            type: 'string',
-            title: 'Image Alt Text'
+            name: 'genericPropertyIssue',
+            type: 'reference',
+            title: 'Generic Property Issue',
+            to: [{type: 'genericPropertyIssue'}],
+            validation: (Rule) => Rule.required()
         }
+       
     ]
 }

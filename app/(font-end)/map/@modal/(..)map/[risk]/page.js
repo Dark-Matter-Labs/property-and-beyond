@@ -8,13 +8,17 @@ export const riskSlugs = `
 
 const riskQuery = `
 *[_type == "risk" && slug.current == $slug][0] {
-  "caseStudy": caseStudies[]->{
-    "image": image.asset->.url,
-    ...,
-  },
-  "solution": solutions[]->,
-  
   ...,
+  caseStudies[]->{
+    ...,
+    "image": image.asset->.url
+  },
+  propertyIssues[]{...,
+    genericPropertyIssue->{
+      ...,
+      "image": image.asset->.url
+    }
+  },
 }
 `;
 

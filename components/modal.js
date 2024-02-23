@@ -10,6 +10,7 @@ export default function Modal({ children, slug }) {
   const pathname = usePathname();
   const [risk, setRisk] = useState(slug);
 
+
   useEffect(() => {
     if (`/map/${risk}` === pathname) {
       setOpen(true);

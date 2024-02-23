@@ -72,7 +72,7 @@ export default function Container({ data }) {
             </div>
           </div>
         </div>
-        <div className='flex flex-col global-margin relative z-30 min-h-screen'>
+        <div className='flex flex-col global-margin relative z-30 min-h-screen 2xl:min-w-[1280px]'>
           <div className='mt-6'>
             <div className='flex items-center justify-start mr-3 text-black text-[22px]'>
               Types of Crisis:

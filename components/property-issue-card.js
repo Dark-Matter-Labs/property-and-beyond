@@ -3,6 +3,7 @@ import { PortableText } from '@portabletext/react';
 import { useFloating, autoUpdate, useHover, useFocus, useInteractions } from '@floating-ui/react';
 import { IoIosInformationCircle } from 'react-icons/io';
 import { useState } from 'react';
+import { urlForImage } from '@/sanity/lib/image';
 
 const componentsPropertyIssue = {
   block: {
@@ -11,9 +12,16 @@ const componentsPropertyIssue = {
   },
 };
 
+const componentsPropertyIssueGeneric = {
+  block: {
+    // Ex. 1: customizing common block types
+    normal: ({ children }) => <p className='text-[16px] mb-2'>{children}</p>,
+  },
+};
+
 export default function PropertyIssueCard({ issue, color }) {
+  console.log(issue, 'issue')
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
 
   const { refs, context, floatingStyles } = useFloating({
     placement: 'bottom',
@@ -33,7 +41,7 @@ export default function PropertyIssueCard({ issue, color }) {
       style={{ borderColor: color }}
     >
       <div className='text-black text-[40px] break-words flex flex-row items-center'>
-        {issue.title}{' '}
+        {issue.genericPropertyIssue.title}{' '}
         <button ref={refs.setReference} {...getReferenceProps()}>
           <IoIosInformationCircle className='w-10 h-10 ml-2' />
         </button>
@@ -44,26 +52,13 @@ export default function PropertyIssueCard({ issue, color }) {
             style={floatingStyles}
             {...getFloatingProps()}
           >
-            <p>Identification of property as abstracted, bounded and separate entities</p>
-            <p>
-              Failure to account for trans-boundary systems (e.g. rivers, animal migrations,
-              atmosphere)
-            </p>
-            <p>
-              Rigid boundaries and definitions on what counts as &apos;property&apos; ,
-              &apos;property damage&apos; , and externalities limit actions that can be taken by
-              property institutions to mitigate new risks or handle multiple claims
-            </p>
-            <p>
-              The imposition of boundaries onto the relational nature of land allows value not
-              created by the owner to be captured, such as its proximity to infrastructure
-            </p>
+           <PortableText value={issue.genericPropertyIssue.genericContent} components={componentsPropertyIssueGeneric}/>
           </div>
         )}
       </div>
       <div className='flex items-center w-full justify-center my-3'>
         <Image
-          src='/propertyIssue.png'
+          src={urlForImage(issue.genericPropertyIssue.image)}
           alt='alt text'
           width={150}
           height={150}
