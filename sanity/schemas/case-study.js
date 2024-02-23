@@ -10,16 +10,19 @@ export default {
             name: 'title',
             type: 'string',
             title: 'Title',
+            validation: (Rule) => Rule.required(),
         },
         {
             name: 'image',
             type: 'image',
             title: 'Image',
+            validation: (Rule) => Rule.required(),
         },
         {
             name: 'source',
             type: 'text',
             title: 'Image Source',
+            validation: (Rule) => Rule.required(),
         },
         {
             name: 'typeOfRisk',
@@ -38,17 +41,21 @@ export default {
             name: 'location',
             type: 'string',
             title: 'Location',
+            validation: (Rule) => Rule.required()
         },
+
         {
             name: 'date',
             type: 'string',
             title: 'Date',
+            validation: (Rule) => Rule.required()
         },  
         {
             name: 'desctiption',
             type: 'array',
             title: 'Case Study Description',
-            of: [{type: 'block'}]
+            of: [{type: 'block'}],
+            validation: (Rule) => Rule.required()
         },
         {
             name: 'references',
