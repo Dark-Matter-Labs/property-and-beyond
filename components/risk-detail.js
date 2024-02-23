@@ -6,6 +6,7 @@ import { Disclosure } from '@headlessui/react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import PropertyIssueCard from './property-issue-card';
+import { urlForImage } from '@/sanity/lib/image';
 
 const componentsImpacts = {
   block: {
@@ -251,13 +252,20 @@ export default function RiskDetail({ risk, ...props }) {
                           <div key={id} className='py-6 border-b' style={{ borderColor: color }}>
                             <div className='flex flex-row '>
                               <div className='basis-1/4 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
-                                <Image
-                                  src='/27.jpg'
+                                {study.image ? (   <Image
+                                  src={urlForImage(study.image)}
                                   alt=''
-                                  width={200}
+                                  width={300}
                                   height={200}
                                   className='object-fill rounded-md w-full h-full'
-                                />
+                                />) : (   <Image
+                                  src='/27.jpg'
+                                  alt=''
+                                  width={300}
+                                  height={200}
+                                  className='object-fill rounded-md w-full h-full'
+                                />)}
+                             
                               </div>
                               <div className='flex flex-col basis-2/4'>
                                 {study.date ? (

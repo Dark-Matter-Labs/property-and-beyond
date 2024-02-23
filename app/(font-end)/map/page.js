@@ -9,7 +9,6 @@ const riskQuery = `
   ...,
   "caseStudy": caseStudies[]->,
   "solution": solutions[]->,
-  "plainText":propertyIssues[]{"content":pt::text(content)},
 }
 `;
 

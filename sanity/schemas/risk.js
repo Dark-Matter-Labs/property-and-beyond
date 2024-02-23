@@ -30,16 +30,6 @@ export default {
                 validation: (Rule) => Rule.required(),
               },
           },
-          {
-            name: 'icon',
-            type: 'image',
-            title: 'Risk Icon',
-          },
-          {
-            name: 'alt',
-            type: 'string',
-            title: 'Icon Alt Text'
-        },
         {
             name: 'riskType',
             type: 'string',
