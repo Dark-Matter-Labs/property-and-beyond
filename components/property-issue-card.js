@@ -20,7 +20,6 @@ const componentsPropertyIssueGeneric = {
 };
 
 export default function PropertyIssueCard({ issue, color }) {
-  console.log(issue, 'issue')
   const [isOpen, setIsOpen] = useState(false);
 
   const { refs, context, floatingStyles } = useFloating({
