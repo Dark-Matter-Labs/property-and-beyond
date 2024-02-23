@@ -40,7 +40,9 @@ export default function Container({ data }) {
       <div className='hidden md:flex flex-col relative z-20 sm:h-[calc(100vh-120px)] w-full bg-black bg-opacity-50 overflow-auto no-scrollbar'>
         <div className='bg-black'>
           <div className='global-margin max-w-2xl bg-black text-white'>
-            <div className='max-w-lg md:max-w-md lg:max-w-2xl pb-20'>
+            <h1 className='mb-4'>CRISIS MAP</h1>
+            <div className='pb-20 grid grid-cols-2 gap-6'>
+              <div>
               <p className='text-xl mb-2'>
                 Property is one of the core deep codes of our everyday life: often invisible,
                 overlooked or seen as a near-natural law.{' '}
@@ -59,6 +61,8 @@ export default function Container({ data }) {
                 We need to rethink property and its role in system responsiveness and resilience,
                 and its potential to drive wider transformational change.
               </p>
+              </div>
+              <div>
               <p className='text-xl font-bold mb-2'>
                 This visualization tool maps critical global risks and their interplay with property
                 and ownership.
@@ -69,6 +73,7 @@ export default function Container({ data }) {
                 level and identify potential solutions, lead environments, and coalitions to build
                 real-world demonstrations of property futures.
               </p>
+              </div>
             </div>
           </div>
         </div>
