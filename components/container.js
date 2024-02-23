@@ -40,7 +40,7 @@ export default function Container({ data }) {
       <div className='hidden md:flex flex-col relative z-20 sm:h-[calc(100vh-120px)] w-full bg-black bg-opacity-50 overflow-auto no-scrollbar'>
         <div className='bg-black'>
           <div className='global-margin max-w-2xl bg-black text-white'>
-            <h1 className='mb-4'>CRISIS MAP</h1>
+            <h1 className='my-6'>CRISIS-RESPONSIVE TRANSFORMATION</h1>
             <div className='pb-20 grid grid-cols-2 gap-6'>
               <div>
               <p className='text-xl mb-2'>
