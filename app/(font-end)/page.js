@@ -42,7 +42,7 @@ export default async function Home() {
           <div className='bg-white w-[calc(w-screen-17px)]'>
             <div className='global-margin max-w-2xl bg-white text-black'>
               <div className='max-w-lg md:max-w-md lg:max-w-2xl py-24'>
-                <h2 className='mb-8'>Crisis-Responsive Transformation</h2>
+                <h2 className='mb-8 break-words w-full'>Crisis-Responsive Transformation</h2>
                 <PortableText value={data.politicsOfChange} components={HPcomponents} />
               </div>
             </div>
