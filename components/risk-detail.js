@@ -18,7 +18,7 @@ const componentsImpacts = {
 const componentsPreparedness = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[20px] mb-4'>{children}</p>,
+    normal: ({ children }) => <p className='text-[20px]'>{children}</p>,
   },
 };
 
@@ -212,7 +212,7 @@ export default function RiskDetail({ risk, ...props }) {
                       style={{ borderColor: color }}
                     >
                       <div className='flex'>
-                        <div className='basis-3/4'>
+                        <div className='basis-3/4 px-4'>
                           <PortableText
                             value={risk?.preparedness}
                             components={componentsPreparedness}

@@ -20,7 +20,7 @@ const componentsImpacts = {
 const componentsPreparedness = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[20px] mb-4'>{children}</p>,
+    normal: ({ children }) => <p className='text-[20px]'>{children}</p>,
   },
 };
 
@@ -198,7 +198,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                       style={{ borderColor: color }}
                     >
                       <div className='flex'>
-                        <div className='basis-3/4'>
+                        <div className='basis-3/4 px-4'>
                           <PortableText
                             value={risk?.preparedness}
                             components={componentsPreparedness}
@@ -251,7 +251,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                                     alt='placeholder image'
                                     width={300}
                                     height={200}
-                                    className='object-fill rounded-md w-full'
+                                    className='object-fill rounded-md w-full h-full'
                                   />
                                 )}
                               </div>
