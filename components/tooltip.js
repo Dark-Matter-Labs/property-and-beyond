@@ -154,7 +154,6 @@ export default function Tooltip({ children, icon }) {
                             alexandra@darkmatterlabs.org
                           </p>
                           <div className='h-6'>
-
                           </div>
                         </div>
                       </div>
