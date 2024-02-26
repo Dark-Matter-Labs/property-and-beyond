@@ -12,19 +12,19 @@ export default function Modal({ children, slug }) {
 
 
   useEffect(() => {
-    if (`/map/${risk}` === pathname) {
+    if (`/tool/${risk}` === pathname) {
       setOpen(true);
     }
   }, [risk, pathname]);
 
   const closeRiskDetail = () => {
-    router.push('/map');
+    router.push('/tool');
     setOpen(false);
     // setRisk(undefined)
   };
 
   useEffect(() => {
-    if (pathname === '/map') {
+    if (pathname === '/tool') {
       setOpen(false);
       // setRisk(undefined)
     }

@@ -72,7 +72,7 @@ export default function RiskDetail({ risk, ...props }) {
           <button
             type='button'
             className='text-black border border-black h-10 w-10 rounded-full bg-white flex items-center justify-center sticky top-[50vh]'
-            onClick={() => router.push('/map')}
+            onClick={() => router.push('/tool')}
           >
             <FaArrowRight />
           </button>
@@ -87,7 +87,7 @@ export default function RiskDetail({ risk, ...props }) {
             <button
               type='button'
               className='text-black border border-black h-10 w-10 rounded-full bg-white flex items-center justify-center sticky top-[50vh]'
-              onClick={() => router.push('/map')}
+              onClick={() => router.push('/tool')}
             >
               <FaArrowRight />
             </button>

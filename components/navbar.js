@@ -59,7 +59,7 @@ export default function NavBar() {
   if (pathname !== '/studio/structure') {
     return (
       <div
-        className={`${pathname === '/map' ? '' : 'sticky top-0'} text-white bg-black h-20 md:h-32 flex items-center justify-center z-50`}
+        className={`${pathname === '/tool' ? '' : 'sticky top-0'} text-white bg-black h-20 md:h-32 flex items-center justify-center z-50`}
       >
         <div className='global-margin flex flex-row justify-between items-center h-full w-full'>
           <Link href='/' className=''>
@@ -110,7 +110,7 @@ export default function NavBar() {
                       >
                         <div className='flex flex-col items-start justify-end global-margin '>
                           <ul className=''>
-                            `{' '}
+                            {' '}
                             <li className='menu mb-6 hover:cursor-pointer'>
                               <ScrollLink
                                 to='section-1'
@@ -202,7 +202,6 @@ export default function NavBar() {
                                 PARTNERS
                               </ScrollLink>
                             </li>
-                            `
                           </ul>
                         </div>
                       </div>

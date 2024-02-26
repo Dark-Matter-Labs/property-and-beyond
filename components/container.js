@@ -136,7 +136,7 @@ export default function Container({ data }) {
             {filteredRisks.map((risk, id) => (
               <Link
                 key={id}
-                href={`/map/${risk.slug.current}`}
+                href={`/tool/${risk.slug.current}`}
                 className='min-h-80 flex flex-col items-center relative'
               >
                 <RiskCard risk={risk} />

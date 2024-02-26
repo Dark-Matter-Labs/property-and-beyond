@@ -79,13 +79,13 @@ export default function RiskDetailNonModal({ risk, ...props }) {
         {/* close button md -> lg */}
 
         <div className='hidden lg:flex rounded-[9px] bg-white text-[16px] w-32 m-4 text-black border border-white p-2  items-center justify-center justify-self-end'>
-          <Link href='/map'>Back to map</Link>
+          <Link href='/tool'>Back to map</Link>
         </div>
 
         <div className='w-full h-full flex flex-col lg:flex-row relative md:overflow-auto lg:overflow-visible'>
           <div className='w-full flex flex-col grow relative items-center min-w-80'>
             <div className='md:flex lg:hidden rounded-[9px] bg-white text-[16px] w-32 m-4 text-black border border-white p-2  items-center justify-center justify-self-end'>
-              <Link href='/map'>Back to map</Link>
+              <Link href='/tool'>Back to map</Link>
             </div>
             <div className='lg:sticky lg:top-0'>
               <div

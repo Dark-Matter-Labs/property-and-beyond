@@ -49,13 +49,13 @@ export default async function Home() {
           </div>
 
           <div className='hidden md:block w-[calc(w-screen-17px)] bg-[url("/crisis.png")] bg-cover h-[800px]'>
-            <Link href='/map'>
+            <Link href='/tool'>
               <div className='w-full h-full bg-black/40 md:bg-black/80 flex items-center justify-center group'>
                 <button
-                  href='/map'
+                  href='/tool'
                   className='md:mr-12 bg-[#AD76F4] border-2 border-[#AD76F4] w-80 md:w-56 lg:w-80 rounded-[33px] items-center justify-center text-white block '
                 >
-                  <div className='py-4 text-[21px]'>View the map</div>
+                  <div className='py-4 text-[21px]'>View the tool</div>
                 </button>
               </div>
             </Link>
@@ -135,7 +135,7 @@ export default async function Home() {
                 Join us in envisioning and co-designing futures of property, ownership and beyond. 
               </p>
               <button
-                href='/map'
+                href='/tool'
                 className='hover:bg-[#AD76F4] text-[#AD76F4] border-2 border-[#AD76F4] w-80 rounded-[33px] items-center justify-center hover:text-white'
               >
                 <div className='py-1 text-[21px] font-semibold'>Contact us</div>
