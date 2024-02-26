@@ -254,7 +254,7 @@ export default function RiskDetail({ risk, ...props }) {
                                 {study.image ? (
                                   <Image
                                     src={urlForImage(study.image)}
-                                    alt=''
+                                    alt={study.alt ?? ''}
                                     width={300}
                                     height={200}
                                     className='object-fill rounded-md w-full h-full'
@@ -262,7 +262,7 @@ export default function RiskDetail({ risk, ...props }) {
                                 ) : (
                                   <Image
                                     src='/27.jpg'
-                                    alt=''
+                                    alt='placeholder image'
                                     width={300}
                                     height={200}
                                     className='object-fill rounded-md w-full h-full'
