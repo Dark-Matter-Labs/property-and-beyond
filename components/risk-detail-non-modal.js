@@ -66,10 +66,12 @@ export default function RiskDetailNonModal({ risk, ...props }) {
   return (
     <>
       <div className='flex md:hidden relative  z-20 bg-black h-screen text-white flex-col items-center justify-center'>
-        CONTENT HERE TO EXPLAIN THAT THE VIS IS BETTER ON A DESKTOP
-        <Link href='/' className='mt-4 bg-white text-black p-4 rounded-[9px]'>
-          Go Back
-        </Link>
+      <div className='global-margin flex flex-col items-center justify-center'>
+         The current version of the tool is only available on desktop view
+          <Link href='/' className='mt-4 bg-white text-black px-4 py-2 rounded-[9px] w-22 flex items-center justify-center'>
+            Go Back
+          </Link>
+          </div>
       </div>
       <div className='hidden md:flex h-auto flex-row lg:flex-col bg-[#181616F0] min-h-screen'>
         {/* close button md -> lg */}

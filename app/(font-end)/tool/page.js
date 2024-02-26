@@ -23,11 +23,13 @@ export default async function Map() {
     <>
       <div className='flex flex-col items-center justify-center overflow-hidden h-full relative'>
         <Container data={data} />
-        <div className='flex md:hidden relative w-full z-20 bg-black h-screen text-white flex-col items-center justify-center global-margin'>
-          CONTENT HERE TO EXPLAIN THAT THE VIS IS BETTER ON A DESKTOP
-          <Link href='/' className='mt-4 bg-white text-black p-4 rounded-[9px]'>
+        <div className='flex md:hidden relative w-full z-20 bg-black h-screen text-white flex-col items-center justify-center'>
+          <div className='global-margin flex flex-col items-center justify-center'>
+         The current version of the tool is only available on desktop view
+          <Link href='/' className='mt-4 bg-white text-black px-4 py-2 rounded-[9px] w-22 flex items-center justify-center'>
             Go Back
           </Link>
+          </div>
         </div>
         <video
           autoPlay
