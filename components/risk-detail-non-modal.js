@@ -79,7 +79,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
         </div>
 
         <div className='w-full h-full flex flex-col lg:flex-row relative md:overflow-auto lg:overflow-visible'>
-        <div className='w-full flex flex-col grow relative items-center lg:max-w-80'>
+          <div className='w-full flex flex-col grow relative items-center lg:max-w-80'>
             <div className='lg:sticky lg:top-0 min-w-80'>
               <div
                 className='bg-black mt-6 ml-6 p-6 border rounded-lg text-white max-w-80'
@@ -123,11 +123,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>Impacts</div>
-                      {open ? (
-                        <FaMinus className='w-4 h-4 ' />
-                      ) : (
-                        <FaPlus className='w-4 h-4 ' />
-                      )}
+                      {open ? <FaMinus className='w-4 h-4 ' /> : <FaPlus className='w-4 h-4 ' />}
                     </Disclosure.Button>
                     <Disclosure.Panel
                       className='flex flex-col p-6 bg-[#E7E7E7] border rounded-b-[9px]'
@@ -187,11 +183,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>PREPAREDNESS</div>
-                      {open ? (
-                        <FaMinus className='w-4 h-4 ' />
-                      ) : (
-                        <FaPlus className='w-4 h-4 ' />
-                      )}
+                      {open ? <FaMinus className='w-4 h-4 ' /> : <FaPlus className='w-4 h-4 ' />}
                     </Disclosure.Button>
                     <Disclosure.Panel
                       className='flex flex-col p-6 bg-[#E7E7E7] border rounded-b-[9px]'
@@ -222,11 +214,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>case studies</div>
-                      {open ? (
-                        <FaMinus className='w-4 h-4 ' />
-                      ) : (
-                        <FaPlus className='w-4 h-4 ' />
-                      )}
+                      {open ? <FaMinus className='w-4 h-4 ' /> : <FaPlus className='w-4 h-4 ' />}
                     </Disclosure.Button>
                     <Disclosure.Panel
                       className='flex flex-col p-6 bg-[#E7E7E7] border rounded-b-[9px]'
@@ -312,11 +300,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>stakeholders</div>
-                      {open ? (
-                        <FaMinus className='w-4 h-4 ' />
-                      ) : (
-                        <FaPlus className='w-4 h-4 ' />
-                      )}
+                      {open ? <FaMinus className='w-4 h-4 ' /> : <FaPlus className='w-4 h-4 ' />}
                     </Disclosure.Button>
                     <Disclosure.Panel
                       className='flex flex-col p-6 bg-[#E7E7E7] border rounded-b-[9px]'

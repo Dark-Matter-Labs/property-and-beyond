@@ -62,59 +62,63 @@ export default async function Home() {
           </div>
 
           <div>
-          <div className='block md:hidden w-[calc(w-screen-17px)] bg-[url("/crisis.png")] bg-cover h-[800px]'>
+            <div className='block md:hidden w-[calc(w-screen-17px)] bg-[url("/crisis.png")] bg-cover h-[800px]'>
               <div className='w-full h-full bg-black/40 md:bg-black/80 flex items-center justify-center group'>
-                <button
-  
-                  className='md:mr-12 bg-[#AD76F4] border-2 border-[#AD76F4] w-80 md:w-56 lg:w-80 rounded-[9px] items-center justify-center text-white block '
-                >
-                  <div className='py-4 text-[21px]'>The current version of the tool is only available on desktop view</div>
+                <button className='md:mr-12 bg-[#AD76F4] border-2 border-[#AD76F4] w-80 md:w-56 lg:w-80 rounded-[9px] items-center justify-center text-white block '>
+                  <div className='py-4 text-[21px]'>
+                    The current version of the tool is only available on desktop view
+                  </div>
                 </button>
               </div>
+            </div>
           </div>
-          </div>
-
-          
-
-     
         </div>
-       
+
         {/* SECTION Three - Capabilites */}
         <div className='bg-black w-[calc(w-screen-17px)]' name='section-3'>
           <div className='global-margin max-w-4xl  bg-black text-white'>
             <div className='max-w-lg md:max-w-md lg:max-w-[690px] xl:max-w-[740px] pb-24'>
-            <h2 className='mb-8 pt-24 w-full break-words'>Building Critical Capabilities</h2>
+              <h2 className='mb-8 pt-24 w-full break-words'>Building Critical Capabilities</h2>
 
               <div className='grid grid-cols-1 lg:grid-cols-3'>
                 <div className='col-span-2'>
                   <p className='intro mb-8'>
-                  We are developing interconnected building blocks for futures of property and ownership seeding new ideas by: 
+                    We are developing interconnected building blocks for futures of property and
+                    ownership seeding new ideas by:
                   </p>
                   <ol className='list-decimal	list-inside normal'>
                     <li className='my-2'>
-                    Demonstrating a diverse portfolio of alternative property configurations like self-ownership and collective ownership 
+                      Demonstrating a diverse portfolio of alternative property configurations like
+                      self-ownership and collective ownership
                     </li>
                     <li className='my-2'>
-                    Designing enabling infrastructures that allow for alternative property mechanisms to be financed and adopted at scale 
+                      Designing enabling infrastructures that allow for alternative property
+                      mechanisms to be financed and adopted at scale
                     </li>
                     <li className='my-2'>
-                    Building new conversations and capabilities on crisis-responsive transformations
+                      Building new conversations and capabilities on crisis-responsive
+                      transformations
                     </li>
                   </ol>
                 </div>
                 <div className='col-span-1 lg:ml-6'>
-                  <p className='normal mb-4'>Pathways are opening up for different iterations of property, moving …</p>
+                  <p className='normal mb-4'>
+                    Pathways are opening up for different iterations of property, moving …
+                  </p>
                   <p className='small-text mb-4 mt-4 lg:mt-0'>
-                    <span className='font-bold'>Beyond objectification:{' '}</span> from dominion and control towards relationality and stewardship of land, resources, information, and labor
-
+                    <span className='font-bold'>Beyond objectification: </span> from dominion and
+                    control towards relationality and stewardship of land, resources, information,
+                    and labor
                   </p>
                   <p className='small-text mb-4'>
-                    <span className='font-bold'>Beyond extraction:{' '}</span>
-                    from commoning externalities towards outcome-based governance and long-term guardianship
+                    <span className='font-bold'>Beyond extraction: </span>
+                    from commoning externalities towards outcome-based governance and long-term
+                    guardianship
                   </p>
                   <p className='small-text'>
-                    <span className='font-bold'>Beyond centralization:{' '}</span>
-                    from rigid bureaucracy and concentration of benefits towards distributed governance, value creation, permissioning and verification frameworks 
+                    <span className='font-bold'>Beyond centralization: </span>
+                    from rigid bureaucracy and concentration of benefits towards distributed
+                    governance, value creation, permissioning and verification frameworks
                   </p>
                 </div>
               </div>

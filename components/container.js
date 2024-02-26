@@ -44,28 +44,35 @@ export default function Container({ data }) {
             <div className='pb-20 grid grid-cols-2 gap-6'>
               <div>
                 <p className='text-xl mb-2'>
-                Property is one of the core deep codes of our everyday life: often invisible, overlooked or seen as a near-natural law. {' '}
+                  Property is one of the core deep codes of our everyday life: often invisible,
+                  overlooked or seen as a near-natural law.{' '}
                 </p>
                 <p className='text-xl mb-2'>
-                But now, crises are bringing property to the fore. Faced with an unprecedented complexity and entanglement of systemic risks, externalities, and value creation in today’s world, property as a means of governance is increasingly falling short.
+                  But now, crises are bringing property to the fore. Faced with an unprecedented
+                  complexity and entanglement of systemic risks, externalities, and value creation
+                  in today’s world, property as a means of governance is increasingly falling short.
                 </p>
                 <p className='text-xl mb-2'>
-                To help us prepare for deepening and emerging crises, we need to delve deeper into the multifaceted challenges of property and build shared understanding and urgency.
+                  To help us prepare for deepening and emerging crises, we need to delve deeper into
+                  the multifaceted challenges of property and build shared understanding and
+                  urgency.
                 </p>
 
                 <p className='text-xl mb-2'>
-                We need to rethink property and its role in system responsiveness and resilience, and its potential to drive wider transformational change. 
-
+                  We need to rethink property and its role in system responsiveness and resilience,
+                  and its potential to drive wider transformational change.
                 </p>
               </div>
               <div>
                 <p className='text-xl font-bold mb-2'>
-                This digital tool maps critical global risks and their interplay with property and ownership. 
+                  This digital tool maps critical global risks and their interplay with property and
+                  ownership.
                 </p>
 
                 <p className='text-xl font-bold mb-2'>
-                It serves as a sensemaking tool to anticipate and respond to crises at a system level and identify potential solutions, lead environments, and coalitions to build real-world demonstrations of property futures. 
-
+                  It serves as a sensemaking tool to anticipate and respond to crises at a system
+                  level and identify potential solutions, lead environments, and coalitions to build
+                  real-world demonstrations of property futures.
                 </p>
               </div>
             </div>

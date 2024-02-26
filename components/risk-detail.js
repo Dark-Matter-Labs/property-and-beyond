@@ -137,11 +137,7 @@ export default function RiskDetail({ risk, ...props }) {
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>Impacts</div>
-                      {open ? (
-                        <FaMinus className='w-4 h-4 ' />
-                      ) : (
-                        <FaPlus className='w-4 h-4 ' />
-                      )}
+                      {open ? <FaMinus className='w-4 h-4 ' /> : <FaPlus className='w-4 h-4 ' />}
                     </Disclosure.Button>
                     <Disclosure.Panel
                       className='flex flex-col p-6 bg-[#E7E7E7] border rounded-b-[9px]'
@@ -201,11 +197,7 @@ export default function RiskDetail({ risk, ...props }) {
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>PREPAREDNESS</div>
-                      {open ? (
-                        <FaMinus className='w-4 h-4 ' />
-                      ) : (
-                        <FaPlus className='w-4 h-4 ' />
-                      )}
+                      {open ? <FaMinus className='w-4 h-4 ' /> : <FaPlus className='w-4 h-4 ' />}
                     </Disclosure.Button>
                     <Disclosure.Panel
                       className='flex flex-col p-6 bg-[#E7E7E7] border rounded-b-[9px]'
@@ -236,11 +228,7 @@ export default function RiskDetail({ risk, ...props }) {
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>case studies</div>
-                      {open ? (
-                        <FaMinus className='w-4 h-4 ' />
-                      ) : (
-                        <FaPlus className='w-4 h-4 ' />
-                      )}
+                      {open ? <FaMinus className='w-4 h-4 ' /> : <FaPlus className='w-4 h-4 ' />}
                     </Disclosure.Button>
                     <Disclosure.Panel
                       className='flex flex-col p-6 bg-[#E7E7E7] border rounded-b-[9px]'
@@ -326,11 +314,7 @@ export default function RiskDetail({ risk, ...props }) {
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>stakeholders</div>
-                      {open ? (
-                        <FaMinus className='w-4 h-4 ' />
-                      ) : (
-                        <FaPlus className='w-4 h-4 ' />
-                      )}
+                      {open ? <FaMinus className='w-4 h-4 ' /> : <FaPlus className='w-4 h-4 ' />}
                     </Disclosure.Button>
                     <Disclosure.Panel
                       className='flex flex-col p-6 bg-[#E7E7E7] border rounded-b-[9px]'
