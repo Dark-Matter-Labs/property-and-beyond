@@ -153,8 +153,7 @@ export default function Tooltip({ children, icon }) {
                             for feedback or collaboration opportunities, please contact:
                             alexandra@darkmatterlabs.org
                           </p>
-                          <div className='h-6'>
-                          </div>
+                          <div className='h-6'></div>
                         </div>
                       </div>
                     </div>
