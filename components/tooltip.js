@@ -74,61 +74,41 @@ export default function Tooltip({ children, icon }) {
                       <div className='relative px-4 sm:px-6 mb-6 h-full'>
                         <div className='absolute inset-0 px-4 sm:px-6 h-full'>
                           <p className='text-[20px] mb-4'>
-                            Unlike traditional risk assessments that focus on classifying severity
-                            of risks and their immediate and tangible impacts, this tool highlights
-                            the inadequacies of existing property and ownership frameworks in
-                            addressing and mitigating future risks and the potential for these
-                            systemic failures to open up windows of opportunity for alternative
-                            solutions.
+                          Unlike traditional risk assessments that focus on classifying the likelihood of risks and the severity of impacts, this tool highlights the inadequacies of existing property and ownership frameworks in addressing and mitigating future risks and the potential for these systemic failures to open up windows of opportunity for alternative solutions. 
+
                           </p>
                           <p className='text-[20px] mb-4'>
-                            <span className='font-bold'>Definition of Property:</span> The
-                            definition of &apos;property&apos; here extends beyond real assets
-                            (land, real estate and infrastructure) to encompass other classes of
-                            property, including, amongst others, intellectual property, corporate
-                            shares, contractual obligations and leases, money and data. We also
-                            consider the worldviews underpinning dominant property institutions.
+                            <span className='font-bold'>Definition of Property:</span> The definition of &apos;property&apos; here extends beyond real assets (land, real estate and infrastructure) to encompass other classes of property, including, amongst others,  intellectual property, corporate shares, contractual obligations and leases, money and data. We also consider the worldviews underpinning dominant property institutions. 
+
                           </p>
                           <p className='text-[20px] mb-4'>
-                            <span className='font-bold'>Risk Identification:</span> We identified
-                            strategic risks across five domains: AI and innovation, climate,
-                            conflict and displacement, labor and economic security, and housing and
-                            civic infrastructure.
+                            <span className='font-bold'>Risk Identification:</span> We identified strategic risks across five domains: AI and innovation, climate, conflict and displacement, labor and economic security, and housing and civic infrastructure. Through a review of literature in each domain, including the national and global risk registers, we shortlisted 20 risks that were not only critical in terms of impact, but also representative of the deep rooted problems of property.
+
                           </p>
                           <p className='text-[20px] mb-4'>
-                            <span className='font-bold'>Property Linkages:</span> Each risk was
-                            analyzed based on its connection to property and ownership as a means of
-                            governance. Rather than assessing connections to geographic and
-                            context-specific property institutions, our analysis focused on core
-                            modalities of the axiomatic concept of property, i.e. the abstract
-                            characteristics that define its operability. This abstract analysis
-                            allows us to identify where in the code of property we can best innovate
-                            to address systemic failures.
+                            <span className='font-bold'>Property Linkages:</span> Each risk was analyzed based on its connection to property and ownership as a means of governance. Rather than assessing connections to geographic and context-specific property institutions, our analysis focused on core modalities of the axiomatic concept of property, i.e. the abstract characteristics that define its operability. This abstract analysis allows us to identify where in the code of property we can best innovate to address systemic failures. 
+
                           </p>
                           <p className='text-[20px] mb-4'>
-                            <span className='font-bold'>Case Studies:</span> Each strategic risk is
-                            supported by relevant case studies. This serves to i) provide concrete
-                            examples of how theoretical risks have manifested in real-world
-                            situations ii) reveal gaps in current risk analysis and preparedness and
-                            iii) showcase how risks and their impacts, as well as their response
-                            spaces, vary across geographies and contexts.
+                            <span className='font-bold'>Impacts: </span> We mapped for each risk the range of potential impacts of the risk materializing, considering both direct and indirect impacts. This allows us to not only identify areas of key concern, but also to demonstrate relationships between different risks and the potential for compounding crises. 
+
+                          </p>
+
+                          <p className='text-[20px] mb-4'>
+                            <span className='font-bold'>Case Studies:</span> Each strategic risk is supported by relevant case studies. This serves to i) provide concrete examples of how theoretical risks have manifested in real-world situations ii) reveal gaps in current risk analysis and preparedness and iii) showcase how risks and their impacts, as well as their response spaces, vary across geographies and contexts. 
+
                           </p>
                           <p className='text-[20px] mb-4'>
-                            <span className='font-bold'>Stakeholders:</span> In relation to each
-                            risk, we identified individuals, groups, or entities most impacted by or
-                            influential in managing the risk. This allows us to identify key
-                            stakeholders to engage in solutions spaces and their potential role as
-                            lead actor, supporter, or barrier.
+                            <span className='font-bold'>Stakeholders:</span> In relation to each risk, we identified individuals, groups, or entities most impacted by or influential in managing the risk. This allows us to identify key stakeholders to engage in solutions spaces and their potential role as lead actor, supporter, or barrier. 
+
                           </p>
                           <p className='text-[20px] mb-4'>
-                            <span className='font-bold'>Preparedness:</span> We assessed the nature
-                            and scope of existing mitigation strategies and their potential and
-                            limitations to respond to a specific risk. Wherever existing solutions
-                            appear insufficient to address a risk, a window of opportunity could
-                            open to shift the Overton window and propose more transformative
-                            solutions. Our mapping aims to start building capacity to anticipate
-                            where and when such new opportunity spaces might open to help
-                            preemptively and strategically build solutions for when they do.
+                            <span className='font-bold'>Preparedness:</span> We assessed the nature and scope of existing mitigation strategies and their potential and limitations to respond to a specific risk. Wherever existing solutions appear insufficient to address a risk, a window of opportunity could open to shift the Overton window and propose more transformative solutions. Our mapping aims to start building capacity to anticipate where and when such new opportunity spaces might open to help preemptively and strategically build solutions for when they do. 
+
+                          </p>
+                          <p className='text-[20px] mb-4'>
+                            <span className='font-bold'>Further developments:</span> We plan to continuously develop and iterate the tool by adding new risks and sections, with the aim of providing a more comprehensive overview of global risks through the lens of property. In the second phase, a new section on Proofs of Possibility and Adjacent Possibles will be added  — describing the critical opportunities and alternative response spaces that emerge through innovating property codes. We welcome comments and suggestions for improvement. If you would like to get in touch with us for feedback or collaboration opportunities, please contact: alexandra@darkmatterlabs.org 
+
                           </p>
                         </div>
                       </div>
