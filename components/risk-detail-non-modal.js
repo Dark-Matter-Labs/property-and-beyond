@@ -6,32 +6,28 @@ import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import PropertyIssueCard from './property-issue-card';
 
-const componentsPropertyIssue = {
-  block: {
-    // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[16px]'>{children}</p>,
-  },
-};
+import { urlForImage } from '@/sanity/lib/image';
 
 const componentsImpacts = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <span className='text-[20px] inline'>{children}</span>,
+    normal: ({ children }) => <span className='text-[20px]'>{children}</span>,
   },
 };
 
 const componentsPreparedness = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[20px]'>{children}</p>,
+    normal: ({ children }) => <p className='text-[20px] mb-4'>{children}</p>,
   },
 };
 
 const componentsCaseStudy = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[20px]'>{children}</p>,
+    normal: ({ children }) => <p className='text-[16px]'>{children}</p>,
   },
 };
 
@@ -83,11 +79,8 @@ export default function RiskDetailNonModal({ risk, ...props }) {
         </div>
 
         <div className='w-full h-full flex flex-col lg:flex-row relative md:overflow-auto lg:overflow-visible'>
-          <div className='w-full flex flex-col grow relative items-center min-w-80'>
-            <div className='md:flex lg:hidden rounded-[9px] bg-white text-[16px] w-32 m-4 text-black border border-white p-2  items-center justify-center justify-self-end'>
-              <Link href='/tool'>Back to map</Link>
-            </div>
-            <div className='lg:sticky lg:top-0'>
+        <div className='w-full flex flex-col grow relative items-center lg:max-w-80'>
+            <div className='lg:sticky lg:top-0 min-w-80'>
               <div
                 className='bg-black mt-6 ml-6 p-6 border rounded-lg text-white max-w-80'
                 style={{ borderColor: color }}
@@ -111,28 +104,12 @@ export default function RiskDetailNonModal({ risk, ...props }) {
             {/* PROPERTY Issues */}
             <div className='flex flex-col mb-6'>
               <div className='text-white text-[30px] font-bold'>Linked property issues</div>
-              <div className='flex flex-row my-6 gap-6 overflow-x-scroll snap-x snap-mandatory no-scrollbar'>
-                {risk?.propertyIssues?.map((issue, id) => (
-                  <div
-                    key={id}
-                    className='border p-6 rounded-[9px] bg-[#E7E7E7] min-w-80 flex flex-col justify-between'
-                    style={{ borderColor: color }}
-                  >
-                    <div className='text-black text-[40px] break-words w-full'>{issue.title}</div>
-                    <div className='flex items-center w-full justify-center my-3'>
-                      <Image
-                        src='/propertyIssue.png'
-                        alt='alt text'
-                        width={150}
-                        height={150}
-                        className='object-fit h-32 w-32'
-                      />
-                    </div>
-                    <div>
-                      <PortableText value={issue.content} components={componentsPropertyIssue} />
-                    </div>
-                  </div>
-                ))}
+              <div className='flex my-6'>
+                <div className='flex gap-6 overflow-x-scroll snap-x snap-mandatory no-scrollbar h-auto'>
+                  {risk?.propertyIssues?.map((issue, id) => (
+                    <PropertyIssueCard issue={issue} key={id} color={color} />
+                  ))}
+                </div>
               </div>
             </div>
             {/* Section two */}
@@ -221,7 +198,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                       style={{ borderColor: color }}
                     >
                       <div className='flex'>
-                        <div className='basis-2/3'>
+                        <div className='basis-3/4'>
                           <PortableText
                             value={risk?.preparedness}
                             components={componentsPreparedness}
@@ -256,41 +233,65 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                       style={{ borderColor: color }}
                     >
                       <div className='flex flex-col'>
-                        {risk?.caseStudy.map((study, id) => (
-                          <div
-                            key={id}
-                            className='flex flex-row basis-2/3 py-6 border-b'
-                            style={{ borderColor: color }}
-                          >
-                            <div className='basis-1/3'>
-                              <Image
-                                src='/caseStudy.png'
-                                alt=''
-                                width={200}
-                                height={200}
-                                className='object-cover'
-                              />
-                            </div>
-                            <div className='flex flex-col basis-2/3'>
-                              <div className='text-[15px] font-bold'>{study.date}</div>
-                              <div className='text-[20px] font-bold'>{study.title}</div>
-                              <div className='text-[20px] font-bold mb-4'>{study.location}</div>
-                              <div>
-                                {study.description ? (
-                                  <PortableText
-                                    value={study?.description}
-                                    components={componentsCaseStudy}
+                        {risk?.caseStudies.map((study, id) => (
+                          <div key={id} className='py-6 border-b' style={{ borderColor: color }}>
+                            <div className='flex flex-row '>
+                              <div className='basis-1/4 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
+                                {study.image ? (
+                                  <Image
+                                    src={urlForImage(study?.image)}
+                                    alt={study?.alt ?? ''}
+                                    width={300}
+                                    height={200}
+                                    className='object-fill rounded-md w-full h-full'
                                   />
                                 ) : (
-                                  <div>
-                                    Tech industry leading here text here here text adding text only
-                                    2 lines here. the text will be actually longere so more than 3
-                                    lines actually even longer so we can consider approximalety this
-                                    amount.
-                                  </div>
+                                  <Image
+                                    src='/27.jpg'
+                                    alt='placeholder image'
+                                    width={300}
+                                    height={200}
+                                    className='object-fill rounded-md w-full h-full'
+                                  />
                                 )}
                               </div>
+                              <div className='flex flex-col basis-2/4'>
+                                {study.date ? (
+                                  <div className='text-[15px] font-bold'>{study.date}</div>
+                                ) : (
+                                  <div className='text-[15px] font-bold'>January</div>
+                                )}
+
+                                <div className='text-[20px] font-bold'>{study.title}</div>
+                                {study.location ? (
+                                  <div className='text-[20px] mb-2'>{study.location}</div>
+                                ) : (
+                                  <div className='text-[20px] mb-4'>Location</div>
+                                )}
+                                <div>
+                                  {study.desctiption ? (
+                                    <PortableText
+                                      value={study?.desctiption}
+                                      components={componentsCaseStudy}
+                                    />
+                                  ) : (
+                                    <div className='text-[16px]'>
+                                      Tech industry leading here text here here text adding text
+                                      only 2 lines here. the text will be actually longere so more
+                                      than 3 lines actually even longer so we can consider
+                                      approximalety this amount.
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
                             </div>
+                            {study.source ? (
+                              <span className='text-[8px] translate-y-2'>{study.source}</span>
+                            ) : (
+                              <span className='text-[8px] translate-y-2'>
+                                I am a source of an image
+                              </span>
+                            )}
                           </div>
                         ))}
                       </div>
@@ -321,22 +322,16 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                       className='flex flex-col p-6 bg-[#E7E7E7] border rounded-b-[9px]'
                       style={{ borderColor: color }}
                     >
-                      <div className='flex flex-col'>
-                        <div className=''>
-                          {risk.stakeholders.map((holder, id) => (
-                            <div key={id} className='my-2w'>
-                              <div className='mb-4'>
-                                <div className='text-[20px] font-bold inline'>
-                                  - {holder.title}:
-                                </div>{' '}
-                                <PortableText
-                                  value={holder.content}
-                                  components={componentsStakehoilder}
-                                />
-                              </div>
-                            </div>
-                          ))}
-                        </div>
+                      <div className='flex flex-col w-full'>
+                        {risk.stakeholders.map((holder, id) => (
+                          <div key={id} className='my-2 w-3/4'>
+                            <div className='text-[20px] font-bold inline'>- {holder.title}:</div>{' '}
+                            <PortableText
+                              value={holder.content}
+                              components={componentsStakehoilder}
+                            />
+                          </div>
+                        ))}
                       </div>
                     </Disclosure.Panel>
                   </>

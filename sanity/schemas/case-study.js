@@ -20,7 +20,7 @@ export default {
         },
         {
             name: 'alt',
-            type: 'text',
+            type: 'string',
             title: 'Image Alt text',
             validation: (Rule) => Rule.required(),
         },
