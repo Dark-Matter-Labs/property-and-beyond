@@ -19,6 +19,12 @@ export default {
             validation: (Rule) => Rule.required(),
         },
         {
+            name: 'alt',
+            type: 'text',
+            title: 'Image Alt text',
+            validation: (Rule) => Rule.required(),
+        },
+        {
             name: 'source',
             type: 'text',
             title: 'Image Source',
