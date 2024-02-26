@@ -249,23 +249,25 @@ export default function RiskDetail({ risk, ...props }) {
                       <div className='flex flex-col'>
                         {risk?.caseStudies.map((study, id) => (
                           <div key={id} className='py-6 border-b' style={{ borderColor: color }}>
-
                             <div className='flex flex-row '>
                               <div className='basis-1/4 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
-                                {study.image ? (   <Image
-                                  src={urlForImage(study.image)}
-                                  alt=''
-                                  width={300}
-                                  height={200}
-                                  className='object-fill rounded-md w-full h-full'
-                                />) : (   <Image
-                                  src='/27.jpg'
-                                  alt=''
-                                  width={300}
-                                  height={200}
-                                  className='object-fill rounded-md w-full h-full'
-                                />)}
-                             
+                                {study.image ? (
+                                  <Image
+                                    src={urlForImage(study.image)}
+                                    alt=''
+                                    width={300}
+                                    height={200}
+                                    className='object-fill rounded-md w-full h-full'
+                                  />
+                                ) : (
+                                  <Image
+                                    src='/27.jpg'
+                                    alt=''
+                                    width={300}
+                                    height={200}
+                                    className='object-fill rounded-md w-full h-full'
+                                  />
+                                )}
                               </div>
                               <div className='flex flex-col basis-2/4'>
                                 {study.date ? (

@@ -41,18 +41,22 @@ export default function RiskCard({ risk }) {
                 className='absolute object-cover h-28 w-full'
               />
             </div>
-            {risk.riskSubType === 'Climate Change and Environmental Impact' ? (    <div
-              className='mt-4 text-[12px] leading-3	  text-center rounded-[10px] w-full py-1.5 px-2 flex items-center justify-center uppercase wrap-text'
-              style={{ backgroundColor: color }}
-            >
-              Climate and Environmental Impact
-            </div>) : (    <div
-              className='mt-4 text-[12px] leading-3	  text-center rounded-[10px] w-full py-1.5 px-2 flex items-center justify-center uppercase wrap-text'
-              style={{ backgroundColor: color }}
-            >
-               {risk.riskSubType}
-            </div>)}
-        
+            {risk.riskSubType === 'Climate Change and Environmental Impact' ? (
+              <div
+                className='mt-4 text-[12px] leading-3	  text-center rounded-[10px] w-full py-1.5 px-2 flex items-center justify-center uppercase wrap-text'
+                style={{ backgroundColor: color }}
+              >
+                Climate and Environmental Impact
+              </div>
+            ) : (
+              <div
+                className='mt-4 text-[12px] leading-3	  text-center rounded-[10px] w-full py-1.5 px-2 flex items-center justify-center uppercase wrap-text'
+                style={{ backgroundColor: color }}
+              >
+                {risk.riskSubType}
+              </div>
+            )}
+
             <div className='text-left mt-4 flex grow items-center'>
               <div className='text-white text-[18px] font-medium'>{risk.title}</div>
             </div>

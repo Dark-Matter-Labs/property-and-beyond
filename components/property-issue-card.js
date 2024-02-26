@@ -18,16 +18,14 @@ const componentsPropertyIssueGeneric = {
     normal: ({ children }) => <p className='text-[16px] mb-2'>{children}</p>,
   },
   list: {
-    bullet: ({children}) => (
+    bullet: ({ children }) => (
       <div className='newlineDisplay p-base my-1 ml-3'>
-      <ul className='list-disc list-inside'>{children}</ul>
+        <ul className='list-disc list-inside'>{children}</ul>
       </div>
-      )
+    ),
   },
   listItem: {
-    bullet: ({children}) => (
-      <li className='text-[16px] mb-1 '>{children}</li>
-    ),
+    bullet: ({ children }) => <li className='text-[16px] mb-1 '>{children}</li>,
   },
 };
 
@@ -63,7 +61,10 @@ export default function PropertyIssueCard({ issue, color }) {
             style={floatingStyles}
             {...getFloatingProps()}
           >
-           <PortableText value={issue.genericPropertyIssue.genericContent} components={componentsPropertyIssueGeneric}/>
+            <PortableText
+              value={issue.genericPropertyIssue.genericContent}
+              components={componentsPropertyIssueGeneric}
+            />
           </div>
         )}
       </div>
