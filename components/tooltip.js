@@ -150,8 +150,7 @@ export default function Tooltip({ children, icon }) {
                             describing the critical opportunities and alternative response spaces
                             that emerge through innovating property codes. We welcome comments and
                             suggestions for improvement. If you would like to get in touch with us
-                            for feedback or collaboration opportunities, please contact:
-                            alexandra@darkmatterlabs.org
+                            for feedback or collaboration opportunities, please <Link href='mailto:property@darkmatterlabs.org' target='_blank'><span className='underline'>contact us</span></Link>.
                           </p>
                           <div className='h-6'></div>
                         </div>

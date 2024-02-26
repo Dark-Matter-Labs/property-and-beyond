@@ -158,7 +158,11 @@ export default async function Home() {
                 href='/tool'
                 className='hover:bg-[#AD76F4] text-[#AD76F4] border-2 border-[#AD76F4] w-80 rounded-[33px] items-center justify-center hover:text-white'
               >
-                <div className='py-1 text-[21px] font-semibold'>Contact us</div>
+                <div className='py-1 text-[21px] font-semibold'>
+                  <Link href='mailto:propert@darkmatterlabs.org' target='_blank'>
+                    Contact us
+                  </Link>
+                  </div>
               </button>
             </div>
           </div>
