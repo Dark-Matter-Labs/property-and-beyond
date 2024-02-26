@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Card({ data }) {
   return (
     <Link href={data.file} target='_blank group '>
-      <div className='bg-[#D9D9D9] border border-black h-auto min-h-[445.79px] max-w-80 basis-1 lg:basis-1/3 flex flex-col items-center justify-between relative'>
+      <div className='bg-[#D9D9D9] border border-black h-auto md:h-[445.79px] max-w-80 basis-1 lg:basis-1/3 flex flex-col items-center justify-between relative'>
         <div className='w-full object-cover h-1/2'>
           <Image
             src={urlForImage(data.image)}
