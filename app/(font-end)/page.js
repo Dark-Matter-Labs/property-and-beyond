@@ -164,9 +164,9 @@ export default async function Home() {
           <div className='global-margin max-w-2xl bg-black text-white' name='section-6'>
             <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
               <div className='uppercase text-[36px]'>conference:</div>
-              <h2 className=''>What and how we own</h2>
+              <h2 className=''>What & How We Own: The Politics of Change</h2>
               <div className='mb-8 text-[30px] text-[#AD76F4]'>
-                <span className='font-bold'>March 1, 2024</span> in Oakland, CA
+                <span className='font-bold'>March 1-2, 2024</span> in Oakland, CA
               </div>
               <PortableText value={data.conference} components={HPcomponents} />
             </div>
