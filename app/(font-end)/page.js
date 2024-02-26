@@ -60,7 +60,25 @@ export default async function Home() {
               </div>
             </Link>
           </div>
+
+          <div>
+          <div className='block md:hidden w-[calc(w-screen-17px)] bg-[url("/crisis.png")] bg-cover h-[800px]'>
+              <div className='w-full h-full bg-black/40 md:bg-black/80 flex items-center justify-center group'>
+                <button
+  
+                  className='md:mr-12 bg-[#AD76F4] border-2 border-[#AD76F4] w-80 md:w-56 lg:w-80 rounded-[9px] items-center justify-center text-white block '
+                >
+                  <div className='py-4 text-[21px]'>The current version of the tool is only available on desktop view</div>
+                </button>
+              </div>
+          </div>
+          </div>
+
+          
+
+     
         </div>
+       
         {/* SECTION Three - Capabilites */}
         <div className='bg-black w-[calc(w-screen-17px)]' name='section-3'>
           <div className='global-margin max-w-4xl  bg-black text-white'>
