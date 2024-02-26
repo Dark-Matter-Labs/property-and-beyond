@@ -124,9 +124,9 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                     >
                       <div className='uppercase text-[20px] font-bold'>Impacts</div>
                       {open ? (
-                        <FaMinus className='w-4 h-4 mr-4' />
+                        <FaMinus className='w-4 h-4 ' />
                       ) : (
-                        <FaPlus className='w-4 h-4 mr-4' />
+                        <FaPlus className='w-4 h-4 ' />
                       )}
                     </Disclosure.Button>
                     <Disclosure.Panel
@@ -188,9 +188,9 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                     >
                       <div className='uppercase text-[20px] font-bold'>PREPAREDNESS</div>
                       {open ? (
-                        <FaMinus className='w-4 h-4 mr-4' />
+                        <FaMinus className='w-4 h-4 ' />
                       ) : (
-                        <FaPlus className='w-4 h-4 mr-4' />
+                        <FaPlus className='w-4 h-4 ' />
                       )}
                     </Disclosure.Button>
                     <Disclosure.Panel
@@ -223,9 +223,9 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                     >
                       <div className='uppercase text-[20px] font-bold'>case studies</div>
                       {open ? (
-                        <FaMinus className='w-4 h-4 mr-4' />
+                        <FaMinus className='w-4 h-4 ' />
                       ) : (
-                        <FaPlus className='w-4 h-4 mr-4' />
+                        <FaPlus className='w-4 h-4 ' />
                       )}
                     </Disclosure.Button>
                     <Disclosure.Panel
@@ -243,7 +243,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                                     alt={study?.alt ?? ''}
                                     width={300}
                                     height={200}
-                                    className='object-fill rounded-md w-full h-full'
+                                    className='object-fill rounded-md w-full'
                                   />
                                 ) : (
                                   <Image
@@ -251,7 +251,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                                     alt='placeholder image'
                                     width={300}
                                     height={200}
-                                    className='object-fill rounded-md w-full h-full'
+                                    className='object-fill rounded-md w-full'
                                   />
                                 )}
                               </div>
@@ -313,9 +313,9 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                     >
                       <div className='uppercase text-[20px] font-bold'>stakeholders</div>
                       {open ? (
-                        <FaMinus className='w-4 h-4 mr-4' />
+                        <FaMinus className='w-4 h-4 ' />
                       ) : (
-                        <FaPlus className='w-4 h-4 mr-4' />
+                        <FaPlus className='w-4 h-4 ' />
                       )}
                     </Disclosure.Button>
                     <Disclosure.Panel
@@ -325,7 +325,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                       <div className='flex flex-col w-full'>
                         {risk.stakeholders.map((holder, id) => (
                           <div key={id} className='my-2 w-3/4'>
-                            <div className='text-[20px] font-bold inline'>- {holder.title}:</div>{' '}
+                            <div className='text-[20px] font-bold inline'>{holder.title}:</div>{' '}
                             <PortableText
                               value={holder.content}
                               components={componentsStakehoilder}

@@ -52,7 +52,7 @@ export default function PropertyIssueCard({ issue, color }) {
       <div className='text-black text-[40px] break-words flex flex-row items-center'>
         {issue.genericPropertyIssue.title}{' '}
         <button ref={refs.setReference} {...getReferenceProps()}>
-          <IoIosInformationCircle className='w-10 h-10 ml-2' />
+          <IoIosInformationCircle className='w-6 h-6 ml-2' />
         </button>
         {isOpen && (
           <div
