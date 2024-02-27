@@ -40,7 +40,7 @@ export default function Container({ data }) {
       <div className='hidden md:flex flex-col relative z-20 sm:h-[calc(100vh-96px)] w-full bg-black bg-opacity-50 overflow-auto no-scrollbar'>
         <div className='bg-black'>
           <div className='global-margin max-w-4xl bg-black text-white'>
-            <div className='max-w-[850px]'>
+            <div className='max-w-[950px]'>
             <h1 className='my-6 max-w-[600px] text-[55px] uppercase leading-[55px]'>CRISIS-RESPONSIVE TRANSFORMATION</h1>
             <div className='pb-20 grid grid-cols-3 gap-6'>
               <div className='col-span-2'>
@@ -73,6 +73,9 @@ export default function Container({ data }) {
                   It serves as a sensemaking tool to anticipate and respond to crises at a system
                   level and identify potential solutions, lead environments, and coalitions to build
                   real-world demonstrations of property futures.
+                </p>
+                <p className='text-xl font-bold mb-2'>
+                It is intended as a living document. We will be continually evolving our risk mapping and exploring potential spaces for property innovation.
                 </p>
               </div>
             </div>

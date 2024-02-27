@@ -37,11 +37,28 @@ export default {
             styles: [
                 {title: 'Intro', value: 'intro'},
                 {title: 'Normal', value: 'normal'},
+                {title: 'small', value: 'small'}
               ],
             lists: [],
             marks: {
                 decorators: [],
-                annotations: [],
+                annotations: [         {
+                    name: 'link',
+                    type: 'object',
+                    title: 'External link',
+                    fields: [
+                      {
+                        name: 'href',
+                        type: 'url',
+                        title: 'URL'
+                      },
+                      {
+                        title: 'Open in new tab',
+                        name: 'blank',
+                        type: 'boolean'
+                      }
+                    ]
+                  },],
             } 
             }]
         },

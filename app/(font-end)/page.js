@@ -25,6 +25,7 @@ async function getData() {
 
 export default async function Home() {
   const data = await getData();
+
   return (
     <main className='flex min-h-screen flex-col items-center'>
       <Header />
@@ -186,7 +187,7 @@ export default async function Home() {
             <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
               <h2 className='mb-8'>Our team</h2>
               <p className='intro mb-20'>
-                Many people have worked on this project. Thanks to our partners and collaborators:{' '}
+               We are working closely with partners and collaborators:{' '}
               </p>
               <div className='flex flex-wrap gap-6 mb-20'>
                 <div>
