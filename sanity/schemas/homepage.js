@@ -48,15 +48,11 @@ export default {
                     title: 'External link',
                     fields: [
                       {
-                        name: 'href',
-                        type: 'url',
-                        title: 'URL'
+                        name: 'file',
+                        title: 'File',
+                        type: 'file'
                       },
-                      {
-                        title: 'Open in new tab',
-                        name: 'blank',
-                        type: 'boolean'
-                      }
+                 
                     ]
                   },],
             } 
