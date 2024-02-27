@@ -118,7 +118,7 @@ export default function RiskDetail({ risk, ...props }) {
           <div className='flex flex-col p-6 overflow-hidden '>
             {/* PROPERTY Issues */}
             <div className='flex flex-col mb-6'>
-              <div className='text-white text-[30px] font-bold'>Linked property issues</div>
+              <div className='text-white text-[30px] font-bold'>Property linkages</div>
               <div className='flex my-6'>
                 <div className='flex gap-6 overflow-x-scroll snap-x snap-mandatory no-scrollbar h-auto'>
                   {risk?.propertyIssues?.map((issue, id) => (
