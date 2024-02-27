@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head>
-        <title>Property and Beyond</title>
+        <title>Property and Beyond Lab</title>
       </head>
       <body className={source.className}>{children}</body>
     </html>
