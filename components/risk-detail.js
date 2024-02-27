@@ -25,7 +25,7 @@ const componentsPreparedness = {
 const componentsCaseStudy = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[16px]'>{children}</p>,
+    normal: ({ children }) => <p className='text-[20px]'>{children}</p>,
   },
 };
 

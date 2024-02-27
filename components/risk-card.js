@@ -58,7 +58,7 @@ export default function RiskCard({ risk }) {
             )}
 
             <div className='text-left mt-4 flex grow items-center'>
-              <div className='text-white text-[18px] font-medium'>{risk.title}</div>
+              <div className='text-white text-[22px] leading-7 font-medium'>{risk.title}</div>
             </div>
           </div>
           <div

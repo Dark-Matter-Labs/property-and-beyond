@@ -41,7 +41,7 @@ export default async function Home() {
         <div name='section-2'>
           <div className='bg-white w-[calc(w-screen-17px)]'>
             <div className='global-margin max-w-2xl bg-white text-black'>
-              <div className='max-w-lg md:max-w-md lg:max-w-2xl py-24'>
+              <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
                 <h2 className='mb-8 break-words w-full'>Crisis-Responsive Transformation</h2>
                 <PortableText value={data.politicsOfChange} components={HPcomponents} />
               </div>
@@ -53,9 +53,9 @@ export default async function Home() {
               <div className='w-full h-full bg-black/40 md:bg-black/80 flex items-center justify-center group'>
                 <button
                   href='/tool'
-                  className='md:mr-12 bg-[#AD76F4] border-2 border-[#AD76F4] w-80 md:w-56 lg:w-80 rounded-[33px] items-center justify-center text-white block '
+                  className='md:mr-12 bg-[#AD76F4] border-2 border-[#AD76F4] hover:bg-transparent hover:text-[#AD76F4] w-80 md:w-56 lg:w-80 rounded-[33px] items-center justify-center text-white block transition-all duration-150'
                 >
-                  <div className='py-4 text-[21px]'>View the tool</div>
+                  <div className='py-1 font-semibold text-[21px]'>View the tool</div>
                 </button>
               </div>
             </Link>
@@ -82,7 +82,7 @@ export default async function Home() {
 
               <div className='grid grid-cols-1 lg:grid-cols-3'>
                 <div className='col-span-2'>
-                  <p className='intro mb-8'>
+                  <p className='intro mb-4'>
                     We are developing interconnected building blocks for futures of property and
                     ownership seeding new ideas by:
                   </p>
@@ -124,7 +124,7 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          <div className='w-full h-8 bg-[#CEB2F2]'></div>
+          <div className='w-full h-4 bg-[#CEB2F2]'></div>
         </div>
 
         {/* SECTION 4 - Proofs of Possibility */}
@@ -145,18 +145,18 @@ export default async function Home() {
 
         {/* SECTION 5 - Join us */}
         <div
-          className='w-[calc(w-screen-17px)] bg-[url("/join-us.png")] bg-cover h-[535px]'
+          className='w-[calc(w-screen-17px)] bg-[url("/join-us.jpg")] bg-cover h-[535px]'
           name='section-5'
         >
           <div className='global-margin max-w-2xl text-white bg-transparent'>
-            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-24'>
+            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
               <h2 className='mb-8'>Join Us</h2>
               <p className='intro mb-20'>
                 Join us in envisioning and co-designing futures of property, ownership and beyond. 
               </p>
               <button
                 href='/tool'
-                className='hover:bg-[#AD76F4] text-[#AD76F4] border-2 border-[#AD76F4] w-80 rounded-[33px] items-center justify-center hover:text-white'
+                className='bg-[#AD76F4] hover:bg-transparent hover:text-[#AD76F4] border-2 border-[#AD76F4] w-80 rounded-[33px] items-center justify-center text-white transition-all duration-150'
               >
                 <div className='py-1 text-[21px] font-semibold'>
                   <Link href='mailto:propert@darkmatterlabs.org' target='_blank'>
@@ -179,12 +179,12 @@ export default async function Home() {
               <PortableText value={data.conference} components={HPcomponents} />
             </div>
           </div>
-          <div className='w-full h-8 bg-[#CEB2F2]'></div>
+          <div className='w-full h-4 bg-[#CEB2F2]'></div>
         </div>
         {/* SECTION 7 - Partners */}
         <div className='bg-white w-[calc(w-screen-17px)]' name='section-7'>
           <div className='global-margin max-w-2xl bg-white text-black'>
-            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-24'>
+            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
               <h2 className='mb-8'>Our team</h2>
               <p className='intro mb-20'>
                 Many people have worked on this project. Thanks to our partners and collaborators:{' '}
@@ -232,7 +232,6 @@ export default async function Home() {
 
         {/* END DECO */}
 
-        <div className="bg-[url('/footer-deco.png')] bg-contain lg:bg-auto lg:bg-left lg:bg-no-repeat	bg-black h-[200px] md:h-[325px] w-full "></div>
 
         <SideMenu />
       </div>

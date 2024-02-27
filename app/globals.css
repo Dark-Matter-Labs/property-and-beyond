@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-  @apply text-[55px] uppercase;
+  @apply text-[55px] uppercase leading-[55px];
 }
 
 .menu {
@@ -25,11 +25,11 @@ h2 {
 }
 
 .intro {
-  @apply text-[28px] font-semibold;
+  @apply text-[24px] font-semibold;
 }
 
 .normal {
-  @apply text-[22px];
+  @apply text-[20px];
 }
 
 .small-text {

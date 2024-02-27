@@ -59,7 +59,7 @@ export default function NavBar() {
   if (pathname !== '/studio/structure') {
     return (
       <div
-        className={`${pathname === '/tool' ? '' : 'sticky top-0'} text-white bg-black h-20 md:h-32 flex items-center justify-center z-50`}
+        className={`${pathname === '/tool' ? '' : 'sticky top-0'} text-white bg-black h-20 md:h-24 flex items-center justify-center z-50`}
       >
         <div className='global-margin flex flex-row justify-between items-center h-full w-full'>
           <Link href='/' className=''>
@@ -108,7 +108,7 @@ export default function NavBar() {
                         className='w-full h-full bg-black'
                         style={{ ...mobileMenuTransitionStyles }}
                       >
-                        <div className='flex flex-col items-start justify-end global-margin '>
+                        <div className='flex flex-col items-start justify-end global-margin pt-6'>
                           <ul className=''>
                             {' '}
                             <li className='menu mb-6 hover:cursor-pointer'>
@@ -116,7 +116,7 @@ export default function NavBar() {
                                 to='section-1'
                                 smooth={true}
                                 duration={500}
-                                offset={-250}
+                                offset={-200}
                                 spy={true}
                                 activeClass=''
                                 onClick={() => setMobileMenuIsOpen(false)}
@@ -129,7 +129,7 @@ export default function NavBar() {
                                 to='section-2'
                                 smooth={true}
                                 duration={500}
-                                offset={-200}
+                                offset={-80}
                                 spy={true}
                                 activeClass=''
                                 onClick={() => setMobileMenuIsOpen(false)}
@@ -142,7 +142,7 @@ export default function NavBar() {
                                 to='section-3'
                                 smooth={true}
                                 duration={500}
-                                offset={-200}
+                                offset={-80}
                                 spy={true}
                                 activeClass=''
                                 onClick={() => setMobileMenuIsOpen(false)}
@@ -155,12 +155,12 @@ export default function NavBar() {
                                 to='section-4'
                                 smooth={true}
                                 duration={500}
-                                offset={-200}
+                                offset={-80}
                                 spy={true}
                                 activeClass=''
                                 onClick={() => setMobileMenuIsOpen(false)}
                               >
-                                PROOFS OF POSSIBILIY
+                                PROOFS OF POSSIBILITY
                               </ScrollLink>
                             </li>
                             <li className='menu mb-6 hover:cursor-pointer'>
@@ -168,7 +168,7 @@ export default function NavBar() {
                                 to='section-5'
                                 smooth={true}
                                 duration={500}
-                                offset={-200}
+                                offset={-80}
                                 spy={true}
                                 activeClass=''
                                 onClick={() => setMobileMenuIsOpen(false)}
@@ -181,7 +181,7 @@ export default function NavBar() {
                                 to='section-6'
                                 smooth={true}
                                 duration={500}
-                                offset={-200}
+                                offset={-80}
                                 spy={true}
                                 activeClass=''
                                 onClick={() => setMobileMenuIsOpen(false)}
@@ -194,7 +194,7 @@ export default function NavBar() {
                                 to='section-7'
                                 smooth={true}
                                 duration={500}
-                                offset={-200}
+                                offset={-80}
                                 spy={true}
                                 activeClass=''
                                 onClick={() => setMobileMenuIsOpen(false)}

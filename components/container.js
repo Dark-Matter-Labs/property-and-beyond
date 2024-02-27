@@ -37,7 +37,7 @@ export default function Container({ data }) {
 
   return (
     <>
-      <div className='hidden md:flex flex-col relative z-20 sm:h-[calc(100vh-120px)] w-full bg-black bg-opacity-50 overflow-auto no-scrollbar'>
+      <div className='hidden md:flex flex-col relative z-20 sm:h-[calc(100vh-96px)] w-full bg-black bg-opacity-50 overflow-auto no-scrollbar'>
         <div className='bg-black'>
           <div className='global-margin max-w-2xl bg-black text-white'>
             <h1 className='my-6'>CRISIS-RESPONSIVE TRANSFORMATION</h1>

@@ -10,7 +10,7 @@ export default function SideMenu() {
             to='section-1'
             smooth={true}
             duration={500}
-            offset={-250}
+            offset={-220}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
@@ -22,7 +22,7 @@ export default function SideMenu() {
             to='section-2'
             smooth={true}
             duration={500}
-            offset={-200}
+            offset={-90}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
@@ -34,7 +34,7 @@ export default function SideMenu() {
             to='section-3'
             smooth={true}
             duration={500}
-            offset={-200}
+            offset={-90}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
@@ -46,11 +46,11 @@ export default function SideMenu() {
             to='section-4'
             smooth={true}
             duration={500}
-            offset={-200}
+            offset={-90}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
-            PROOFS OF POSSIBILIY
+            PROOFS OF POSSIBILITY
           </ScrollLink>
         </li>
         <li className='menu mb-6 hover:cursor-pointer'>
@@ -58,7 +58,7 @@ export default function SideMenu() {
             to='section-5'
             smooth={true}
             duration={500}
-            offset={-200}
+            offset={-90}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
@@ -70,7 +70,7 @@ export default function SideMenu() {
             to='section-6'
             smooth={true}
             duration={500}
-            offset={-200}
+            offset={-90}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
@@ -82,7 +82,7 @@ export default function SideMenu() {
             to='section-7'
             smooth={true}
             duration={500}
-            offset={-200}
+            offset={-90}
             spy={true}
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
