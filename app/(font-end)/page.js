@@ -187,7 +187,7 @@ export default async function Home() {
         <div className='bg-white w-[calc(w-screen-17px)]' name='section-7'>
           <div className='global-margin max-w-2xl bg-white text-black'>
             <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
-              <h2 className='mb-8'>Our team</h2>
+              <h2 className='mb-8'>Partners</h2>
               <p className='intro mb-20'>
                 We are working closely with partners and collaborators:{' '}
               </p>
