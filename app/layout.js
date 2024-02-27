@@ -7,8 +7,8 @@ import { Source_Sans_3 } from 'next/font/google';
 const source = Source_Sans_3({ subsets: ['latin'], display: 'swap' });
 
 export const metadata = {
-  title: 'Property and Beyond',
-  description: 'A DML project',
+  title: 'Property and Beyond Lab',
+  description: 'Part of the Dark Matter Labs ecosystem',
 };
 
 export default function RootLayout({ children }) {
