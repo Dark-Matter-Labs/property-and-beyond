@@ -39,10 +39,11 @@ export default function Container({ data }) {
     <>
       <div className='hidden md:flex flex-col relative z-20 sm:h-[calc(100vh-96px)] w-full bg-black bg-opacity-50 overflow-auto no-scrollbar'>
         <div className='bg-black'>
-          <div className='global-margin max-w-2xl bg-black text-white'>
-            <h1 className='my-6'>CRISIS-RESPONSIVE TRANSFORMATION</h1>
-            <div className='pb-20 grid grid-cols-2 gap-6'>
-              <div>
+          <div className='global-margin max-w-4xl bg-black text-white'>
+            <div className='max-w-[850px]'>
+            <h1 className='my-6 max-w-[600px] text-[55px] uppercase leading-[55px]'>CRISIS-RESPONSIVE TRANSFORMATION</h1>
+            <div className='pb-20 grid grid-cols-3 gap-6'>
+              <div className='col-span-2'>
                 <p className='text-xl mb-2'>
                   Property is one of the core deep codes of our everyday life: often invisible,
                   overlooked or seen as a near-natural law.{' '}
@@ -63,12 +64,11 @@ export default function Container({ data }) {
                   and its potential to drive wider transformational change.
                 </p>
               </div>
-              <div>
+              <div className='col-span-1'>
                 <p className='text-xl font-bold mb-2'>
                   This digital tool maps critical global risks and their interplay with property and
                   ownership.
                 </p>
-
                 <p className='text-xl font-bold mb-2'>
                   It serves as a sensemaking tool to anticipate and respond to crises at a system
                   level and identify potential solutions, lead environments, and coalitions to build
@@ -77,10 +77,11 @@ export default function Container({ data }) {
               </div>
             </div>
           </div>
+          </div>
         </div>
         <div className='flex flex-col global-margin relative z-30 min-h-screen 2xl:min-w-[1280px]'>
           <div className='mt-6'>
-            <div className='flex items-center justify-start mr-3 text-black text-[22px]'>
+            <div className='flex items-center justify-start mr-3 text-white font-semibold text-[22px]'>
               Types of Crisis:
             </div>
             <div className='flex flex-row flex-wrap gap-y-4 justify-between mt-4'>

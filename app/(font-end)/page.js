@@ -77,9 +77,8 @@ export default async function Home() {
         {/* SECTION Three - Capabilites */}
         <div className='bg-black w-[calc(w-screen-17px)]' name='section-3'>
           <div className='global-margin max-w-4xl  bg-black text-white'>
-            <div className='max-w-lg md:max-w-md lg:max-w-[690px] xl:max-w-[740px] pb-24'>
-              <h2 className='mb-8 pt-24 w-full break-words'>Building Critical Capabilities</h2>
-
+            <div className='max-w-lg md:max-w-md lg:max-w-[790px] xl:max-w-[850px] pb-20'>
+              <h2 className='mb-8 pt-20 w-full break-words max-w-[500px]'>Building Critical Capabilities</h2>
               <div className='grid grid-cols-1 lg:grid-cols-3'>
                 <div className='col-span-2'>
                   <p className='intro mb-4'>
@@ -131,11 +130,11 @@ export default async function Home() {
 
         <div className='bg-white w-[calc(w-screen-17px)]' name='section-4'>
           <div className='global-margin max-w-2xl bg-white text-black'>
-            <div className='max-w-lg md:max-w-md lg:max-w-2xl pt-24 pb-12'>
+            <div className='max-w-lg md:max-w-md lg:max-w-2xl pt-20 pb-12'>
               <h2 className='mb-8'>Proofs of Possibility</h2>
               <PortableText value={data.proofsOfPossibility} components={HPcomponents} />
             </div>
-            <div className='flex flex-wrap gap-6 max-w-lg md:max-w-md lg:max-w-2xl pb-24 justify-center md:justify-start items-center'>
+            <div className='flex flex-wrap gap-6 max-w-lg md:max-w-md lg:max-w-2xl pb-20 justify-center md:justify-start items-center'>
               {data?.cards?.map((card, id) => (
                 <Card key={id} data={card} />
               ))}

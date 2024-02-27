@@ -25,6 +25,11 @@ export default {
             name: 'file',
             type: 'file',
             title: 'Upload pdf',    
+        },
+        {
+            name: 'link',
+            type: 'url',
+            title: 'Add link to card',    
         }
     ]
 }
