@@ -64,11 +64,11 @@ export default function Tooltip({ children, icon }) {
                         </button>
                       </div>
                     </Transition.Child>
-                    <div className='flex h-screen pb-10 md:w-[60vw] flex-col overflow-y-scroll bg-white py-6 shadow-xl'>
+                    <div className='flex h-screen pb-10 md:w-[60vw] flex-col overflow-y-scroll bg-black text-white py-6 shadow-xl'>
                       <div className='px-4 sm:px-6'>
-                        <Dialog.Title className='text-gray-900'>
+                        <Dialog.Title className='text-[#AD76F4] mb-6'>
                           {' '}
-                          <h2 className='mobile sm:desktop'>Methodology</h2>
+                          <h2 className=''>Methodology</h2>
                         </Dialog.Title>
                       </div>
                       <div className='relative px-4 sm:px-6 mb-6 h-full'>
