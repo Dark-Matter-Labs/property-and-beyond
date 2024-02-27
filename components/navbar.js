@@ -78,7 +78,7 @@ export default function NavBar() {
               className='block sm:hidden'
             />
           </Link>
-      
+
           <div className='block md:hidden'>
             <div className='inset-y-0 float-right flex items-center pt-2 lgNav:hidden'>
               {pathname === '/' && (
@@ -210,8 +210,6 @@ export default function NavBar() {
                   </FloatingFocusManager>
                 </FloatingOverlay>
               )}
-
-           
             </div>
           </div>
         </div>

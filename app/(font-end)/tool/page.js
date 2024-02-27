@@ -25,10 +25,13 @@ export default async function Map() {
         <Container data={data} />
         <div className='flex md:hidden relative w-full z-20 bg-black h-screen text-white flex-col items-center justify-center'>
           <div className='global-margin flex flex-col items-center justify-center'>
-         The current version of the tool is only available on desktop view
-          <Link href='/' className='mt-4 bg-white text-black px-4 py-2 rounded-[9px] w-22 flex items-center justify-center'>
-            Go Back
-          </Link>
+            The current version of the tool is only available on desktop view
+            <Link
+              href='/'
+              className='mt-4 bg-white text-black px-4 py-2 rounded-[9px] w-22 flex items-center justify-center'
+            >
+              Go Back
+            </Link>
           </div>
         </div>
         <video

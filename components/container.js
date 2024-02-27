@@ -41,45 +41,49 @@ export default function Container({ data }) {
         <div className='bg-black'>
           <div className='global-margin max-w-4xl bg-black text-white'>
             <div className='max-w-[950px]'>
-            <h1 className='my-6 max-w-[600px] text-[55px] uppercase leading-[55px]'>CRISIS-RESPONSIVE TRANSFORMATION</h1>
-            <div className='pb-20 grid grid-cols-3 gap-6'>
-              <div className='col-span-2'>
-                <p className='text-xl mb-2'>
-                  Property is one of the core deep codes of our everyday life: often invisible,
-                  overlooked or seen as a near-natural law.{' '}
-                </p>
-                <p className='text-xl mb-2'>
-                  But now, crises are bringing property to the fore. Faced with an unprecedented
-                  complexity and entanglement of systemic risks, externalities, and value creation
-                  in today’s world, property as a means of governance is increasingly falling short.
-                </p>
-                <p className='text-xl mb-2'>
-                  To help us prepare for deepening and emerging crises, we need to delve deeper into
-                  the multifaceted challenges of property and build shared understanding and
-                  urgency.
-                </p>
+              <h1 className='my-6 max-w-[600px] text-[55px] uppercase leading-[55px]'>
+                CRISIS-RESPONSIVE TRANSFORMATION
+              </h1>
+              <div className='pb-20 grid grid-cols-3 gap-6'>
+                <div className='col-span-2'>
+                  <p className='text-xl mb-2'>
+                    Property is one of the core deep codes of our everyday life: often invisible,
+                    overlooked or seen as a near-natural law.{' '}
+                  </p>
+                  <p className='text-xl mb-2'>
+                    But now, crises are bringing property to the fore. Faced with an unprecedented
+                    complexity and entanglement of systemic risks, externalities, and value creation
+                    in today’s world, property as a means of governance is increasingly falling
+                    short.
+                  </p>
+                  <p className='text-xl mb-2'>
+                    To help us prepare for deepening and emerging crises, we need to delve deeper
+                    into the multifaceted challenges of property and build shared understanding and
+                    urgency.
+                  </p>
 
-                <p className='text-xl mb-2'>
-                  We need to rethink property and its role in system responsiveness and resilience,
-                  and its potential to drive wider transformational change.
-                </p>
-              </div>
-              <div className='col-span-1'>
-                <p className='text-xl font-bold mb-2'>
-                  This digital tool maps critical global risks and their interplay with property and
-                  ownership.
-                </p>
-                <p className='text-xl font-bold mb-2'>
-                  It serves as a sensemaking tool to anticipate and respond to crises at a system
-                  level and identify potential solutions, lead environments, and coalitions to build
-                  real-world demonstrations of property futures.
-                </p>
-                <p className='text-xl font-bold mb-2'>
-                It is intended as a living document. We will be continually evolving our risk mapping and exploring potential spaces for property innovation.
-                </p>
+                  <p className='text-xl mb-2'>
+                    We need to rethink property and its role in system responsiveness and
+                    resilience, and its potential to drive wider transformational change.
+                  </p>
+                </div>
+                <div className='col-span-1'>
+                  <p className='text-xl font-bold mb-2'>
+                    This digital tool maps critical global risks and their interplay with property
+                    and ownership.
+                  </p>
+                  <p className='text-xl font-bold mb-2'>
+                    It serves as a sensemaking tool to anticipate and respond to crises at a system
+                    level and identify potential solutions, lead environments, and coalitions to
+                    build real-world demonstrations of property futures.
+                  </p>
+                  <p className='text-xl font-bold mb-2'>
+                    It is intended as a living document. We will be continually evolving our risk
+                    mapping and exploring potential spaces for property innovation.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
         <div className='flex flex-col global-margin relative z-30 min-h-screen 2xl:min-w-[1280px]'>

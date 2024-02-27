@@ -69,7 +69,6 @@ export default function RiskDetail({ risk, ...props }) {
           className='lg:hidden flex max-w-14 px-2 relative justify-center min-h-screen'
           style={{ backgroundColor: color }}
           onClick={() => router.push('/tool')}
-
         >
           <div
             type='button'
@@ -237,7 +236,11 @@ export default function RiskDetail({ risk, ...props }) {
                     >
                       <div className='flex flex-col'>
                         {risk?.caseStudies.map((study, id) => (
-                          <div key={id} className='py-6 border-b w-[75%]' style={{ borderColor: color }}>
+                          <div
+                            key={id}
+                            className='py-6 border-b w-[75%]'
+                            style={{ borderColor: color }}
+                          >
                             <div className='flex flex-row w-full'>
                               <div className='basis-1/3 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
                                 {study.image ? (

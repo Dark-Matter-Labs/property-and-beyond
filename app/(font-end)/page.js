@@ -79,7 +79,9 @@ export default async function Home() {
         <div className='bg-black w-[calc(w-screen-17px)]' name='section-3'>
           <div className='global-margin max-w-4xl  bg-black text-white'>
             <div className='max-w-lg md:max-w-md lg:max-w-[790px] xl:max-w-[850px] pb-20'>
-              <h2 className='mb-8 pt-20 w-full break-words max-w-[500px]'>Building Critical Capabilities</h2>
+              <h2 className='mb-8 pt-20 w-full break-words max-w-[500px]'>
+                Building Critical Capabilities
+              </h2>
               <div className='grid grid-cols-1 lg:grid-cols-3'>
                 <div className='col-span-2'>
                   <p className='intro mb-4'>
@@ -162,7 +164,7 @@ export default async function Home() {
                   <Link href='mailto:propert@darkmatterlabs.org' target='_blank'>
                     Contact us
                   </Link>
-                  </div>
+                </div>
               </button>
             </div>
           </div>
@@ -187,7 +189,7 @@ export default async function Home() {
             <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
               <h2 className='mb-8'>Our team</h2>
               <p className='intro mb-20'>
-               We are working closely with partners and collaborators:{' '}
+                We are working closely with partners and collaborators:{' '}
               </p>
               <div className='flex flex-wrap gap-6 mb-20'>
                 <div>
@@ -231,7 +233,6 @@ export default async function Home() {
         </div>
 
         {/* END DECO */}
-
 
         <SideMenu />
       </div>
