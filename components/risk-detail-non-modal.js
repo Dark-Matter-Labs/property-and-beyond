@@ -76,12 +76,13 @@ export default function RiskDetailNonModal({ risk, ...props }) {
       <div className='hidden md:flex h-auto flex-row lg:flex-col bg-[#181616F0] min-h-screen'>
         {/* close button md -> lg */}
 
-        <div className='hidden lg:flex rounded-[9px] bg-white text-[16px] w-32 m-4 text-black border border-white p-2  items-center justify-center justify-self-end'>
+        <div className='hidden lg:flex rounded-[9px] bg-white text-[16px] w-32 mt-6 mx-6 text-black border border-white p-2  items-center justify-center justify-self-end'>
           <Link href='/tool'>Back to map</Link>
         </div>
 
         <div className='w-full h-full flex flex-col lg:flex-row relative md:overflow-auto lg:overflow-visible'>
-          <div className='w-full flex flex-col grow relative items-center lg:max-w-80'>
+        
+        <div className='w-full flex flex-col grow relative items-center lg:max-w-80'>
             <div className='lg:sticky lg:top-0 min-w-80'>
               <div
                 className='bg-black mt-6 ml-6 p-6 border rounded-lg text-white max-w-80'
@@ -90,9 +91,9 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                 <div className='relative h-32 w-full mb-4 bg-black rounded-lg'>
                   <Image fill src={`${image}`} alt='icon' className='absolute object-fit' />
                 </div>
-                <div className='text-[18px] my-4 font-medium'>{risk.title}</div>
+                <div className='text-[22px] leading-7 my-4 font-medium'>{risk.title}</div>
                 <div
-                  className='w-full rounded-lg text-[12px] uppercase py-2 px-4 text-black'
+                  className='mt-4 text-[12px] leading-3 text-black	text-center rounded-[10px] w-full py-1.5 px-2 flex items-center justify-center uppercase wrap-text'
                   style={{ backgroundColor: color }}
                 >
                   {risk.riskSubType}
@@ -121,7 +122,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                   <>
                     {' '}
                     <Disclosure.Button
-                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center p-4 `}
+                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center py-4 px-6`}
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>Impacts</div>
@@ -181,7 +182,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                   <>
                     {' '}
                     <Disclosure.Button
-                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center p-4 `}
+                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center py-4 px-6 `}
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>PREPAREDNESS</div>
@@ -192,7 +193,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                       style={{ borderColor: color }}
                     >
                       <div className='flex'>
-                        <div className='basis-3/4 px-4'>
+                        <div className='basis-3/4'>
                           <PortableText
                             value={risk?.preparedness}
                             components={componentsPreparedness}
@@ -212,7 +213,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                   <>
                     {' '}
                     <Disclosure.Button
-                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center p-4 `}
+                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center py-4 px-6 `}
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>case studies</div>
@@ -224,13 +225,13 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                     >
                       <div className='flex flex-col'>
                         {risk?.caseStudies.map((study, id) => (
-                          <div key={id} className='py-6 border-b' style={{ borderColor: color }}>
-                            <div className='flex flex-row '>
-                              <div className='basis-1/4 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
+                          <div key={id} className='py-6 border-b w-[75%]' style={{ borderColor: color }}>
+                            <div className='flex flex-row w-full'>
+                              <div className='basis-1/3 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
                                 {study.image ? (
                                   <Image
-                                    src={urlForImage(study?.image)}
-                                    alt={study?.alt ?? ''}
+                                    src={urlForImage(study.image)}
+                                    alt={study.alt ?? ''}
                                     width={300}
                                     height={200}
                                     className='object-fill rounded-md w-full'
@@ -241,11 +242,11 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                                     alt='placeholder image'
                                     width={300}
                                     height={200}
-                                    className='object-fill rounded-md w-full h-full'
+                                    className='object-fill rounded-md w-full'
                                   />
                                 )}
                               </div>
-                              <div className='flex flex-col basis-2/4'>
+                              <div className='flex flex-col basis-2/3'>
                                 {study.date ? (
                                   <div className='text-[15px] font-bold'>{study.date}</div>
                                 ) : (
@@ -276,9 +277,9 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                               </div>
                             </div>
                             {study.source ? (
-                              <span className='text-[8px] translate-y-2'>{study.source}</span>
+                              <span className='text-[14px] translate-y-2'>{study.source}</span>
                             ) : (
-                              <span className='text-[8px] translate-y-2'>
+                              <span className='text-[14px] translate-y-2'>
                                 I am a source of an image
                               </span>
                             )}
@@ -298,7 +299,7 @@ export default function RiskDetailNonModal({ risk, ...props }) {
                   <>
                     {' '}
                     <Disclosure.Button
-                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center p-4 `}
+                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center py-4 px-6`}
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>stakeholders</div>

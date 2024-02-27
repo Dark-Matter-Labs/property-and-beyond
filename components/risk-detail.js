@@ -25,7 +25,7 @@ const componentsPreparedness = {
 const componentsCaseStudy = {
   block: {
     // Ex. 1: customizing common block types
-    normal: ({ children }) => <p className='text-[20px]'>{children}</p>,
+    normal: ({ children }) => <p className='text-[18px] xl:text-[20px]'>{children}</p>,
   },
 };
 
@@ -65,33 +65,34 @@ export default function RiskDetail({ risk, ...props }) {
     <>
       <div className='hidden md:flex h-auto flex-row lg:flex-col bg-[#181616F0] min-h-screen'>
         {/* close button md -> lg */}
-        <div
+        <button
           className='lg:hidden flex max-w-14 px-2 relative justify-center min-h-screen'
           style={{ backgroundColor: color }}
+          onClick={() => router.push('/tool')}
+
         >
-          <button
+          <div
             type='button'
             className='text-black border border-black h-10 w-10 rounded-full bg-white flex items-center justify-center sticky top-[50vh]'
-            onClick={() => router.push('/tool')}
           >
             <FaArrowRight />
-          </button>
-        </div>
+          </div>
+        </button>
 
         <div className='w-full h-full flex flex-col lg:flex-row relative md:overflow-auto lg:overflow-visible'>
           {/* close button lg + */}
-          <div
+          <button
             className='hidden lg:flex max-w-14 relative justify-center min-h-screen px-2 '
             style={{ backgroundColor: color }}
+            onClick={() => router.push('/tool')}
           >
-            <button
+            <div
               type='button'
               className='text-black border border-black h-10 w-10 rounded-full bg-white flex items-center justify-center sticky top-[50vh]'
-              onClick={() => router.push('/tool')}
             >
               <FaArrowRight />
-            </button>
-          </div>
+            </div>
+          </button>
 
           <div className='w-full flex flex-col grow relative items-center lg:max-w-80'>
             <div className='lg:sticky lg:top-0 min-w-80'>
@@ -102,9 +103,9 @@ export default function RiskDetail({ risk, ...props }) {
                 <div className='relative h-32 w-full mb-4 bg-black rounded-lg'>
                   <Image fill src={`${image}`} alt='icon' className='absolute object-fit' />
                 </div>
-                <div className='text-[18px] my-4 font-medium'>{risk.title}</div>
+                <div className='text-[22px] leading-7 my-4 font-medium'>{risk.title}</div>
                 <div
-                  className='w-full rounded-lg text-[12px] uppercase py-2 px-4 text-black'
+                  className='mt-4 text-[12px] leading-3 text-black	text-center rounded-[10px] w-full py-1.5 px-2 flex items-center justify-center uppercase wrap-text'
                   style={{ backgroundColor: color }}
                 >
                   {risk.riskSubType}
@@ -133,7 +134,7 @@ export default function RiskDetail({ risk, ...props }) {
                   <>
                     {' '}
                     <Disclosure.Button
-                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center p-4 `}
+                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center py-4 px-6`}
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>Impacts</div>
@@ -193,7 +194,7 @@ export default function RiskDetail({ risk, ...props }) {
                   <>
                     {' '}
                     <Disclosure.Button
-                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center p-4 `}
+                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center py-4 px-6 `}
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>PREPAREDNESS</div>
@@ -204,7 +205,7 @@ export default function RiskDetail({ risk, ...props }) {
                       style={{ borderColor: color }}
                     >
                       <div className='flex'>
-                        <div className='basis-3/4 px-4'>
+                        <div className='basis-3/4'>
                           <PortableText
                             value={risk?.preparedness}
                             components={componentsPreparedness}
@@ -224,7 +225,7 @@ export default function RiskDetail({ risk, ...props }) {
                   <>
                     {' '}
                     <Disclosure.Button
-                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center p-4 `}
+                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center py-4 px-6 `}
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>case studies</div>
@@ -236,9 +237,9 @@ export default function RiskDetail({ risk, ...props }) {
                     >
                       <div className='flex flex-col'>
                         {risk?.caseStudies.map((study, id) => (
-                          <div key={id} className='py-6 border-b' style={{ borderColor: color }}>
-                            <div className='flex flex-row '>
-                              <div className='basis-1/4 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
+                          <div key={id} className='py-6 border-b w-[75%]' style={{ borderColor: color }}>
+                            <div className='flex flex-row w-full'>
+                              <div className='basis-1/3 rounded-md mr-4 flex flex-col items-start justify-center object-fill'>
                                 {study.image ? (
                                   <Image
                                     src={urlForImage(study.image)}
@@ -257,7 +258,7 @@ export default function RiskDetail({ risk, ...props }) {
                                   />
                                 )}
                               </div>
-                              <div className='flex flex-col basis-2/4'>
+                              <div className='flex flex-col basis-2/3'>
                                 {study.date ? (
                                   <div className='text-[15px] font-bold'>{study.date}</div>
                                 ) : (
@@ -288,9 +289,9 @@ export default function RiskDetail({ risk, ...props }) {
                               </div>
                             </div>
                             {study.source ? (
-                              <span className='text-[8px] translate-y-2'>{study.source}</span>
+                              <span className='text-[14px] translate-y-2'>{study.source}</span>
                             ) : (
-                              <span className='text-[8px] translate-y-2'>
+                              <span className='text-[14px] translate-y-2'>
                                 I am a source of an image
                               </span>
                             )}
@@ -310,7 +311,7 @@ export default function RiskDetail({ risk, ...props }) {
                   <>
                     {' '}
                     <Disclosure.Button
-                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center p-4 `}
+                      className={`${open ? 'rounded-t-[9px]' : 'rounded-[9px]'} flex flex-row justify-between items-center py-4 px-6`}
                       style={{ backgroundColor: color }}
                     >
                       <div className='uppercase text-[20px] font-bold'>stakeholders</div>
