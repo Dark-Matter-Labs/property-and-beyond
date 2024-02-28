@@ -2,7 +2,6 @@
 import './globals.css';
 
 import { Source_Sans_3 } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
 
 // const inter = Inter({ subsets: ['latin'] });
 const source = Source_Sans_3({ subsets: ['latin'], display: 'swap' });
@@ -18,10 +17,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>Property and Beyond Lab</title>
       </head>
-      <body className={source.className}>
-        {children}
-        <Analytics />
-      </body>
+      <body className={source.className}>{children}</body>
     </html>
   );
 }
