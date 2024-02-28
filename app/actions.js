@@ -7,4 +7,5 @@ export default async function action() {
   revalidateTag('riskDetail');
   revalidateTag('riskSlugs');
   revalidateTag('homePage');
+  revalidateTag('caseStudy')
 }

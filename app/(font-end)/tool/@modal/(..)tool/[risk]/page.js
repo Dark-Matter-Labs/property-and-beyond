@@ -25,8 +25,7 @@ const riskQuery = `
 export async function generateStaticParams() {
   const slugs = await client.fetch(
     riskSlugs,
-    { next: { tags: ['riskSlugs'] } },
-    { cache: 'no-store' },
+    { next: { tags: ['risk'] } },
   );
   return slugs.map((slug) => ({
     slug: slug,
@@ -38,8 +37,7 @@ async function getData(params) {
   const res = await client.fetch(
     riskQuery,
     { slug },
-    { next: { tags: ['riskDetail'] } },
-    { cache: 'no-store' },
+    { next: { tags: ['risk', 'caseStudy', 'propertyIssue'] } },
   );
   return res;
 }

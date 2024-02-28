@@ -23,7 +23,7 @@ const hpQuery = `
 `;
 
 async function getData() {
-  const res = await client.fetch(hpQuery, { next: { tags: ['homePage'] } }, { cache: 'no-store' });
+  const res = await client.fetch(hpQuery, { next: { tags: ['homePage', 'possibility'] } });
   return res;
 }
 
