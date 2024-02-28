@@ -6,6 +6,10 @@ import { HPcomponents } from '@/lib/portableText';
 import Link from 'next/link';
 import Image from 'next/image';
 import Card from '@/components/card';
+import scottishLogo from '@/public/logos/scottish.jpeg'
+import stanfordLogo from '@/public/logos/stan.png'
+import radicalXLogo from '@/public/logos/radical.svg'
+import friendship from '@/public/logos/friendship.png'
 
 const hpQuery = `
   *[_type == "homePage"][0] {
@@ -191,40 +195,50 @@ export default async function Home() {
               <p className='intro mb-20'>
                 We are working closely with partners and collaborators:{' '}
               </p>
-              <div className='flex flex-wrap gap-6 mb-20'>
-                <div>
+              <div className='grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-6'>
+                <div className='flex items-center justify-center'>
                   <Image
                     src='/DMLogo-black.png'
                     alt='Dark Matter Labs Logo'
-                    height={157}
-                    width={157}
+                    height={100}
+                    width={100}
                   />
                 </div>
-                <div>
+                <div className='flex items-center justify-center'>
                   {' '}
                   <Image
-                    src='/DMLogo-black.png'
+                    src={radicalXLogo}
                     alt='Dark Matter Labs Logo'
                     height={157}
-                    width={157}
+                    width={250}
                   />
                 </div>
-                <div>
+                <div className='flex items-center justify-center'>
                   {' '}
                   <Image
-                    src='/DMLogo-black.png'
+                    src={friendship}
                     alt='Dark Matter Labs Logo'
-                    height={157}
-                    width={157}
+                    height={180}
+                    width={300}
                   />
                 </div>
-                <div>
+             
+                <div className='flex items-center justify-center'>
                   {' '}
                   <Image
-                    src='/DMLogo-black.png'
+                    src={scottishLogo}
                     alt='Dark Matter Labs Logo'
                     height={157}
-                    width={157}
+                    width={250}
+                  />
+                </div>
+                <div className='flex items-center justify-center'>
+                  {' '}
+                  <Image
+                    src={stanfordLogo}
+                    alt='Dark Matter Labs Logo'
+                    height={157}
+                    width={250}
                   />
                 </div>
               </div>
