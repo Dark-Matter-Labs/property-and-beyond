@@ -19,6 +19,7 @@
     "@sanity/types": "^3.25",
     "@sanity/ui": "^2.0",
     "@sanity/vision": "3",
+    "@vercel/analytics": "^1.2.2",
     "next": "^14.1",
     "next-sanity": "7.0.12",
     "prettier": "^3.2.4",

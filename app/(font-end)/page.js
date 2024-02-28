@@ -6,10 +6,10 @@ import { HPcomponents } from '@/lib/portableText';
 import Link from 'next/link';
 import Image from 'next/image';
 import Card from '@/components/card';
-import scottishLogo from '@/public/logos/scottish.jpeg'
-import stanfordLogo from '@/public/logos/stan.png'
-import radicalXLogo from '@/public/logos/radical.svg'
-import friendship from '@/public/logos/friendship.png'
+import scottishLogo from '@/public/logos/scottish.jpeg';
+import stanfordLogo from '@/public/logos/stan.png';
+import radicalXLogo from '@/public/logos/radical.svg';
+import friendship from '@/public/logos/friendship.png';
 
 const hpQuery = `
   *[_type == "homePage"][0] {
@@ -206,40 +206,20 @@ export default async function Home() {
                 </div>
                 <div className='flex items-center justify-center'>
                   {' '}
-                  <Image
-                    src={radicalXLogo}
-                    alt='Dark Matter Labs Logo'
-                    height={157}
-                    width={250}
-                  />
+                  <Image src={radicalXLogo} alt='Dark Matter Labs Logo' height={157} width={250} />
                 </div>
                 <div className='flex items-center justify-center'>
                   {' '}
-                  <Image
-                    src={friendship}
-                    alt='Dark Matter Labs Logo'
-                    height={180}
-                    width={300}
-                  />
+                  <Image src={friendship} alt='Dark Matter Labs Logo' height={180} width={300} />
                 </div>
-             
+
                 <div className='flex items-center justify-center'>
                   {' '}
-                  <Image
-                    src={scottishLogo}
-                    alt='Dark Matter Labs Logo'
-                    height={157}
-                    width={250}
-                  />
+                  <Image src={scottishLogo} alt='Dark Matter Labs Logo' height={157} width={250} />
                 </div>
                 <div className='flex items-center justify-center'>
                   {' '}
-                  <Image
-                    src={stanfordLogo}
-                    alt='Dark Matter Labs Logo'
-                    height={157}
-                    width={250}
-                  />
+                  <Image src={stanfordLogo} alt='Dark Matter Labs Logo' height={157} width={250} />
                 </div>
               </div>
             </div>
