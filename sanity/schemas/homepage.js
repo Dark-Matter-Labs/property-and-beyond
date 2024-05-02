@@ -108,7 +108,19 @@ export default {
             lists: [],
             marks: {
                 decorators: [],
-                annotations: [],
+                annotations: [         {
+                  name: 'link',
+                  type: 'object',
+                  title: 'External link',
+                  fields: [
+                    {
+                      name: 'file',
+                      title: 'File',
+                      type: 'file'
+                    },
+               
+                  ]
+                },],
             } 
             }]
         },

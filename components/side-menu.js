@@ -55,6 +55,18 @@ export default function SideMenu() {
         </li>
         <li className='menu mb-6 hover:cursor-pointer'>
           <ScrollLink
+            to='section-6'
+            smooth={true}
+            duration={500}
+            offset={-90}
+            spy={true}
+            activeClass='font-bold transition-all duration-300 ease-in-out'
+          >
+            INSIGHTS
+          </ScrollLink>
+        </li>
+        <li className='menu mb-6 hover:cursor-pointer'>
+          <ScrollLink
             to='section-5'
             smooth={true}
             duration={500}
@@ -63,18 +75,6 @@ export default function SideMenu() {
             activeClass='font-bold transition-all duration-300 ease-in-out'
           >
             JOIN US
-          </ScrollLink>
-        </li>
-        <li className='menu mb-6 hover:cursor-pointer'>
-          <ScrollLink
-            to='section-6'
-            smooth={true}
-            duration={500}
-            offset={-90}
-            spy={true}
-            activeClass='font-bold transition-all duration-300 ease-in-out'
-          >
-            CONFERENCE
           </ScrollLink>
         </li>
         <li className='menu mb-6 hover:cursor-pointer'>
