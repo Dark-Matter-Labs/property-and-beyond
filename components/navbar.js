@@ -166,6 +166,19 @@ export default function NavBar() {
                             </li>
                             <li className='menu mb-6 hover:cursor-pointer'>
                               <ScrollLink
+                                to='section-6'
+                                smooth={true}
+                                duration={500}
+                                offset={-80}
+                                spy={true}
+                                activeClass=''
+                                onClick={() => setMobileMenuIsOpen(false)}
+                              >
+                                INSIGHTS
+                              </ScrollLink>
+                            </li>
+                            <li className='menu mb-6 hover:cursor-pointer'>
+                              <ScrollLink
                                 to='section-5'
                                 smooth={true}
                                 duration={500}
@@ -175,19 +188,6 @@ export default function NavBar() {
                                 onClick={() => setMobileMenuIsOpen(false)}
                               >
                                 JOIN US
-                              </ScrollLink>
-                            </li>
-                            <li className='menu mb-6 hover:cursor-pointer'>
-                              <ScrollLink
-                                to='section-6'
-                                smooth={true}
-                                duration={500}
-                                offset={-80}
-                                spy={true}
-                                activeClass=''
-                                onClick={() => setMobileMenuIsOpen(false)}
-                              >
-                                CONFERENCE
                               </ScrollLink>
                             </li>
                             <li className='menu mb-6 hover:cursor-pointer'>
