@@ -114,9 +114,9 @@ export default {
                   title: 'External link',
                   fields: [
                     {
-                      name: 'file',
-                      title: 'File',
-                      type: 'file'
+                      name: 'link',
+                      title: 'Link',
+                      type: 'url'
                     },
                
                   ]
