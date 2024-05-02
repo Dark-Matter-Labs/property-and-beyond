@@ -22,10 +22,7 @@ const riskQuery = `
 `;
 
 export async function generateStaticParams() {
-  const slugs = await client.fetch(
-    riskSlugs,
-    { next: { tags: ['risk'] } },
-  );
+  const slugs = await client.fetch(riskSlugs, { next: { tags: ['risk'] } });
   return slugs.map((slug) => ({
     slug: slug,
   }));
