@@ -10,6 +10,8 @@ import scottishLogo from '@/public/logos/scottish.jpeg';
 import stanfordLogo from '@/public/logos/stan.png';
 import radicalXLogo from '@/public/logos/radical.svg';
 import friendship from '@/public/logos/friendship.png';
+import rfLogo from '@/public/logos/RF_logo.png';
+import omiLogo from '@/public/logos/Omidyar_Network_logo.png';
 
 const hpQuery = `
   *[_type == "homePage"][0] {
@@ -149,7 +151,18 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* SECTION 5 - Join us */}
+        {/* SECTION 5 - Insights */}
+        <div className='bg-black w-[calc(w-screen-17px)]'>
+          <div className='global-margin max-w-2xl bg-black text-white' name='section-6'>
+            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
+              <h2 className=''>INSIGHTS</h2>
+              <PortableText value={data.conference} components={HPcomponents} />
+            </div>
+          </div>
+          <div className='w-full h-4 bg-[#CEB2F2]'></div>
+        </div>
+
+        {/* SECTION 6 - Join us */}
         <div
           className='w-[calc(w-screen-17px)] bg-[url("/join-us.jpg")] bg-cover h-[535px]'
           name='section-5'
@@ -173,20 +186,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        {/* SECTION 6 - Conference */}
-        <div className='bg-black w-[calc(w-screen-17px)]'>
-          <div className='global-margin max-w-2xl bg-black text-white' name='section-6'>
-            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
-              <div className='uppercase text-[36px]'>conference:</div>
-              <h2 className=''>What & How We Own: The Politics of Change</h2>
-              <div className='mb-8 text-[30px] text-[#AD76F4]'>
-                <span className='font-bold'>March 1-2, 2024</span> in Oakland, CA
-              </div>
-              <PortableText value={data.conference} components={HPcomponents} />
-            </div>
-          </div>
-          <div className='w-full h-4 bg-[#CEB2F2]'></div>
-        </div>
+
         {/* SECTION 7 - Partners */}
         <div className='bg-white w-[calc(w-screen-17px)]' name='section-7'>
           <div className='global-margin max-w-2xl bg-white text-black'>
@@ -206,20 +206,43 @@ export default async function Home() {
                 </div>
                 <div className='flex items-center justify-center'>
                   {' '}
-                  <Image src={radicalXLogo} alt='Dark Matter Labs Logo' height={157} width={250} />
+                  <Image src={radicalXLogo} alt='Radicle X Change Logo' height={157} width={250} />
                 </div>
                 <div className='flex items-center justify-center'>
                   {' '}
-                  <Image src={friendship} alt='Dark Matter Labs Logo' height={180} width={300} />
+                  <Image
+                    src={friendship}
+                    alt='Wijewinen Friendship Center Logo'
+                    height={180}
+                    width={300}
+                  />
                 </div>
 
                 <div className='flex items-center justify-center'>
                   {' '}
-                  <Image src={scottishLogo} alt='Dark Matter Labs Logo' height={157} width={250} />
+                  <Image
+                    src={scottishLogo}
+                    alt='Scottish Land Commission Logo'
+                    height={157}
+                    width={250}
+                  />
                 </div>
                 <div className='flex items-center justify-center'>
                   {' '}
-                  <Image src={stanfordLogo} alt='Dark Matter Labs Logo' height={157} width={250} />
+                  <Image
+                    src={stanfordLogo}
+                    alt='Stanford University Logo'
+                    height={157}
+                    width={250}
+                  />
+                </div>
+                <div className='flex items-center justify-center'>
+                  {' '}
+                  <Image src={rfLogo} alt='Rockefeller Foundation Logo' />
+                </div>
+                <div className='flex items-center justify-center'>
+                  {' '}
+                  <Image src={omiLogo} alt='Omidyar Network Logo' />
                 </div>
               </div>
             </div>
