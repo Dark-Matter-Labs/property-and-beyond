@@ -109,7 +109,7 @@ export default {
             marks: {
                 decorators: [],
                 annotations: [         {
-                  name: 'link',
+                  name: 'extLink',
                   type: 'object',
                   title: 'External link',
                   fields: [
