@@ -6,7 +6,7 @@ export default function Card({ data }) {
   if (data.file) {
     return (
       <Link href={data.file} target='_blank group '>
-        <div className='bg-[#D9D9D9] border border-black h-auto max-w-80 basis-1 lg:basis-1/3 flex flex-col items-center justify-between relative'>
+        <div className='bg-[#D9D9D9] border border-black h-auto md:h-[540px] max-w-80 basis-1 lg:basis-1/3 flex flex-col items-end justify-between relative'>
           <div className='w-full object-cover h-1/2'>
             {data.image && (
               <Image
@@ -32,7 +32,7 @@ export default function Card({ data }) {
   } else if (data.link) {
     return (
       <Link href={data.link} target='_blank group '>
-        <div className='bg-[#D9D9D9] border border-black h-auto max-w-80 basis-1 lg:basis-1/3 flex flex-col items-center justify-between relative'>
+        <div className='bg-[#D9D9D9] border border-black h-auto md:h-[540px] max-w-80 basis-1 lg:basis-1/3 flex flex-col items-end justify-between relative'>
           <div className='w-full object-cover h-1/2'>
             {data.image && (
               <Image
@@ -58,7 +58,7 @@ export default function Card({ data }) {
   } else {
     return (
       <div>
-        <div className='bg-[#D9D9D9] border border-black h-auto md:h-[465.79px] max-w-80 basis-1 lg:basis-1/3 flex flex-col items-center justify-between relative'>
+        <div className='bg-[#D9D9D9] border border-black h-auto md:h-[540px] max-w-80 basis-1 lg:basis-1/3 flex flex-col items-end justify-between relative'>
           <div className='w-full object-cover h-1/2'>
             {data.image && (
               <Image
