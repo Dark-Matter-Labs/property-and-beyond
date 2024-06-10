@@ -18,7 +18,7 @@ export default function Card({ data }) {
               />
             )}
           </div>
-          <div className='h-2/3 flex flex-col pl-12 pr-3 py-6'>
+          <div className='h-2/3 flex flex-col pl-8 pr-3 pb-6 pt-6 md:pt-0 justify-between'>
             <div className='text-[22px] uppercase'>{data.title}</div>
             <div className='text-[14px]'>{data.description}</div>
             <button className='bg-black text-white w-4/5 mt-4 flex items-center justify-center px-4 py-2'>
@@ -44,7 +44,7 @@ export default function Card({ data }) {
               />
             )}
           </div>
-          <div className='h-2/3 flex flex-col pl-12 pr-3 py-6'>
+          <div className='h-2/3 flex flex-col pl-8 pr-3 pb-6 pt-6 md:pt-0 justify-between'>
             <div className='text-[22px] uppercase'>{data.title}</div>
             <div className='text-[14px]'>{data.description}</div>
             <button className='bg-black text-white w-4/5 mt-4 flex items-center justify-center px-4 py-2'>

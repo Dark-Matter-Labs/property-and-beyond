@@ -33,7 +33,7 @@ async function getData(params) {
   const res = await client.fetch(
     riskQuery,
     { slug },
-    { next: { tags: ['risk', 'caseStudy', 'propertyIssue'] } },
+    { next: { revalidate: 30, tags: ['risk', 'caseStudy', 'propertyIssue'] } },
   );
   return res;
 }
