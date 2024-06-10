@@ -25,7 +25,7 @@ const hpQuery = `
 `;
 
 async function getData() {
-  const res = await client.fetch(hpQuery, { next: { tags: ['homePage', 'possibility'] } });
+  const res = await client.fetch(hpQuery, { next: { revalidate: 30 } });
   return res;
 }
 
