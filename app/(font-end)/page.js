@@ -143,7 +143,7 @@ export default async function Home() {
               <h2 className='mb-8'>Proofs of Possibility</h2>
               <PortableText value={data.proofsOfPossibility} components={HPcomponents} />
             </div>
-            <div className='flex flex-wrap gap-6 max-w-lg md:max-w-md lg:max-w-2xl pb-20 justify-center md:justify-start items-center'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:max-w-2xl lg:max-w-4xl pb-20 justify-center md:justify-start items-center'>
               {data?.cards?.map((card, id) => (
                 <Card key={id} data={card} />
               ))}
