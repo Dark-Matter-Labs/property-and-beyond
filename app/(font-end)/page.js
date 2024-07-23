@@ -153,10 +153,54 @@ export default async function Home() {
 
         {/* SECTION 5 - Insights */}
         <div className='bg-black w-[calc(w-screen-17px)]'>
-          <div className='global-margin max-w-2xl bg-black text-white' name='section-6'>
-            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
-              <h2 className=''>INSIGHTS</h2>
-              <PortableText value={data.conference} components={HPcomponents} />
+          <div className='global-margin bg-black text-white' name='section-6'>
+            <div className='max-w-lg md:max-w-md lg:max-w-4xl py-20'>
+              <h2 className='pb-4'>INSIGHTS</h2>
+              {/* <PortableText value={data.conference} components={HPcomponents} /> */}
+              <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
+                <div className='px-4 py-4 border border-white'>
+                  <h3 className='intro text-[#ad77f4]'>
+                    Conference What & How We Own: The Politics of Change
+                  </h3>
+                  <p className='small-text pt-4'>
+                    What financing mechanisms can support alternative and experimental property
+                    systems? How can we expand and improve community land trusts? And how might we
+                    concretely integrate Indigenous thinking, rights of nature, and self-ownership
+                    into our property institutions? We explored these and other questions at the
+                    conference “What and How We Own: The Politics Of Change” co-hosted by Dark
+                    Matter Labs, RadicalxChange Foundation, and a Stanford University research team,
+                    with generous support from Rockefeller Foundation and Omidyar Network (Oakland,
+                    CA, March 1-3, 2024). The conference was the first step in seeding a coalition
+                    of loosely-aligned actors building a new paradigm for property and ownership in
+                    the 21st century. Through the event, we crystallized a set of projects and
+                    initiatives focused on reimagined property relations that the coalition will
+                    support and pursue together. Check out the <a href="https://vimeo.com/925039435" target='_blank' rel='noreferrer' className='underline font-bold'>highlights</a> and <a href="https://www.notion.so/what-and-how-we-own/What-How-We-Own-The-Politics-of-Change-0755201b081549bfa8ff8426c1fdeb0f" target='_blank' rel='noreferrer' className='underline font-bold'>emerging initiatives</a>
+                    from the conference.
+                  </p>
+                </div>
+                <div>
+                  <div className='px-4 py-4 border border-white mb-4'>
+                    <h3 className='intro text-[#ad77f4]'>
+                      A deep exploration of how urban land ownership provides opportunities and
+                      barriers to <a href="https://provocations.darkmatterlabs.org/urban-land-ownership-mapping-towards-a-just-transition-of-europes-built-environment-1-72ff315fefff" target='_blank' rel='noreferrer' className='underline font-bold'>just transition in the built environment</a>.
+                    </h3>
+                  </div>
+                  <div className='px-4 py-4 border border-white mb-4'>
+                    <h3 className='intro text-[#ad77f4]'>
+                    <a href="https://bloombergcities.jhu.edu/news/city-putting-its-people-charge-public-space#:~:text=They%27re%20doing%20so%20by,billboards%E2%80%94in%20the%20people%27s%20hands" target='_blank' rel='noreferrer' className='underline font-bold'>Emerging insights on how Re:Permissioning the City platform</a> designed for
+                      citizen-led governance of public space opens up pathways for new civic
+                      economies and responses to emerging challenges like unhoused populations and
+                      refugee communities.
+                    </h3>
+                  </div>
+                  <div className='px-4 py-4 border border-white'>
+                    <h3 className='intro text-[#ad77f4]'>
+                    <a href="https://provocations.darkmatterlabs.org/diving-deep-into-the-deep-code-unraveling-the-knotted-problem-spaces-of-housing-data-87e595e8919b" target='_blank' rel='noreferrer' className='underline font-bold'>Diving Deep into the Deep Code: Unraveling the Knotted Problem Spaces of
+                      Housing & Data</a>
+                    </h3>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className='w-full h-4 bg-[#CEB2F2]'></div>
