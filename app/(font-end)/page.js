@@ -174,7 +174,24 @@ export default async function Home() {
                     of loosely-aligned actors building a new paradigm for property and ownership in
                     the 21st century. Through the event, we crystallized a set of projects and
                     initiatives focused on reimagined property relations that the coalition will
-                    support and pursue together. Check out the <a href="https://vimeo.com/925039435" target='_blank' rel='noreferrer' className='underline font-bold'>highlights</a> and <a href="https://www.notion.so/what-and-how-we-own/What-How-We-Own-The-Politics-of-Change-0755201b081549bfa8ff8426c1fdeb0f" target='_blank' rel='noreferrer' className='underline font-bold'>emerging initiatives</a>
+                    support and pursue together. Check out the{' '}
+                    <a
+                      href='https://vimeo.com/925039435'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='underline font-bold'
+                    >
+                      highlights
+                    </a>{' '}
+                    and{' '}
+                    <a
+                      href='https://www.notion.so/what-and-how-we-own/What-How-We-Own-The-Politics-of-Change-0755201b081549bfa8ff8426c1fdeb0f'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='underline font-bold'
+                    >
+                      emerging initiatives
+                    </a>
                     from the conference.
                   </p>
                 </div>
@@ -182,21 +199,44 @@ export default async function Home() {
                   <div className='px-4 py-4 border border-white mb-4'>
                     <h3 className='intro text-[#ad77f4]'>
                       A deep exploration of how urban land ownership provides opportunities and
-                      barriers to <a href="https://provocations.darkmatterlabs.org/urban-land-ownership-mapping-towards-a-just-transition-of-europes-built-environment-1-72ff315fefff" target='_blank' rel='noreferrer' className='underline font-bold'>just transition in the built environment</a>.
+                      barriers to{' '}
+                      <a
+                        href='https://provocations.darkmatterlabs.org/urban-land-ownership-mapping-towards-a-just-transition-of-europes-built-environment-1-72ff315fefff'
+                        target='_blank'
+                        rel='noreferrer'
+                        className='underline font-bold'
+                      >
+                        just transition in the built environment
+                      </a>
+                      .
                     </h3>
                   </div>
                   <div className='px-4 py-4 border border-white mb-4'>
                     <h3 className='intro text-[#ad77f4]'>
-                    <a href="https://bloombergcities.jhu.edu/news/city-putting-its-people-charge-public-space#:~:text=They%27re%20doing%20so%20by,billboards%E2%80%94in%20the%20people%27s%20hands" target='_blank' rel='noreferrer' className='underline font-bold'>Emerging insights on how Re:Permissioning the City platform</a> designed for
-                      citizen-led governance of public space opens up pathways for new civic
-                      economies and responses to emerging challenges like unhoused populations and
-                      refugee communities.
+                      <a
+                        href='https://bloombergcities.jhu.edu/news/city-putting-its-people-charge-public-space#:~:text=They%27re%20doing%20so%20by,billboards%E2%80%94in%20the%20people%27s%20hands'
+                        target='_blank'
+                        rel='noreferrer'
+                        className='underline font-bold'
+                      >
+                        Emerging insights on how Re:Permissioning the City platform
+                      </a>{' '}
+                      designed for citizen-led governance of public space opens up pathways for new
+                      civic economies and responses to emerging challenges like unhoused populations
+                      and refugee communities.
                     </h3>
                   </div>
                   <div className='px-4 py-4 border border-white'>
                     <h3 className='intro text-[#ad77f4]'>
-                    <a href="https://provocations.darkmatterlabs.org/diving-deep-into-the-deep-code-unraveling-the-knotted-problem-spaces-of-housing-data-87e595e8919b" target='_blank' rel='noreferrer' className='underline font-bold'>Diving Deep into the Deep Code: Unraveling the Knotted Problem Spaces of
-                      Housing & Data</a>
+                      <a
+                        href='https://provocations.darkmatterlabs.org/diving-deep-into-the-deep-code-unraveling-the-knotted-problem-spaces-of-housing-data-87e595e8919b'
+                        target='_blank'
+                        rel='noreferrer'
+                        className='underline font-bold'
+                      >
+                        Diving Deep into the Deep Code: Unraveling the Knotted Problem Spaces of
+                        Housing & Data
+                      </a>
                     </h3>
                   </div>
                 </div>
@@ -287,6 +327,68 @@ export default async function Home() {
                 <div className='flex items-center justify-center'>
                   {' '}
                   <Image src={omiLogo} alt='Omidyar Network Logo' />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* SECTION 8 CREDITS */}
+        <div className='bg-white w-[calc(w-screen-17px)]' name='section-7'>
+          <div className='global-margin max-w-2xl bg-white text-black'>
+            <div className='max-w-lg md:max-w-md lg:max-w-2xl py-20'>
+              <p className='intro mb-10'>
+                Thanks to the teams at Dark Matter Labs for their contributions:
+              </p>
+              <div className='grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-6'>
+                <div className='flex flex-col items-start justify-start h-full'>
+                  <h4 className='normal font-semibold mb-4'>Property & Beyond Lab</h4>
+                  <p className='text-[14px]'>
+                    <span className='font-semibold'>Co-holders:</span> Alexandra Bekker, Jayne
+                    Engle, Indy Johar; <span className='font-semibold'>Designers:</span> Arianna
+                    Smaron, Anahat Kaur, Theo Campbell, Sofia Valentini, Madelyn Capozzi.
+                  </p>
+                </div>
+                <div className='flex flex-col items-start justify-start mb-4 h-full'>
+                  <h4 className='normal font-semibold mb-4'>Crisis-Responsive Transformation</h4>
+                  <h5 className='normal'>Theory of Change</h5>
+                  <p className='text-[14px] mb-4'>
+                    <span className='font-semibold'>Researchers:</span> Alexandra Bekker, Jayne
+                    Engle, Indy Johar, Zehra Zaidi;{' '}
+                    <span className='font-semibold'>Designers: </span>
+                    Madelyn Capozzi, Anahat Kaur, Eunji Kang.
+                  </p>
+                  <h5 className='normal'>Crisis Mapping </h5>
+                  <p className='text-[14px]'>
+                    <span className='font-semibold'>Researchers:</span> Alexandra Bekker, Eunsoo
+                    Lee, Meggan Collins; <span className='font-semibold'>Designers: </span> Arianna
+                    Smaron, Meggan Collins, Theo Campbell.
+                  </p>
+                </div>
+                <div className='flex flex-col items-start justify-start h-full'>
+                  <h4 className='normal font-semibold text-left mb-4'>Proofs of Possibility</h4>
+                  <h5 className='normal'>FreeLand: </h5>
+                  <p className='text-[14px] mb-4'>
+                    <span className='font-semibold'>Co-holders:</span> Alexandra Bekker, Jayne
+                    Engle, Indy Johar; <span className='font-semibold'>Researchers:</span> Alexandra
+                    Bekker, Calvin Po, Madelyn Capozzi; Designer: Madelyn Capozzi.
+                  </p>
+                  <h5 className='normal'>FreeHouse: </h5>
+                  <p className='text-[14px] mb-4'>
+                    <span className='font-semibold'>Co-holders:</span> Meggan Collins, Fang-Jui
+                    Chang; <span className='font-semibold'>Researchers:</span> Meggan, Fang-Jui
+                    Chang, Charlie Fisher, Calvin Po, Emily Harris; Designer: Meggan Collins.{' '}
+                  </p>
+                  <h5 className='normal'>FreeSense: </h5>
+                  <p className='text-[14px] mb-4'>
+                    <span className='font-semibold'>Co-holders:</span> Alexandra Bekker, Eunsoo Lee,
+                    Shuyang Lin; <span className='font-semibold'>Researchers:</span> Eunsoo Lee,
+                    Gurden Batra, Shuyang Lin; Designer: Sofia Valentini.{' '}
+                  </p>
+                  <h5 className='normal'>Permissioning the City: </h5>
+                  <p className='text-[14px] mb-4'>
+                    <span className='font-semibold'>Co-holders, Research, and Design:</span> Eunji
+                    Kang, Eunsoo Lee
+                  </p>
                 </div>
               </div>
             </div>
